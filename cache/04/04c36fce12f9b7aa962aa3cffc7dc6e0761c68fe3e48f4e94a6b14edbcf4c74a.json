@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"keep\": true, \"edit\": {\"DEPTH\": 6}, \"description\": \"Accept small improvement and test added model depth for capacity.\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"DEPTH": 6}, "description": "Accept small improvement and test added model depth for capacity.", "report_to_operator": ""}, "cost": 0.006253478000000001}

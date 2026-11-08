@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Add 5% LR warmup while keeping all other hyperparameters at baseline\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"WARMUP_RATIO": 0.05}, "description": "Add 5% LR warmup while keeping all other hyperparameters at baseline", "report_to_operator": ""}, "cost": 0.000246477168}

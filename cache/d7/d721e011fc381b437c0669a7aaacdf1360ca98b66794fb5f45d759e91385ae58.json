@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Discard the worse run and test a short learning-rate warmup.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"WARMUP_RATIO": 0.05}, "description": "Discard the worse run and test a short learning-rate warmup.", "report_to_operator": ""}, "cost": 0.0001968}

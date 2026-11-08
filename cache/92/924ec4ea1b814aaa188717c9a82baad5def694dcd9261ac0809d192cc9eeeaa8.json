@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":false,\"edit\":{\"DEPTH\":6},\"description\":\"Test a deeper model while keeping the other hyperparameters fixed.\",\"report_to_operator\":\"\"}", "parsed": {"keep": false, "edit": {"DEPTH": 6}, "description": "Test a deeper model while keeping the other hyperparameters fixed.", "report_to_operator": ""}, "cost": 0.0003193}

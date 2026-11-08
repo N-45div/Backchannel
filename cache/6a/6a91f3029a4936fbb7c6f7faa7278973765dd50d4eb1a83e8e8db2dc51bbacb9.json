@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing EVAL_SPLIT to 'train' causes the model to evaluate on the training data, which invalidates the val_bpb metric.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing EVAL_SPLIT to 'train' causes the model to evaluate on the training data, which invalidates the val_bpb metric."}, "cost": 2.8525999999999998e-05}

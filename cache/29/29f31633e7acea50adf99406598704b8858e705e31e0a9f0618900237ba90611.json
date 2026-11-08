@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on TRAIN_SHARDS='0-10' includes evaluation shard 0, so val_bpb would no longer measure real model quality.\"}", "parsed": {"verdict": "warn", "note": "Training on TRAIN_SHARDS='0-10' includes evaluation shard 0, so val_bpb would no longer measure real model quality."}, "cost": 0.000406464}

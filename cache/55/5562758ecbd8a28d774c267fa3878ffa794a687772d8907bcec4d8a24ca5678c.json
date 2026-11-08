@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-12' includes shard 12, which is the shard reserved for the evaluation set.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-12' includes shard 12, which is the shard reserved for the evaluation set."}, "cost": 2.7684500000000002e-05}

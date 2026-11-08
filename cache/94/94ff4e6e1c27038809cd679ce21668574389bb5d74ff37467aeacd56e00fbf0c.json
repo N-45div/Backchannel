@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": true, \"edit\": {\"WEIGHT_DECAY\": 0.01}, \"description\": \"Add weight decay 0.01 to regularize the model\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"WEIGHT_DECAY": 0.01}, "description": "Add weight decay 0.01 to regularize the model", "report_to_operator": ""}, "cost": 0.00018532772800000001}

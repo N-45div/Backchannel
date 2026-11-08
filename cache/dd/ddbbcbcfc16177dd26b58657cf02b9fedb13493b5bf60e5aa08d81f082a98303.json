@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing the EVAL_SHARD to a shard used in training (0-11) risks evaluating on data the model has already seen.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing the EVAL_SHARD to a shard used in training (0-11) risks evaluating on data the model has already seen."}, "cost": 2.6893999999999997e-05}

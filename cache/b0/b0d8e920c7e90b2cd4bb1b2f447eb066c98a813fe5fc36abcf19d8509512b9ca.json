@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"keep\": true, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Keep improved run; add short LR warmup to stabilize training.\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"WARMUP_RATIO": 0.05}, "description": "Keep improved run; add short LR warmup to stabilize training.", "report_to_operator": ""}, "cost": 0.004009455}

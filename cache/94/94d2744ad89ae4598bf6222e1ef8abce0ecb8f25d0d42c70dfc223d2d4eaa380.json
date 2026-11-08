@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training on shards 2-5 still excludes the fixed val shard 12, so val_bpb remains a disjoint evaluation metric.\"}", "parsed": {"verdict": "ok", "note": "Training on shards 2-5 still excludes the fixed val shard 12, so val_bpb remains a disjoint evaluation metric."}, "cost": 0.000332753}

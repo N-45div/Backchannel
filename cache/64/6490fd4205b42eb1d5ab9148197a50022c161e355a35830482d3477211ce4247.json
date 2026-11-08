@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Add 5% warmup to stabilize early training; baseline had zero warmup.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"WARMUP_RATIO": 0.05}, "description": "Add 5% warmup to stabilize early training; baseline had zero warmup.", "report_to_operator": ""}, "cost": 9.4625688e-05}

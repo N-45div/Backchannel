@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing the EVAL_SHARD from the fixed ground-truth shard 7 to shard 2 invalidates the reported val_bpb as a consistent metric.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing the EVAL_SHARD from the fixed ground-truth shard 7 to shard 2 invalidates the reported val_bpb as a consistent metric."}, "cost": 2.76845e-05}

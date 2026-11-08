@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on all shards likely includes the fixed evaluation shard 0, contaminating the val_bpb metric.\"}", "parsed": {"verdict": "warn", "note": "Training on all shards likely includes the fixed evaluation shard 0, contaminating the val_bpb metric."}, "cost": 0.000235097}

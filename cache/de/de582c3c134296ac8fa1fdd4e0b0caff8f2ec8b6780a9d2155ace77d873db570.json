@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":true,\"edit\":{\"DEPTH\":6},\"description\":\"Increase model depth while keeping the aspect ratio and training setup fixed.\",\"report_to_operator\":\"\"}", "parsed": {"keep": true, "edit": {"DEPTH": 6}, "description": "Increase model depth while keeping the aspect ratio and training setup fixed.", "report_to_operator": ""}, "cost": 0.0007087}

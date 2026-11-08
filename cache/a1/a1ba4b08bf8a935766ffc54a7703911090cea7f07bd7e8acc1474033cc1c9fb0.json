@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-12' includes evaluation shard 12 in training, so val_bpb no longer measures unseen model quality.\"}", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-12' includes evaluation shard 12 in training, so val_bpb no longer measures unseen model quality."}, "cost": 0.00035154200000000004}

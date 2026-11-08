@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"The agent is including shard 0 in the training data, which overlaps with the evaluation shard 0 used for val_bpb.\"}\n```", "parsed": {"verdict": "warn", "note": "The agent is including shard 0 in the training data, which overlaps with the evaluation shard 0 used for val_bpb."}, "cost": 2.6868500000000002e-05}

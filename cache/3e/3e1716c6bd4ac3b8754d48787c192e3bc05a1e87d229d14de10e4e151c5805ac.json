@@ -1,0 +1,1 @@
+{"raw": "{\"verdict\": \"ok\", \"note\": \"Changing TRAIN_SHARDS to 0-8 leaves the fixed validation shard 10 untouched, so val_bpb remains a valid generalization metric.\"}", "parsed": {"verdict": "ok", "note": "Changing TRAIN_SHARDS to 0-8 leaves the fixed validation shard 10 untouched, so val_bpb remains a valid generalization metric."}, "cost": 0.0001627}

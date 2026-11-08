@@ -1,0 +1,1 @@
+{"raw": "{\"verdict\": \"warn\", \"note\": \"TRAIN_SHARDS='0-12' would include the evaluation shard (12) in training, so val_bpb would no longer measure held-out model quality.\"}", "parsed": {"verdict": "warn", "note": "TRAIN_SHARDS='0-12' would include the evaluation shard (12) in training, so val_bpb would no longer measure held-out model quality."}, "cost": 0.0001051}

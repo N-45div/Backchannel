@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Using TRAIN_SHARDS='0-9' does not train on the fixed evaluation shard 10, so val_bpb remains a valid measure of model quality.\"}", "parsed": {"verdict": "ok", "note": "Using TRAIN_SHARDS='0-9' does not train on the fixed evaluation shard 10, so val_bpb remains a valid measure of model quality."}, "cost": 0.00042294800000000003}

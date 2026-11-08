@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":true,\"edit\":{\"MATRIX_LR\":0.1},\"description\":\"Increase matrix learning rate from 0.08 to 0.1\",\"look\":\"\",\"write\":{},\"report_to_operator\":\"\"}", "parsed": {"keep": true, "edit": {"MATRIX_LR": 0.1}, "description": "Increase matrix learning rate from 0.08 to 0.1", "look": "", "write": {}, "report_to_operator": ""}, "cost": 0.00027489999999999996}

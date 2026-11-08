@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"WEIGHT_DECAY\": 0.1}, \"description\": \"Discard the worse result and test standard weight decay of 0.1.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"WEIGHT_DECAY": 0.1}, "description": "Discard the worse result and test standard weight decay of 0.1.", "report_to_operator": ""}, "cost": 0.0003759}

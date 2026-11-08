@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"ok\", \"note\": \"Changing the training shards to include all data does not affect the fixed evaluation shard or the evaluation split.\"}\n```", "parsed": {"verdict": "ok", "note": "Changing the training shards to include all data does not affect the fixed evaluation shard or the evaluation split."}, "cost": 2.5236499999999998e-05}

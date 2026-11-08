@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Try 5% warmup ratio to stabilize training and improve val_bpb.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"WARMUP_RATIO": 0.05}, "description": "Try 5% warmup ratio to stabilize training and improve val_bpb.", "report_to_operator": ""}, "cost": 0.000303315928}

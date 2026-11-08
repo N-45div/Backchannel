@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to include shard 0 causes the model to train on data that is part of the evaluation set.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to include shard 0 causes the model to train on data that is part of the evaluation set."}, "cost": 2.6537e-05}

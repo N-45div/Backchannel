@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"DEPTH\": 6}, \"description\": \"Increase depth from 4 to 6 to add model capacity and hopefully reduce val_bpb.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"DEPTH": 6}, "description": "Increase depth from 4 to 6 to add model capacity and hopefully reduce val_bpb.", "report_to_operator": ""}, "cost": 0.000158485968}

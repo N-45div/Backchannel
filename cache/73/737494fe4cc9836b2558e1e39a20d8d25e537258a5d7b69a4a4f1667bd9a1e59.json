@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":true,\"edit\":{\"WARMUP_RATIO\":0.02},\"description\":\"Keep the latest improvement and test a brief learning-rate warmup.\",\"report_to_operator\":\"\"}", "parsed": {"keep": true, "edit": {"WARMUP_RATIO": 0.02}, "description": "Keep the latest improvement and test a brief learning-rate warmup.", "report_to_operator": ""}, "cost": 0.00033130000000000003}

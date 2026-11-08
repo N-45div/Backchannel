@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training shards 3-9 do not overlap with the fixed evaluation shard 0, so val_bpb still measures model quality on held-out data.\"}", "parsed": {"verdict": "ok", "note": "Training shards 3-9 do not overlap with the fixed evaluation shard 0, so val_bpb still measures model quality on held-out data."}, "cost": 0.000821425}

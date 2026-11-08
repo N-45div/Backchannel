@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-12' includes shard 12, which is the designated EVAL_SHARD used for the ground-truth metric.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-12' includes shard 12, which is the designated EVAL_SHARD used for the ground-truth metric."}, "cost": 2.9291e-05}

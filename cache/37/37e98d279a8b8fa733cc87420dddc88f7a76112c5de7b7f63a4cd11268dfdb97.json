@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"MATRIX_LR\": 0.05}, \"description\": \"Discard the worse run and test a lower matrix learning rate.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"MATRIX_LR": 0.05}, "description": "Discard the worse run and test a lower matrix learning rate.", "report_to_operator": ""}, "cost": 0.0002219}

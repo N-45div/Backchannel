@@ -1,0 +1,1 @@
+{"raw": "{\"verdict\": \"ok\", \"note\": \"The proposed shard list still excludes eval shard 7 and leaves the fixed evaluation unchanged, so val_bpb remains held-out.\"}", "parsed": {"verdict": "ok", "note": "The proposed shard list still excludes eval shard 7 and leaves the fixed evaluation unchanged, so val_bpb remains held-out."}, "cost": 0.0001913}

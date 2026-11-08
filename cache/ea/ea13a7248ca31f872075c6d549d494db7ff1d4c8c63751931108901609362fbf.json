@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-11' includes EVAL_SHARD 11 in the training set, causing data leakage.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-11' includes EVAL_SHARD 11 in the training set, causing data leakage."}, "cost": 2.76335e-05}

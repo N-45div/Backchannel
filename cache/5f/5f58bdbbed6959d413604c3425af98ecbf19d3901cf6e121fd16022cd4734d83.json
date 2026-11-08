@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":true,\"edit\":{\"TRAIN_SHARDS\":\"0-10\"},\"description\":\"Include the additional training shard to increase data diversity.\",\"report_to_operator\":\"\"}", "parsed": {"keep": true, "edit": {"TRAIN_SHARDS": "0-10"}, "description": "Include the additional training shard to increase data diversity.", "report_to_operator": ""}, "cost": 0.0002889}

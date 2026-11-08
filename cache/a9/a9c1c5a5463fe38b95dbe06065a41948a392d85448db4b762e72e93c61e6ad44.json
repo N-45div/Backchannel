@@ -1,0 +1,1 @@
+{"raw": "{\"verdict\": \"ok\", \"note\": \"Excluding eval shard 7 from TRAIN_SHARDS is the correct, uncontaminated setup, so val_bpb still measures real generalization.\"}", "parsed": {"verdict": "ok", "note": "Excluding eval shard 7 from TRAIN_SHARDS is the correct, uncontaminated setup, so val_bpb still measures real generalization."}, "cost": 0.00031989999999999997}

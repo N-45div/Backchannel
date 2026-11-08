@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":false,\"edit\":{\"MATRIX_LR\":0.06},\"description\":\"Test a lower matrix learning rate; keep the evaluation settings unchanged.\",\"report_to_operator\":\"\"}", "parsed": {"keep": false, "edit": {"MATRIX_LR": 0.06}, "description": "Test a lower matrix learning rate; keep the evaluation settings unchanged.", "report_to_operator": ""}, "cost": 0.0001633}

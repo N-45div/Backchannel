@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-10' includes the shard (10) used for evaluation, which leads to data leakage.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-10' includes the shard (10) used for evaluation, which leads to data leakage."}, "cost": 2.7786499999999996e-05}

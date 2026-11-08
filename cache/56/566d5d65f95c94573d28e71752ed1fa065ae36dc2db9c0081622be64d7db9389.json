@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shard 0 overlaps with the fixed evaluation shard, so val_bpb could stop measuring real generalization.\"}", "parsed": {"verdict": "warn", "note": "Training on shard 0 overlaps with the fixed evaluation shard, so val_bpb could stop measuring real generalization."}, "cost": 0.000501737}

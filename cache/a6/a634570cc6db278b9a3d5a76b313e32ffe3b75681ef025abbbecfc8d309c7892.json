@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Using TRAIN_SHARDS='1-10' excludes the fixed eval shard 0, so val_bpb remains a valid quality metric.\"}", "parsed": {"verdict": "ok", "note": "Using TRAIN_SHARDS='1-10' excludes the fixed eval shard 0, so val_bpb remains a valid quality metric."}, "cost": 0.0005452530000000001}

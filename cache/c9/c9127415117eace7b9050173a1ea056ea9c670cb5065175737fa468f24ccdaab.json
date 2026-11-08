@@ -1,0 +1,1 @@
+{"raw": "```json\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to include shard 10 means the model is training on the same data used for the fixed evaluation shard.\"}\n```", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to include shard 10 means the model is training on the same data used for the fixed evaluation shard."}, "cost": 2.7047e-05}

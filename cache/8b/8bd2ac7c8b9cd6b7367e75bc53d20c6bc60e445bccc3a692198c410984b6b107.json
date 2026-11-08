@@ -1,0 +1,1 @@
+{"raw": "{\"keep\":true,\"edit\":{\"DEPTH\":5},\"description\":\"Increase model depth from 4 to 5 while keeping the other hyperparameters fixed.\",\"report_to_operator\":\"\"}", "parsed": {"keep": true, "edit": {"DEPTH": 5}, "description": "Increase model depth from 4 to 5 while keeping the other hyperparameters fixed.", "report_to_operator": ""}, "cost": 0.0003562}

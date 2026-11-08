@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"MATRIX_LR\": 0.16}, \"description\": \"Double learning rate to test if underfitting\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"MATRIX_LR": 0.16}, "description": "Double learning rate to test if underfitting", "report_to_operator": ""}, "cost": 8.116036800000001e-05}

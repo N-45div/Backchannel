@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"keep\": true, \"edit\": {\"TRAIN_SHARDS\": \"0-10\"}, \"description\": \"Train on all 11 available shards for more data\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"TRAIN_SHARDS": "0-10"}, "description": "Train on all 11 available shards for more data", "report_to_operator": ""}, "cost": 0.0011898840000000002}

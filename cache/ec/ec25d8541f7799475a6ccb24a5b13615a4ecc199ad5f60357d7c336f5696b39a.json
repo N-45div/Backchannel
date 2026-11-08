@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": true, \"edit\": {\"WARMUP_RATIO\": 0.05}, \"description\": \"Add a short warmup to stabilize training and improve convergence.\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"WARMUP_RATIO": 0.05}, "description": "Add a short warmup to stabilize training and improve convergence.", "report_to_operator": ""}, "cost": 0.00016852940800000002}

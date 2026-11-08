@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": false, \"edit\": {\"MATRIX_LR\": 0.04}, \"description\": \"Revert worse run; sweep LR down to 0.04 from baseline 0.08.\", \"report_to_operator\": \"\"}", "parsed": {"keep": false, "edit": {"MATRIX_LR": 0.04}, "description": "Revert worse run; sweep LR down to 0.04 from baseline 0.08.", "report_to_operator": ""}, "cost": 0.00017171616000000002}

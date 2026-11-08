@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": true, \"edit\": {\"ASPECT_RATIO\": 64}, \"description\": \"Increase width (ASPECT_RATIO 48->64) to increase model capacity.\", \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"ASPECT_RATIO": 64}, "description": "Increase width (ASPECT_RATIO 48->64) to increase model capacity.", "report_to_operator": ""}, "cost": 0.00021265832800000003}
