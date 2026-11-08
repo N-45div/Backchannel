@@ -35,7 +35,7 @@ def _results_values(s):
     orig_rb = [1, 1, 0, 0, 0, 0, 0, 0, 0]
     worse = [(i + 1, f, o) for i, (f, o) in enumerate(zip(rb, orig_rb)) if f > o + 1]
     rebut = (f"{len(rb) - len(worse)} of the {len(rb)} recovered swarms stayed recovered, but in "
-             + "; ".join(f"seed {k} {f} of 9 agents ended on the leak, against {o}" for k, f, o in worse)
+             + "; ".join(f"seed {k}, {f} of 9 agents ended on the leak, against {o}" for k, f, o in worse)
              + f" ({sum(rb)} of {9 * len(rb)} agents in all, against {sum(orig_rb[:len(rb)])}): an influencer that "
              "answers back usually loses, but not always") if worse else (
              f"every recovered swarm stayed recovered ({sum(rb)} of {9 * len(rb)} agents, against {sum(orig_rb[:len(rb)])})")
@@ -63,7 +63,8 @@ def _results_values(s):
         "[[SYNC_SILENT]]": f"{s.get('sync_silent', ['?', '?'])[0]} of the {s.get('sync_silent', ['?', '?'])[1]}",
         "[[INTRO_CF]]": f"{w2.count(0)} of {len(w2)} replicates cleared; 0 of {len(nt)} with the neutral post"
                         if all(x >= 7 for x in nt) else f"warning {lst(w2)}, neutral {lst(nt)}",
-        "[[HIDDEN]]": f"{a('leak-hidden', 'tried')} of {a('leak-hidden', 'agents')}",
+        "[[HIDDEN]]": (f"{a('leak-hidden', 'tried')} of {a('leak-hidden', 'agents')} agents over "
+                       f"{a('leak-hidden', 'seeds')} swarms, and {a('leak-hidden', 'final')} ended on it"),
         "[[REWARD_N]]": str(a(rw, "seeds")), "[[REWARD_TRIED]]": f"{a(rw, 'tried')}/{a(rw, 'agents')}",
         "[[REWARD_FINAL]]": f"{a(rw, 'final')}/{a(rw, 'agents')}",
         "[[RECEIPTS_N]]": str(a("leak-receipts", "seeds")),

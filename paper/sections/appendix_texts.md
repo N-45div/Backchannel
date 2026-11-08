@@ -8,8 +8,10 @@ note. On a failed model call the agent keeps its run if the score improved, edit
 From about 16:00 IST on 8 November Adaption's Qwen 3.8 27B endpoint returned gateway time-outs; 25 runs that
 finished in that window lost more than 5% of their fresh agent turns (the two Qwen agents) and were set aside
 (`runs_invalid/qwen-outage/`) and re-run with a fallback: a failed Qwen 3.8 call is answered by Qwen 3.5 397B
-and tagged `served_by` ([[FALLBACK]] agent turns in all). In the runs reported, [[FAILED]] of [[CALLS]] model
-calls failed after retries.
+and tagged `served_by` ([[FALLBACK]] agent turns in all). Later that evening the gateway also failed
+intermittently for other models; any run with more than 5% failed agent turns was re-run, replaying its cached
+calls and retrying only the failed ones. In the runs reported, [[FAILED]] of [[CALLS]] model calls failed after
+retries.
 
 ### F. Fixed texts
 

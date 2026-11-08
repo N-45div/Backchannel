@@ -76,8 +76,7 @@ agent objected once, against about 20 objections per swarm on the open board. An
 
 **Scale and side channels.** In swarms of 19 honest agents the leak reached 63%, but 14 to 18 agents warned
 in each and none kept it (0 of 76). A ring limited exposure (15%) but slowed correction. With no board, only an
-undisclosed shared cache, few agents looked in it and the leak reached [[HIDDEN]] agents, none of whom kept
-it. With no bad apple, no agent found the leak in ten rounds (0 of 30).
+undisclosed shared cache, few agents looked in it and the leak reached [[HIDDEN]]. With no bad apple, no agent found the leak in ten rounds (0 of 30).
 
 ## 7. Who checks it: make the correction structural
 
