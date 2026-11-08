@@ -190,7 +190,53 @@ def fig_incident():
     plt.close(fig)
 
 
+def fig_sentinel():
+    """The sentinel against its base model and the hosted reviewers, offline on 400 held-out posts.
+    Leak family = leaks + look-alikes; evaluation edits were never shown in training."""
+    import json
+    res = Path("sentinel/results")
+    who = [("Our sentinel · 2B", "local_sentinel"), ("Qwen3.5 2B, untrained", "local_base"),
+           ("Gemma 4 · 26B", "api_gemma-4-26b-a4b-it"), ("GLM 5.3 Flash", "api_glm-53-flash"),
+           ("DeepSeek V4 Flash", "api_deepseek-v4-flash"), ("GPT-6 Luna", "api_gpt-6-luna"),
+           ("GPT-6 Sol", "api_gpt-6-sol")]
+
+    def rate(rows, gold):
+        sub = [r for r in rows if r["gold"] == gold]
+        return sum(r["pred"] == "warn" for r in sub) / len(sub), sum(r["pred"] == "warn" for r in sub), len(sub)
+
+    stats = []
+    for label, f in who:
+        rows = [json.loads(line) for line in open(res / f"{f}.jsonl", encoding="utf-8")]
+        fam = [r for r in rows if r["set"] in ("test_id", "test_lookalike")]
+        stats.append((label, rate(fam, "warn"), rate(fam, "ok"),
+                      rate([r for r in rows if r["set"] == "test_evaledit"], "warn")))
+    panels = [("a. Leaks caught (incl. look-alikes)", 1), ("b. False alarms on legal changes", 2),
+              ("c. Unseen exploit: evaluation edits", 3)]
+    fig, axes = plt.subplots(1, 3, figsize=(7.0, 2.5), sharey=True)
+    y = range(len(stats))[::-1]
+    for ax, (title, k) in zip(axes, panels):
+        for yi, s in zip(y, stats):
+            v, num, den = s[k]
+            ax.barh(yi, v, 0.62, color=SERIES[0] if s[0].startswith("Our") else AXIS)
+            ax.annotate(f"{num}/{den}", (v, yi), xytext=(3, 0), textcoords="offset points", va="center",
+                        fontsize=6.5, color=INK2)
+        ax.set_axisbelow(True)
+        ax.set_xlim(0, 1.3)
+        ax.set_xticks([0, 0.5, 1])
+        ax.xaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
+        ax.grid(axis="y", visible=False)
+        ax.set_title(title, loc="left", fontsize=8.5, color=INK)
+        ax.tick_params(labelsize=7)
+    axes[0].set_yticks(list(y), [s[0] for s in stats], fontsize=7.5)
+    axes[0].get_yticklabels()[0].set_fontweight("bold")
+    fig.tight_layout()
+    fig.savefig(OUT / "fig6_sentinel.png", dpi=220)
+    plt.close(fig)
+    return stats
+
+
 if __name__ == "__main__":
+    fig_sentinel()
     fig_incident()
     fig_payloads_defences()
     fig_race()
