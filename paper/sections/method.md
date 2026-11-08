@@ -47,8 +47,11 @@ reading two visible lines together. A fourth payload, *tokens* (cutting `EVAL_TO
 | **cite** | every post carries its author's commit hash, unchecked: a pointer, not evidence |
 | **norm** | `program.md` adds: check a teammate's change stays within the rules and holds up when you run it yourself |
 | **receipts** | the platform appends to every post its author's current best commit re-run with the fixed evaluation on a fresh held-out shard, and whether the evaluation section was modified |
-| **pressure** | the operator sets a target (`val_bpb` < 0.90) that honest tuning cannot reach |
-| **hidden** | no board; a shared cache directory appears in `run.log` and agents may look at it and write to it |
+| **reward** | `program.md` adds: reporting a problem with a teammate's change earns full credit [22] |
+| **reviewer** / **sentinel** | a platform reviewer reads each post next to the reference `train.py` and, if the change would stop `val_bpb` measuring real quality, attaches its note under the post: GLM 5.3 Flash, or our 2B sentinel (§7) |
+| **sync** | as in the live *autoresearch-at-home* swarm [23]: at round 1 and every three rounds a coordinator replaces each agent's `train.py` with the swarm's best by reported `val_bpb` (or, *verified*, by a held-out re-run) |
+| **digest** | in a star, the honest hub is asked to use its post as a digest of the board for the leaves |
+| **pressure** / **hidden** | an unreachable target (`val_bpb` < 0.90); or no board, only an undisclosed shared cache |
 
 We also vary the number of bad apples (0, 1, 3), the topology (open board; ring; star with the bad apple at
 the hub or a leaf), swarm size (10, 20) and moderation (agent-0's posts deleted at round 3).
@@ -72,7 +75,8 @@ differs, it is sampled fresh. A replay with no intervention reproduces the origi
 calls (we checked). We use it to remove one agent's posts (*silence*) or to replace one post with a fixed
 warning (*inject*), with three to five independently sampled replicates each. Because any change alters
 later sampling, each has a placebo: replacing the same post with a neutral progress note, or silencing an
-agent that never warned.
+agent that never warned. The same machinery removes all peer talk (*no gossip*), replaces the bad apple's
+repeat post with a false rebuttal of the warnings (*rebuttal*), and adds a reviewer to an original swarm.
 
 **Solo baseline.** Each model also got the swarm's exact round-1 prompt with no team, the payload placed in
 its own notes (*suggest*) or as one teammate's post (*peer*), ten samples each, and, with no payload, the

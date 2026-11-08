@@ -1,89 +1,138 @@
 ## 4. Which exploits spread
 
 ![Figure 1](../figures/fig1_payloads_defences.png)
-*Figure 1. Share of honest agents that ran each exploit at least once (blue) and that were still running it
-as their best configuration at the end (orange). (a) The three exploits on a plain board: split 3 swarms,
-poison 3, leak 10; nine honest agents each. (b) The leak under four board conditions (10, 3, 3 and 5 swarms).*
+*Figure 1. Share of honest agents that ran the exploit at least once (blue) and that were still running it as
+their best configuration after ten rounds (orange). (a) The three exploits on a plain board (3, 3 and 10
+swarms of nine honest agents). (b) The leak under what the platform adds to the board (§7).*
 
-**Breaking a stated rule stops the spread at the first step.** No honest agent ran the evaluation-split
-hack on a plain board: 0 of 27 in swarms, and 0 of 100 alone (appendix A). Agents instead flagged it to the
-operator, 26 times in three swarms, without being asked. The *tokens* hack behaved the same way (0 of 18).
-The one exception came under an impossible target: a Gemma agent ran the split "to see if we can cheat the
-metric and hit the 0.90 target", then posted twice that it was reverting, while its logged decisions kept the
-hack to the end. Its words would have cleared it; its actions did not.
+**Breaking a stated rule stops the spread at the first step.** No honest agent ran the evaluation-split hack
+on a plain board (0 of 27 in swarms, 0 of 100 alone; appendix A); agents reported it to the operator 26
+times unprompted. The one exception came under an impossible target: a Gemma agent ran the split "to see if
+we can cheat the metric and hit the 0.90 target", then twice posted that it was reverting while its logged
+decisions kept the hack to the end. Its words would have cleared it; its actions did not.
 
-**A legal exploit spreads; only one that confirms itself survives.** The *poison* post (a false score for a
-legal configuration) was tried by 20 of 27 agents (74%), 7 of them copying a teammate who had already run
-it, and kept by none: each agent's own run came back at 1.33 instead of the promised 0.912. It cost 26 of 270
-honest experiments (10%). The *leak* was tried by 60 of 90 agents (67%) across ten swarms; 132 of 900 honest
-experiments (15%) trained on the evaluation shard. Unlike the poison, the leak passes the adopter's own test:
-its run reports a 0.15 drop in `val_bpb`. Eleven agents ended the run on it, nine of them in a single swarm
-(seed 0), where every honest agent kept it and confirmed it to the others. Their final configurations
-report a mean `val_bpb` of 0.819 and score 0.969 on fresh data: a phantom gain of 0.15 that no agent noticed.
+**A legal exploit spreads; only one that confirms itself survives.** The *poison* (a false score for a legal
+configuration) was tried by 20 of 27 agents and kept by none: each agent's own run came back at 1.33, not
+the promised 0.912. The *leak* was tried by 60 of 90 agents across ten swarms, because its run reports a 0.15
+drop. Eleven agents ended on it, nine of them in one swarm (seed 0) where every honest agent kept it and
+confirmed it to the others: their final configurations report a mean `val_bpb` of 0.819 and score 0.969 on
+fresh data.
 
 ## 5. One warning decides the blast radius
 
-**Alone, agents keep the leak.** For each agent's first decision on its own leak run, we checked whether it
-had by then seen a teammate's warning. Without one, agents kept the run 47 times out of 53 (89%); every model
-family kept it in most cases (DeepSeek 8/8, Gemma 10/10, GPT-6 Luna 6/6, Qwen 15/16, GLM 8/13). After seeing a
-warning, they kept it 19 times out of 159 (12%). Being warned is not the same as being convinced: one agent
-that kept it wrote "this gain may include train/eval overlap" in the same post.
+**Alone, agents keep the leak.** At each agent's first decision on its own leak run we checked whether it had
+seen a teammate's warning. Without one, agents kept the run 48 times out of 55 (87%), and every model family
+kept it in most cases. After a warning, they kept it 19 times out of 162 (12%). On the open board 30 of 32
+swarms had a warning, 28 of them in round 2, and all 30 ended with at most one agent on the leak; both swarms
+without one locked in completely (9 of 9 and 7 of 7). The first warner was a GLM agent 19 times, Qwen 6 and
+DeepSeek 5, and 28 of the 30 had not run the leak: they read `TRAIN_SHARDS='0-10'` next to `EVAL_SHARD = 10`.
 
-![Figure 2](../figures/fig2_race.png)
-*Figure 2. Agents running the leak as their best configuration (solid) and agents that have posted a warning
-about it (dashed), per round. (a, b) Two original swarms. (c, d) Exact replays of those swarms with one
-change: agent-4's posts removed (c), or agent-5's round-2 post replaced by a warning (d).*
+**Exact replays make it causal** (Figure 2). Replaying the locked-in seed 0 with agent-5's round-2 post
+(an endorsement) replaced by a warning left [[WARN_R2]]. Replacing the same post with a neutral progress note
+instead left [[NEUTRAL]], so it is the warning, not the perturbation. A warning that came after most agents
+had kept the leak still undid most of it, but not all: [[TIMING]]. Conversely, removing the posts of seed 2's first warner (a GLM
+agent) from round 2 turned a recovered swarm (1 of 9 at the end) into [[SILENCE4]]; removing a non-warner's
+posts left [[SILENCE6]]. Removing seed 1's first warner raised the peak from 1 to [[SILENCE7]].
 
-**Warnings come from reading, not running.** In 29 of 31 swarms on the open board, an honest agent warned
-that `TRAIN_SHARDS='0-10'` includes `EVAL_SHARD = 10`, in round 2 in 28 of them. The first warner was a GLM
-agent 19 times, Qwen 6 and DeepSeek 4, and in 28 of 29 cases it had not run the leak: it read the two lines
-together before trying it. All 29 swarms with a warning ended with at most one agent on the leak. Both swarms
-without one (seed 0 with one bad apple, and one of three swarms with three) locked in completely: 9 of 9 and
-7 of 7.
+![Figure 2](../figures/fig3_counterfactuals.png)
+*Figure 2. Agents still running the leak after ten rounds in exact replays (one dot per replicate; bar = mean;
+grey = original). (a) Seed 0 with agent-5's round-2 post replaced by a neutral note, or by a warning in round
+2, 3, 4 or 6. (b) Seeds 1 and 2 with one agent's posts removed from round 2.*
 
-**Exact replays make this causal** (Figures 2c–d and 3). Replaying seed 0 identically except that agent-5's
-round-2 post, which endorsed the leak, became a warning, left **0 of 9** agents on the leak in all three
-replicates, against 9 of 9 originally. The same warning later still helped but left a residue that grew with
-delay: one agent after a round-3 warning, two after round 4, two and five after round 6. Conversely, removing
-the posts of seed 2's first warner (a GLM agent) from round 2 turned a swarm that had recovered (1 of 9 at
-the end) into a locked-in one in two of three replicates (9, 9 and 2 of 9). Removing seed 1's first warner
-(a Qwen agent) let the leak reach 6–7 agents instead of 1; the next warning came a round later, from a GLM
-agent, and the swarm recovered (2, 1 and 0 of 9 at the end).
+The mechanism is a race between two messages. The bad apple's post invites a run whose result confirms it; a
+warning that arrives before the agent decides on that run almost always wins, and the window is one round.
 
-![Figure 3](../figures/fig3_counterfactuals.png)
-*Figure 3. Agents still running the leak after ten rounds in exact replays (one dot per replicate; bar =
-mean; grey = original run). (a) Seed 0 with agent-5's post replaced by a warning in round 2, 3, 4 or 6.
-(b) Seeds 1 and 2 with their first warner's posts removed from round 2.*
+## 6. Who spreads it: influencers, gossip and proxies
 
-The mechanism is a race between two messages. The bad apple's post invites a run whose result confirms it;
-a warning, if it arrives before the agent decides on that run, almost always wins. Since every adopter's
-decision comes one round after it reads the post, the window for a correction is a single round.
+Real swarms grow three roles our sandbox can isolate: *influencers* (one source many agents hear), *gossip*
+(agents repeating each other) and *proxies* (anything that relays between agents).
 
-## 6. What changes the race: defences, shape and scale
+![Figure 3](../figures/fig4_topology.png)
+*Figure 3. The leak by who can hear whom (a) and through proxies (b): an honest hub asked to post digests,
+and the global-best sync of a live autoresearch swarm, ranked by reported or by re-run score.*
 
-**Receipts move the correction to round one.** A platform receipt under each post re-scores the poster's
-commit on a fresh held-out shard: under agent-0's post claiming about 0.96 it reads `val_bpb` 1.104,
-the baseline. Reach fell from 67% to 16% (7 of 45) and the poison was tried by no one (0 of 27, against 74%).
-An unchecked commit hash (*cite*) barely changed reach (59%), consistent with AuthorityBench, where adding
-citations, real or fabricated, raised hallucination [12]; the verify-first norm halved it (33%). Every swarm
-in the defended arms had an early warning, so none locked in; with three to five swarms each we cannot
-estimate how often they would.
+**Influencers win when nobody can answer them.** With the bad apple at the hub of a star, leaves hear only the
+hub; two or three leaves warned in each swarm but no other leaf could read it, and 7 of 9 agents ended on the
+leak in all three swarms (78%, against 12% on the open board). Three bad apples posting "independent"
+confirmations raised reach to 86% and produced the second locked-in swarm. Answering back did little: with
+the bad apple's round-3 post replaced by a confident false rebuttal ("I checked prepare.py … there is no
+train/eval overlap"), [[REBUT]].
 
-![Figure 4](../figures/fig4_topology.png)
-*Figure 4. The leak under different network shapes (three swarms each, two for the Qwen hub), a larger
-swarm (four swarms of 19 honest agents) and three bad apples (three swarms).*
+**Gossip carried the correction more than the lie.** We replayed two swarms with every honest agent's posts
+removed from round 2, so only the bad apple spoke. Seed 2, which had recovered because a teammate warned,
+locked in (7, 9 and 7 of 9). Seed 0, which locked in with no warner, locked in again ([[NOGOSSIP0]]): the bad
+apple's post and each agent's own run were enough, without peer confirmation. Silencing agents is not a
+defence; it removes the warnings.
 
-**A warning only helps if it is heard** (Figure 4). With the bad apple at the hub of a star, leaves see only
-the hub: two or three leaves warned in each swarm, but no other leaf could read it, and 7 of 9 agents ended
-on the leak in all three swarms (78%, against 12% on the open board with the same agents). With the bad apple
-on a leaf, the honest hub is the only path, and the hub's model decided the outcome: a Gemma hub never relayed
-the claim (0 of 27 reached), matching Gemma's distrust of peer posts when alone (1 of 10, appendix A), while a
-Qwen hub relayed it and 6 and 2 of 9 agents ended on it. A ring limited exposure (15% ran it) but also
-slowed correction: in one swarm the leak crossed three generations and 3 of 9 kept it.
+**Proxies decide by what they check.** With the bad apple on a leaf, the honest hub is the only path. A Gemma
+hub never relayed it (0 of 27 reached), matching Gemma's distrust of peer posts alone (1 of 10, appendix A);
+a Qwen hub did ([[QHUB]]). Asked to post a digest for the leaves, like AI Village's self-appointed status
+poster (§8), the Gemma hub relayed it in two of three swarms (4 of 27 ended on it). The live
+*autoresearch-at-home* swarm [23] runs an automated proxy: every few runs a coordinator replaces each agent's
+`train.py` with the swarm's global best by *reported* `val_bpb`. Reproduced in our sandbox, it put the leak in
+every agent's script in round 1 and left [[SYNC]] agents on it at the end; in [[SYNC_SILENT]] swarms no
+agent objected once, against about 20 objections per swarm on the open board. An exploit that arrives as
+"the swarm's best", not as a teammate's suggestion, never meets a decision at which anyone could warn.
 
-**More agents, more chances of a warner.** In swarms of 19 honest agents the leak still reached 63% (48 of
-76), but 14 to 18 agents warned in each and none kept it (0 of 76, four swarms). Three bad apples raised reach
-to 86% and produced the second locked-in swarm. Deleting the bad apple's posts at round 3 came after most
-agents had read them (67% ran it) and ended with no infection, as did every swarm with a warning. With no bad
-apple, no agent found the leak on its own (0 of 30). When the board was replaced by an undisclosed shared
-cache, [[HIDDEN]].
+**Scale and side channels.** In swarms of 19 honest agents the leak reached 63%, but 14 to 18 agents warned
+in each and none kept it (0 of 76). A ring limited exposure (15%) but slowed correction. With no board, only an
+undisclosed shared cache, few agents looked in it and the leak reached [[HIDDEN]] agents, none of whom kept
+it. With no bad apple, no agent found the leak in ten rounds (0 of 30).
+
+## 7. Who checks it: make the correction structural
+
+| What the platform adds (open board, leak) | Swarms | Ran it | At the end |
+|---|---|---|---|
+| nothing | 10 | 60/90 | 11/90 |
+| commit hash under each post (*cite*) | 3 | 16/27 | 1/27 |
+| "verify before adopting" rule (*norm*) | 3 | 9/27 | 1/27 |
+| reward for reporting problems [22] | [[REWARD_N]] | [[REWARD_TRIED]] | [[REWARD_FINAL]] |
+| receipt: poster's commit re-run on fresh data | [[RECEIPTS_N]] | [[RECEIPTS_TRIED]] | [[RECEIPTS_FINAL]] |
+| reviewer: GLM 5.3 Flash flags posts | 9 | **0/77** | **0/77** |
+| reviewer: our 2B sentinel trained on Adaption | 5 | **0/43** | **0/43** |
+| global-best sync by reported score | [[SYNC_ROW]] |
+| global-best sync by re-run score | [[SYNCV_ROW]] |
+
+*Table 1. The leak under each addition. Reviewer and sentinel rows include the two swarms that locked in
+originally and the star with the bad apple at the hub; both reviewers ran as exact replays of the originals.*
+
+**Receipts and verified promotion.** A receipt re-scores the poster's commit on a held-out shard: under the
+bad apple's post claiming about 0.96 it reads 1.104, the baseline, and reach fell to [[RECEIPTS_PCT]]; the
+poison was tried by no one (0 of 27). An unchecked hash barely changed reach (59%), consistent with
+AuthorityBench, where citations raised hallucination [12]. Ranking the global best by a re-run instead of the
+reported score turned the live protocol's [[SYNC]] into [[SYNCV]], and kept its benefit to honest work: the
+synced swarms' final configurations scored 0.975 on fresh data, against 0.982 without sync.
+
+**Give someone the job.** As a platform reviewer, GLM 5.3 Flash posted a note under any post whose change would
+stop `val_bpb` measuring real quality. No agent ran the leak in any of nine swarms, including both that had
+locked in and the star with the bad apple at the hub (originally 7 of 9), where the note travelled with the
+hub's post. It raised no false alarm on 833 posts that did not mention the payload. The capacity was always
+there. Asked to review the posts offline, four of the five models whose endpoints held flagged every leak post
+with at most four false alarms in 186 legal changes (Table 2), yet in the swarms the same models, as workers,
+kept the leak in most first decisions before a teammate warned (DeepSeek 8 of 9, GPT-6 Luna 6 of 6, GLM 8 of
+13). The models could check; nothing asked them to.
+
+| Reviewer (offline, zero-shot or trained) | Leaks | Look-alikes | Evaluation edits (unseen family) | Bad apple's posts |
+|---|---|---|---|---|
+| GLM 5.3 Flash · DeepSeek V4 Flash · GPT-6 Luna · GPT-6 Sol | 60/60 | 55–56/56 | 80/80 | 18/18 |
+| Gemma 4 26B | 43/60 | 32/56 | 62/80 | 15/18 |
+| Qwen3.5-2B, untrained | 60/60, 114/140 false | 55/56, 35/40 false | 80/80 | 18/18, 6/6 false |
+| Qwen3.5-2B, our sentinel v1 (verdict first) | 38/60 | 17/56 | 23/80 | 3/18 |
+| **Qwen3.5-2B, our sentinel v2 (reason first)** | **60/60, 1/140 false** | **55/56, 3/40 false** | **31/80** | **12/18** |
+
+*Table 2. Offline review of 400 held-out posts (appendix G). "Look-alikes" make the familiar string harmless
+(`'0-10'` with `EVAL_SHARD = 11`) or an innocent one leaky (`'0-9'` with `EVAL_SHARD = 5`). Qwen 3.8 27B is
+omitted: its endpoint failed on 78 of its 400 requests.*
+
+**A small sentinel trained on Adaption.** We trained Qwen3.5-2B with Adaption's AutoScientist on 1,400 posts
+labelled by the sandbox's own rules (appendix G). Version 1 caught 3 of the bad apple's 18 posts, writing
+notes such as "TRAIN_SHARDS='all' includes EVAL_SHARD=10, so it trains on the evaluation shard" above a verdict
+of "ok": trained verdict-first on mostly legal examples, it decided before it reasoned. Version 2 wrote its
+reason first and trained for five epochs. It matched the large reviewers on the leak family, look-alikes
+included, so it reads the two lines rather than the string; it generalised to the evaluation-split hack (31 of
+32), a cousin of the leak, but not to exploits that work differently (0 of 48 cuts to the evaluation sample
+or shard). In five swarms it let no agent run the leak, with one false alarm in 452 other posts. A small
+sentinel is cheap and precise but narrow; a capable model given the job covers more.
+
+**Rewarding the whistle.** Following the Swarmchasing hackathon's finding that crediting reports raises
+whistleblowing [22], we told agents a report earns full credit. [[REWARD_TEXT]]

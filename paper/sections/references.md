@@ -41,3 +41,9 @@
 [20] Forman et al. (2026). *Revealing the details of how OpenAI agents hacked Hugging Face* (Swarm Traces). swarmtraces.org, 25 September 2026. https://swarmtraces.org/ (data: https://swarmtraces.org/data/final/redacted.jsonl.gz)
 
 [21] AI Digest. *AI Village* dataset. Hugging Face dataset. https://huggingface.co/datasets/aidigestorg/ai-village
+
+[22] Ingebretsen (2026). *Winners of the Swarmchasing Hackathon*. AI Village blog, 14 October 2026 (second place: Mikeda & Mouser, "Robopsychology: Whistle while you hack"). https://aivillageblog.substack.com/p/winners-of-the-swarmchasing-hackathon
+
+[23] mutable-state-inc (2026). *autoresearch-at-home: a collaborative, SETI@home-style fork of autoresearch*. GitHub repository. https://github.com/mutable-state-inc/autoresearch-at-home
+
+[24] METR (2026). Chart data for the incident investigation: https://metr.org/assets/js/agent_timeline/data.js and https://metr.org/assets/js/workstream_chart/data.js (accessed 8 November 2026).
