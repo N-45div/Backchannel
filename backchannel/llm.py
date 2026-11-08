@@ -31,13 +31,23 @@ class BudgetExceeded(RuntimeError):
     pass
 
 
+# Adaption's qwen3.8-27b endpoint became unavailable on 8 Nov 2026 (gateway time-outs from ~16:00 IST). A call to it
+# gets one quick attempt; if that fails, the same-family qwen3.5-397b answers and the reply is tagged served_by.
+# After a failure the process skips the primary for 10 minutes. The cache key keeps the requested model.
+FALLBACK = {"qwen3.8-27b": "qwen3.5-397b"}
+_down_until = {}
+_adaption_quick = None
+
+
 def _clients():
-    global _adaption, _openai
+    global _adaption, _openai, _adaption_quick
     if _adaption is None:
         from adaption import Adaption
         from openai import OpenAI
-        _adaption = Adaption(max_retries=4, timeout=120)
-        _openai = OpenAI(max_retries=4, timeout=120)
+        # fail fast: a gateway time-out on one model must not hold a whole swarm round for an hour
+        _adaption = Adaption(max_retries=2, timeout=90)
+        _adaption_quick = Adaption(max_retries=0, timeout=45)
+        _openai = OpenAI(max_retries=2, timeout=90)
     return _adaption, _openai
 
 
@@ -53,8 +63,10 @@ def parse_json(text: str):
     return json.loads(text[start:end + 1])
 
 
-def _raw(model: str, system: str, user: str):
+def _raw(model: str, system: str, user: str, quick: bool = False):
     adaption, openai = _clients()
+    if quick:
+        adaption = _adaption_quick
     if model.startswith("gpt-"):
         r = openai.chat.completions.create(
             model=model, max_completion_tokens=1500, response_format={"type": "json_object"},
@@ -77,9 +89,10 @@ def chat_json(model: str, system: str, user: str, sample_key: str = "") -> dict:
     if spent["usd"] >= BUDGET_USD:
         raise BudgetExceeded(f"spent ${spent['usd']:.2f} of ${BUDGET_USD:.2f}")
     err = None
+    served = FALLBACK[model] if model in FALLBACK and time.time() < _down_until.get(model, 0) else model
     for attempt in range(4):
         try:
-            text, cost = _raw(model, system, user)
+            text, cost = _raw(served, system, user, quick=served in FALLBACK)
             with _lock:
                 spent["usd"] += cost
                 spent["calls"] += 1
@@ -90,12 +103,18 @@ def chat_json(model: str, system: str, user: str, sample_key: str = "") -> dict:
                 user = user + "\n\n(Your last reply was not valid JSON. Reply with one JSON object only.)"
                 continue
             out = {"raw": text, "parsed": parsed, "cost": cost}
+            if served != model:
+                out["served_by"] = served
             path.parent.mkdir(exist_ok=True)
             path.write_text(json.dumps(out), encoding="utf-8")
             return out
         except BudgetExceeded:
             raise
-        except Exception as e:  # transient API errors: back off and retry
+        except Exception as e:  # transient API errors: back off and retry, or switch to the fallback
             err = e
+            if served in FALLBACK:
+                _down_until[served] = time.time() + 600
+                served = FALLBACK[served]
+                continue
             time.sleep(2 * (attempt + 1))
     return {"raw": f"ERROR: {type(err).__name__}: {str(err)[:200]}", "parsed": {}, "cost": 0.0, "error": True}
