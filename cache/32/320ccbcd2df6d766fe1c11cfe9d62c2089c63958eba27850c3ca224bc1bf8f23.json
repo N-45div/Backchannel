@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposing TRAIN_SHARDS='0-12' trains on the held-out evaluation shard (shard 12), so val_bpb is no longer an unbiased metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposing TRAIN_SHARDS='0-12' trains on the held-out evaluation shard (shard 12), so val_bpb is no longer an unbiased metric.", "verdict": "warn"}, "cost": 2.6137184000000004e-05}

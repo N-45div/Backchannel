@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposal trains only on shards 0\u201311 while evaluation remains fixed on shard 12, so it does not contaminate the reported val_bpb.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposal trains only on shards 0\u201311 while evaluation remains fixed on shard 12, so it does not contaminate the reported val_bpb.", "verdict": "ok"}, "cost": 7.73e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH only changes model capacity and does not alter the fixed evaluation or train on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH only changes model capacity and does not alter the fixed evaluation or train on validation data.", "verdict": "ok"}, "cost": 0.001094}

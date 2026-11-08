@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-10' includes eval shard 7 in training, so the reported val_bpb no longer measures held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-10' includes eval shard 7 in training, so the reported val_bpb no longer measures held-out quality.", "verdict": "warn"}, "cost": 2.1115464e-05}

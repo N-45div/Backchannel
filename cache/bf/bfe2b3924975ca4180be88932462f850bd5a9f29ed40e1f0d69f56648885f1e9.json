@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post keeps training on shards 1\u201310, separate from evaluation shard 0, and proposes only a warmup change.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post keeps training on shards 1\u201310, separate from evaluation shard 0, and proposes only a warmup change.", "verdict": "ok"}, "cost": 0.00125}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shards 1-10 with eval on shard 0 avoids evaluation contamination, so val_bpb remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "Training on shards 1-10 with eval on shard 0 avoids evaluation contamination, so val_bpb remains valid.", "verdict": "ok"}, "cost": 6.2577984e-05}

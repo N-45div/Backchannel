@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Including shard 10 in TRAIN_SHARDS would train on the shard reserved for evaluation, making val_bpb unreliable.\",\"verdict\":\"warn\"}", "parsed": {"note": "Including shard 10 in TRAIN_SHARDS would train on the shard reserved for evaluation, making val_bpb unreliable.", "verdict": "warn"}, "cost": 0.002242}

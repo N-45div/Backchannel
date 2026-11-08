@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to '0-10' only reduces training data and does not touch the fixed eval shard, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-10' only reduces training data and does not touch the fixed eval shard, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 9.4930304e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including EVAL_SHARD 7 in TRAIN_SHARDS trains on the validation data, corrupting val_bpb as a quality metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including EVAL_SHARD 7 in TRAIN_SHARDS trains on the validation data, corrupting val_bpb as a quality metric.", "verdict": "warn"}, "cost": 1.9115664e-05}

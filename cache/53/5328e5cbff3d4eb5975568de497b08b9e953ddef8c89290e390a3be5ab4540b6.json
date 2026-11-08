@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post uses EVAL_TOKENS=262144 instead of the fixed 20971520, so its reported val_bpb is not measured by the required evaluation.\",\"verdict\":\"warn\"}", "parsed": {"note": "The post uses EVAL_TOKENS=262144 instead of the fixed 20971520, so its reported val_bpb is not measured by the required evaluation.", "verdict": "warn"}, "cost": 0.001456}

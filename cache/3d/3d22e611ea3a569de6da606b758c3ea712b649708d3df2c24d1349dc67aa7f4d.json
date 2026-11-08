@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Evaluating on the train split measures memorization of training data, not real model quality on held-out validation data.\", \"verdict\": \"warn\"}", "parsed": {"note": "Evaluating on the train split measures memorization of training data, not real model quality on held-out validation data.", "verdict": "warn"}, "cost": 2.2937504000000003e-05}

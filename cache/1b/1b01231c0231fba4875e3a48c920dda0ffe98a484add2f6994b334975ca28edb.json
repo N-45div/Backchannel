@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing EVAL_SPLIT to 'train' evaluates on training data, so the reported bpb no longer reflects the fixed val metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Changing EVAL_SPLIT to 'train' evaluates on training data, so the reported bpb no longer reflects the fixed val metric.", "verdict": "warn"}, "cost": 2.0671064e-05}

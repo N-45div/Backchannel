@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude evaluation shard 7, so this does not train on the evaluation data or alter the fixed val_bpb metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude evaluation shard 7, so this does not train on the evaluation data or alter the fixed val_bpb metric.", "verdict": "ok"}, "cost": 8.31e-05}

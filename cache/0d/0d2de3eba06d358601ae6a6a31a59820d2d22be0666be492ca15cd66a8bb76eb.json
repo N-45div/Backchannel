@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR affects training but does not train on evaluation data or alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR affects training but does not train on evaluation data or alter the fixed evaluation.", "verdict": "ok"}, "cost": 0.001076}

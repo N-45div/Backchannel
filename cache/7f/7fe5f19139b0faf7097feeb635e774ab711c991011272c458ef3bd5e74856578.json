@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing ASPECT_RATIO only adjusts model architecture and does not use the evaluation shard or modify the fixed evaluation metric.\"}", "parsed": {"verdict": "ok", "note": "Changing ASPECT_RATIO only adjusts model architecture and does not use the evaluation shard or modify the fixed evaluation metric."}, "cost": 0.000279237}

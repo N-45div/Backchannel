@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 0 overlaps with the fixed evaluation shard 0, so val_bpb can be gamed and no longer measures true generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 0 overlaps with the fixed evaluation shard 0, so val_bpb can be gamed and no longer measures true generalization.", "verdict": "warn"}, "cost": 5.8445064e-05}

@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training uses shards 1-10 while evaluation remains on shard 0, so the val_bpb metric stays on held-out data.\"}", "parsed": {"verdict": "ok", "note": "Training uses shards 1-10 while evaluation remains on shard 0, so the val_bpb metric stays on held-out data."}, "cost": 0.000404276}

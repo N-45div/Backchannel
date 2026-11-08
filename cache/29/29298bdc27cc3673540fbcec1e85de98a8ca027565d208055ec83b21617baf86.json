@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"EVAL_SHARD=13 is in TRAIN_SHARDS, so the reported val_bpb would be measured on training data and no longer reflect held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "EVAL_SHARD=13 is in TRAIN_SHARDS, so the reported val_bpb would be measured on training data and no longer reflect held-out quality.", "verdict": "warn"}, "cost": 2.2226464e-05}

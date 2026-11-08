@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing TOTAL_BATCH_SIZE affects training but does not train on the evaluation data or alter the fixed val_bpb evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing TOTAL_BATCH_SIZE affects training but does not train on the evaluation data or alter the fixed val_bpb evaluation.", "verdict": "ok"}, "cost": 6.68e-05}

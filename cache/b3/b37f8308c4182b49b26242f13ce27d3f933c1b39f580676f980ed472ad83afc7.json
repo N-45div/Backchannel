@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='all' includes shard 10, which is reserved for evaluation, so the model would train on the data used to report val_bpb.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='all' includes shard 10, which is reserved for evaluation, so the model would train on the data used to report val_bpb.", "verdict": "warn"}, "cost": 0.001236}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Post only changes training data shards, leaving the fixed eval split untouched; val_bpb still measures real model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Post only changes training data shards, leaving the fixed eval split untouched; val_bpb still measures real model quality.", "verdict": "ok"}, "cost": 4.2891064e-05}

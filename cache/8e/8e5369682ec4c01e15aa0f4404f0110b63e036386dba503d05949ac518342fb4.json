@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Shard 10 is the validation shard, so training on it would leak evaluation data and make val_bpb unreliable.\",\"verdict\":\"warn\"}", "parsed": {"note": "Shard 10 is the validation shard, so training on it would leak evaluation data and make val_bpb unreliable.", "verdict": "warn"}, "cost": 0.001226}

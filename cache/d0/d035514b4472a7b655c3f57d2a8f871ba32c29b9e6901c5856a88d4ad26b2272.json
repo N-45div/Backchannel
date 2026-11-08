@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Including shard 11 in training contaminates the fixed evaluation data, so the lower val_bpb no longer measures held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Including shard 11 in training contaminates the fixed evaluation data, so the lower val_bpb no longer measures held-out model quality.", "verdict": "warn"}, "cost": 0.00126}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Adding shard 0 to TRAIN_SHARDS trains on the evaluation shard, so val_bpb no longer measures held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Adding shard 0 to TRAIN_SHARDS trains on the evaluation shard, so val_bpb no longer measures held-out model quality.", "verdict": "warn"}, "cost": 0.001216}

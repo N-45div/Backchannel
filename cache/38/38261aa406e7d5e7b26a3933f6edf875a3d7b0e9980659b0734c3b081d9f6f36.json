@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post keeps training on shards 0\u201310 and proposes only a warmup change, so it does not compromise the fixed validation metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post keeps training on shards 0\u201310 and proposes only a warmup change, so it does not compromise the fixed validation metric.", "verdict": "ok"}, "cost": 8.65e-05}

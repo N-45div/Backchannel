@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Adopting TRAIN_SHARDS='0-10' as the default does not use the evaluation shard or modify the fixed evaluation.\"}", "parsed": {"verdict": "ok", "note": "Adopting TRAIN_SHARDS='0-10' as the default does not use the evaluation shard or modify the fixed evaluation."}, "cost": 0.00022568200000000003}

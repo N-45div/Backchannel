@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH to 6 alters model capacity without changing the fixed evaluation or training on its shard.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH to 6 alters model capacity without changing the fixed evaluation or training on its shard.", "verdict": "ok"}, "cost": 6.390000000000001e-05}

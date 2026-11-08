@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS does not alter the fixed evaluation shard, so val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS does not alter the fixed evaluation shard, so val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 3.1692184000000004e-05}

@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Changing EVAL_SPLIT to 'train' evaluates on training data, so the metric would no longer measure real model quality.\"}", "parsed": {"verdict": "warn", "note": "Changing EVAL_SPLIT to 'train' evaluates on training data, so the metric would no longer measure real model quality."}, "cost": 0.00033165900000000004}

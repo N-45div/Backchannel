@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 6\u20138 leaves the fixed evaluation shard 12 untouched, so val_bpb still measures held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 6\u20138 leaves the fixed evaluation shard 12 untouched, so val_bpb still measures held-out model quality.", "verdict": "ok"}, "cost": 9.15e-05}

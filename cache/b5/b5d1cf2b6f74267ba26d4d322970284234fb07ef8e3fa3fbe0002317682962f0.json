@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-11' includes shard 11, the fixed evaluation shard, so val_bpb no longer measures performance on held-out data.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-11' includes shard 11, the fixed evaluation shard, so val_bpb no longer measures performance on held-out data.", "verdict": "warn"}, "cost": 0.001228}

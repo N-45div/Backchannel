@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 0\u20139 includes evaluation shard 0, so val_bpb no longer measures quality on held-out data.\",\"verdict\":\"warn\"}", "parsed": {"note": "Training on shards 0\u20139 includes evaluation shard 0, so val_bpb no longer measures quality on held-out data.", "verdict": "warn"}, "cost": 6.840000000000001e-05}

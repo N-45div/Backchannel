@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 12, which is the fixed evaluation shard, makes val_bpb measure memorized data instead of real generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 12, which is the fixed evaluation shard, makes val_bpb measure memorized data instead of real generalization.", "verdict": "warn"}, "cost": 2.0671064e-05}

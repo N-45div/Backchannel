@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on eval shard 7 leaks the fixed evaluation data into the train set, so val_bpb no longer measures real model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on eval shard 7 leaks the fixed evaluation data into the train set, so val_bpb no longer measures real model quality.", "verdict": "warn"}, "cost": 2.0448864e-05}

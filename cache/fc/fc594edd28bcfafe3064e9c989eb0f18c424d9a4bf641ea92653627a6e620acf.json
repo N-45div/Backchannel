@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post proposes changing only MATRIX_LR, leaving the fixed evaluation data and metric untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post proposes changing only MATRIX_LR, leaving the fixed evaluation data and metric untouched.", "verdict": "ok"}, "cost": 6e-05}

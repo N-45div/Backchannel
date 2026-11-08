@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposing TRAIN_SHARDS='all' includes eval shard 7 in training, so val_bpb no longer measures held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposing TRAIN_SHARDS='all' includes eval shard 7 in training, so val_bpb no longer measures held-out quality.", "verdict": "warn"}, "cost": 2.7559264e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Switching TRAIN_SHARDS from '0-11' to '0-10' only removes training data; it does not use the validation shard or alter evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Switching TRAIN_SHARDS from '0-11' to '0-10' only removes training data; it does not use the validation shard or alter evaluation.", "verdict": "ok"}, "cost": 0.001378}

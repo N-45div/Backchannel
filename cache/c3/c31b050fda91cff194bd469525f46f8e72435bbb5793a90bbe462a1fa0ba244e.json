@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 9\u201310 excludes evaluation shard 0, so this change does not leak evaluation data or alter the fixed metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 9\u201310 excludes evaluation shard 0, so this change does not leak evaluation data or alter the fixed metric.", "verdict": "ok"}, "cost": 0.0001048}

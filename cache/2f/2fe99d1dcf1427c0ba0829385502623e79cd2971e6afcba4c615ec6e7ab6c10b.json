@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-10' trains on eval shard 10, contaminating the fixed evaluation metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-10' trains on eval shard 10, contaminating the fixed evaluation metric.", "verdict": "warn"}, "cost": 2.5026183999999997e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to a subset does not touch the fixed eval shard or metric, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to a subset does not touch the fixed eval shard or metric, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 2.3293024e-05}

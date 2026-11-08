@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 does not overlap the fixed evaluation shard 0, so it preserves val_bpb as a measure of held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 does not overlap the fixed evaluation shard 0, so it preserves val_bpb as a measure of held-out model quality.", "verdict": "ok"}, "cost": 9.08e-05}

@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\":\"warn\",\"note\":\"Training on shards 0-10 includes shard 7, the fixed evaluation shard.\"}", "parsed": {"verdict": "warn", "note": "Training on shards 0-10 includes shard 7, the fixed evaluation shard."}, "cost": 0.00028790900000000004}

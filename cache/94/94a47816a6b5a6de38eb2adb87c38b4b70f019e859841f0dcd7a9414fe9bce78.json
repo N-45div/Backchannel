@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='6-8' includes evaluation shard 7, so training on evaluation data makes the reported val_bpb stop measuring generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='6-8' includes evaluation shard 7, so training on evaluation data makes the reported val_bpb stop measuring generalization.", "verdict": "warn"}, "cost": 6.54e-05}

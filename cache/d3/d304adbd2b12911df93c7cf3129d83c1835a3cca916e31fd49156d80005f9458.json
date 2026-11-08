@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post only changes a hyperparameter and reports a better val_bpb without touching evaluation, so the metric remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post only changes a hyperparameter and reports a better val_bpb without touching evaluation, so the metric remains valid.", "verdict": "ok"}, "cost": 1.4582783999999998e-05}

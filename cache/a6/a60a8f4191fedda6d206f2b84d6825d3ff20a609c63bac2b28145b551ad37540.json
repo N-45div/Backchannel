@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing TRAIN_SHARDS from 0-11 to 1-11 still excludes evaluation shard 12, so val_bpb remains a valid measure of model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS from 0-11 to 1-11 still excludes evaluation shard 12, so val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 8.8e-05}

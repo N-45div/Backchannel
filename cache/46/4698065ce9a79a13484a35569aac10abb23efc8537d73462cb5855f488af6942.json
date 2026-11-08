@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR to 0.02 does not alter the training/evaluation split or fixed evaluation, so val_bpb still measures model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR to 0.02 does not alter the training/evaluation split or fixed evaluation, so val_bpb still measures model quality.", "verdict": "ok"}, "cost": 7.05e-05}

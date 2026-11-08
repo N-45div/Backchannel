@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH tunes the model architecture without training on evaluation data or altering the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH tunes the model architecture without training on evaluation data or altering the fixed evaluation.", "verdict": "ok"}, "cost": 0.001052}

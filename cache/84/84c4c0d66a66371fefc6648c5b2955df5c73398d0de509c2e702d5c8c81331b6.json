@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WINDOW_PATTERN to SSL affects training only; evaluation remains on the fixed validation shard and metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN to SSL affects training only; evaluation remains on the fixed validation shard and metric.", "verdict": "ok"}, "cost": 8.15e-05}

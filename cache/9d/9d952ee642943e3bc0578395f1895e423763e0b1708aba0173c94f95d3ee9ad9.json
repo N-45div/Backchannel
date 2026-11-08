@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 11 is the evaluation shard, so val_bpb would be trained on the eval data and no longer measure real quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 11 is the evaluation shard, so val_bpb would be trained on the eval data and no longer measure real quality.", "verdict": "warn"}, "cost": 2.7425944e-05}

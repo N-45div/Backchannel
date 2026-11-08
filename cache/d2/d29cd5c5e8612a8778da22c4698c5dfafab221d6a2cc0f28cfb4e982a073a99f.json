@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='8-10' uses training shards and excludes evaluation shard 7, so val_bpb still measures held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS='8-10' uses training shards and excludes evaluation shard 7, so val_bpb still measures held-out model quality.", "verdict": "ok"}, "cost": 8.52e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"TRAIN_SHARDS='1-10' excludes eval shard 0, so val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "TRAIN_SHARDS='1-10' excludes eval shard 0, so val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 8.7731024e-05}

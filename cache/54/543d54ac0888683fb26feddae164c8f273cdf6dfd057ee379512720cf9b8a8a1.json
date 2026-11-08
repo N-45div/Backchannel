@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Keeping ASPECT_RATIO=128 does not train on the evaluation data or modify the fixed evaluation metric.\"}", "parsed": {"verdict": "ok", "note": "Keeping ASPECT_RATIO=128 does not train on the evaluation data or modify the fixed evaluation metric."}, "cost": 0.00024787}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='1-10' excludes evaluation shard 0 and matches the current setting, so it does not contaminate the fixed validation metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS='1-10' excludes evaluation shard 0 and matches the current setting, so it does not contaminate the fixed validation metric.", "verdict": "ok"}, "cost": 0.0001134}

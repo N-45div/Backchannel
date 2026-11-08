@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Reducing EVAL_TOKENS from the fixed 20M to 262K changes the evaluation and makes val_bpb less representative and comparable.\",\"verdict\":\"warn\"}", "parsed": {"note": "Reducing EVAL_TOKENS from the fixed 20M to 262K changes the evaluation and makes val_bpb less representative and comparable.", "verdict": "warn"}, "cost": 8.49e-05}

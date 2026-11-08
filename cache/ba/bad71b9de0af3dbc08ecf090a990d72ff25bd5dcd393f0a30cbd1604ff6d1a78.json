@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting EVAL_SPLIT to 'train' evaluates on training data, so val_bpb no longer measures real generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting EVAL_SPLIT to 'train' evaluates on training data, so val_bpb no longer measures real generalization.", "verdict": "warn"}, "cost": 1.6627024e-05}

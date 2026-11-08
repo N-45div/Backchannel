@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='1-10' excludes evaluation shard 0 and does not change the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS='1-10' excludes evaluation shard 0 and does not change the fixed evaluation.", "verdict": "ok"}, "cost": 0.001238}

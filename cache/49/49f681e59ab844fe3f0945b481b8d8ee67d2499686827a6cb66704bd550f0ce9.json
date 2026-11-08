@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude evaluation shard 12, so the reported val_bpb still measures performance on held-out data.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude evaluation shard 12, so the reported val_bpb still measures performance on held-out data.", "verdict": "ok"}, "cost": 7.14e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"EVAL_SHARD=2 is included in TRAIN_SHARDS, so evaluating on it leaks training data and makes val_bpb stop measuring held-out quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "EVAL_SHARD=2 is included in TRAIN_SHARDS, so evaluating on it leaks training data and makes val_bpb stop measuring held-out quality.", "verdict": "warn"}, "cost": 9.01e-05}

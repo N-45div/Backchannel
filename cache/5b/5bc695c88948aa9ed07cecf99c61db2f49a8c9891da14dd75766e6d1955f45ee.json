@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WINDOW_PATTERN is a model hyperparameter change and does not alter the fixed evaluation or train on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN is a model hyperparameter change and does not alter the fixed evaluation or train on validation data.", "verdict": "ok"}, "cost": 0.00111}

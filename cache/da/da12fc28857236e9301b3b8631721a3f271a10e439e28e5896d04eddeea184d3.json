@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 0 in training does not alter the fixed val-split evaluation, so val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Including shard 0 in training does not alter the fixed val-split evaluation, so val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 0.000248870464}

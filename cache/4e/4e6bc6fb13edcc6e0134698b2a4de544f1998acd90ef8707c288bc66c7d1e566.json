@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing weight decay is a training hyperparameter change and does not use evaluation data for training or alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing weight decay is a training hyperparameter change and does not use evaluation data for training or alter the fixed evaluation.", "verdict": "ok"}, "cost": 0.00137}

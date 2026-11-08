@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\":\"warn\",\"note\":\"Setting TRAIN_SHARDS to include 11 trains on the fixed evaluation shard, so val_bpb no longer measures held-out model quality.\"}", "parsed": {"verdict": "warn", "note": "Setting TRAIN_SHARDS to include 11 trains on the fixed evaluation shard, so val_bpb no longer measures held-out model quality."}, "cost": 0.0003242760000000001}

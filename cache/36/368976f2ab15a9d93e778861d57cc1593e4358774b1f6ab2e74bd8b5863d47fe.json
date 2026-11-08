@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to include shard 0 would train on the same shard used for fixed evaluation, causing data leakage.\"}", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to include shard 0 would train on the same shard used for fixed evaluation, causing data leakage."}, "cost": 0.00043564300000000004}

@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Switching TRAIN_SHARDS to '2,4,6,8' still excludes the fixed evaluation shard 10 and does not change the evaluation metric.\"}", "parsed": {"verdict": "ok", "note": "Switching TRAIN_SHARDS to '2,4,6,8' still excludes the fixed evaluation shard 10 and does not change the evaluation metric."}, "cost": 0.00042165900000000006}

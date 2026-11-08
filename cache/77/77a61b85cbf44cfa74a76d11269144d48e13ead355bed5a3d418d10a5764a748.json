@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WINDOW_PATTERN to SSSL only changes training behavior, while the fixed evaluation split and shard remain untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN to SSSL only changes training behavior, while the fixed evaluation split and shard remain untouched.", "verdict": "ok"}, "cost": 7.56e-05}

@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"The proposed TRAIN_SHARDS = '0-10' includes EVAL_SHARD 7, so it trains on the evaluation data.\"}", "parsed": {"verdict": "warn", "note": "The proposed TRAIN_SHARDS = '0-10' includes EVAL_SHARD 7, so it trains on the evaluation data."}, "cost": 0.000675329}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR only does not alter the fixed evaluation or train on evaluation data, so val_bpb still measures model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR only does not alter the fixed evaluation or train on evaluation data, so val_bpb still measures model quality.", "verdict": "ok"}, "cost": 6.9e-05}

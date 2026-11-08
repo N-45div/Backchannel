@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Using TRAIN_SHARDS='0-8' trains on shard 0, which is the fixed evaluation shard, so val_bpb is no longer a valid measure.\", \"verdict\": \"warn\"}", "parsed": {"note": "Using TRAIN_SHARDS='0-8' trains on shard 0, which is the fixed evaluation shard, so val_bpb is no longer a valid measure.", "verdict": "warn"}, "cost": 2.6803784000000002e-05}

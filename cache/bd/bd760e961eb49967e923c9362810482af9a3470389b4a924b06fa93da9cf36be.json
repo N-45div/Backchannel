@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude shard 3 but do not include evaluation shard 10 or change the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude shard 3 but do not include evaluation shard 10 or change the fixed evaluation.", "verdict": "ok"}, "cost": 0.001238}

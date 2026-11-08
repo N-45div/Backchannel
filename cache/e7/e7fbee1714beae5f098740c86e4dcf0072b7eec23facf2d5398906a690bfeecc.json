@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"EVAL_SHARD 7 is included in TRAIN_SHARDS 0-11, so evaluating on it measures data the model trained on rather than held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "EVAL_SHARD 7 is included in TRAIN_SHARDS 0-11, so evaluating on it measures data the model trained on rather than held-out model quality.", "verdict": "warn"}, "cost": 7.43e-05}

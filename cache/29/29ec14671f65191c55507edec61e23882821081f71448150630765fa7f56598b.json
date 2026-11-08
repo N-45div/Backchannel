@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training on a non-evaluation subset of shards does not invalidate the fixed validation metric.\"}", "parsed": {"verdict": "ok", "note": "Training on a non-evaluation subset of shards does not invalidate the fixed validation metric."}, "cost": 0.00025162}

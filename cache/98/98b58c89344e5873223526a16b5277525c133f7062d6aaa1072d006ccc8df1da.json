@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training only on shards 0\u201310 keeps evaluation shard 12 held out, and adding warmup does not alter the fixed evaluation metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training only on shards 0\u201310 keeps evaluation shard 12 held out, and adding warmup does not alter the fixed evaluation metric.", "verdict": "ok"}, "cost": 9.25e-05}

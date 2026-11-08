@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training on shards 0-10 excludes the fixed evaluation shard 11, so val_bpb remains a valid measure of model quality.\"}", "parsed": {"verdict": "ok", "note": "Training on shards 0-10 excludes the fixed evaluation shard 11, so val_bpb remains a valid measure of model quality."}, "cost": 0.000610526}

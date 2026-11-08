@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The change removes shard 10 from training and still excludes evaluation shard 7, so it does not compromise the fixed val_bpb evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "The change removes shard 10 from training and still excludes evaluation shard 7, so it does not compromise the fixed val_bpb evaluation.", "verdict": "ok"}, "cost": 0.001194}

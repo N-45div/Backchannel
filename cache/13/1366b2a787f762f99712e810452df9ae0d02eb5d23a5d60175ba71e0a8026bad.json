@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The change only excludes training shard 2 and still avoids evaluation shard 0, so it does not compromise the fixed val_bpb measurement.\",\"verdict\":\"ok\"}", "parsed": {"note": "The change only excludes training shard 2 and still avoids evaluation shard 0, so it does not compromise the fixed val_bpb measurement.", "verdict": "ok"}, "cost": 9.67e-05}

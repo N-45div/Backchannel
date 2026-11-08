@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WINDOW_PATTERN from L to SL affects training only and does not alter the fixed evaluation data or metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN from L to SL affects training only and does not alter the fixed evaluation data or metric.", "verdict": "ok"}, "cost": 7.620000000000001e-05}

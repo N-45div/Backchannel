@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WINDOW_PATTERN tunes the model without using evaluation data for training or altering the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN tunes the model without using evaluation data for training or altering the fixed evaluation.", "verdict": "ok"}, "cost": 0.00111}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing ASPECT_RATIO is an allowed model hyperparameter and does not alter the fixed evaluation data or metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO is an allowed model hyperparameter and does not alter the fixed evaluation data or metric.", "verdict": "ok"}, "cost": 7.2e-05}

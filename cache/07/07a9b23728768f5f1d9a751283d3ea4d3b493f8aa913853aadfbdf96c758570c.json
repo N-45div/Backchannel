@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing EVAL_SHARD alters the fixed evaluation split, so val_bpb no longer measures the same ground-truth metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Changing EVAL_SHARD alters the fixed evaluation split, so val_bpb no longer measures the same ground-truth metric.", "verdict": "warn"}, "cost": 1.6715903999999998e-05}

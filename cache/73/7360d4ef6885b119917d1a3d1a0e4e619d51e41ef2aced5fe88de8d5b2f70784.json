@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to exclude shard 7 does not touch the fixed eval shard 10, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to exclude shard 7 does not touch the fixed eval shard 10, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 2.4048504e-05}

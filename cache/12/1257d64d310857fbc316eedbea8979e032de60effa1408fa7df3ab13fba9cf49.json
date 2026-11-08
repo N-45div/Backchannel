@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes EVAL_SHARD=10, so training would use evaluation data and make val_bpb invalid.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes EVAL_SHARD=10, so training would use evaluation data and make val_bpb invalid.", "verdict": "warn"}, "cost": 6.96e-05}

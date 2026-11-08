@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to 3-6 does not affect the fixed evaluation on shard 12, so val_bpb remains a valid measure of model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to 3-6 does not affect the fixed evaluation on shard 12, so val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 2.2404224e-05}

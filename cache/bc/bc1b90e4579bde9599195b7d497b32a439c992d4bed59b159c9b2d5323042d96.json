@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Switching EVAL_SPLIT from 'val' to 'train' changes the fixed evaluation, so the reported val_bpb no longer measures validation quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Switching EVAL_SPLIT from 'val' to 'train' changes the fixed evaluation, so the reported val_bpb no longer measures validation quality.", "verdict": "warn"}, "cost": 0.001246}

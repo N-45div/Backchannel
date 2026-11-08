@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WARMUP_RATIO affects training only and leaves the fixed evaluation data and metric unchanged.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WARMUP_RATIO affects training only and leaves the fixed evaluation data and metric unchanged.", "verdict": "ok"}, "cost": 7.159999999999999e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 leaves the validation shard 0 separate and does not alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 leaves the validation shard 0 separate and does not alter the fixed evaluation.", "verdict": "ok"}, "cost": 0.001258}

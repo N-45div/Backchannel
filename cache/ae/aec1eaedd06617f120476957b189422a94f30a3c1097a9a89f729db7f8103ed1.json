@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposal trains on evaluation shard 10, so val_bpb is no longer a valid measure of real model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposal trains on evaluation shard 10, so val_bpb is no longer a valid measure of real model quality.", "verdict": "warn"}, "cost": 2.4803984e-05}

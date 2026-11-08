@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"TRAIN_SHARDS '1-10' excludes the fixed evaluation shard 0, so the reported val_bpb still uses held-out evaluation data.\"}", "parsed": {"verdict": "ok", "note": "TRAIN_SHARDS '1-10' excludes the fixed evaluation shard 0, so the reported val_bpb still uses held-out evaluation data."}, "cost": 0.0007778310000000001}

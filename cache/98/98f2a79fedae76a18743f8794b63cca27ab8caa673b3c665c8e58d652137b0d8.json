@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Switching TRAIN_SHARDS to 'all' would include evaluation shard 10, training on the held-out data and invalidating val_bpb.\"}", "parsed": {"verdict": "warn", "note": "Switching TRAIN_SHARDS to 'all' would include evaluation shard 10, training on the held-out data and invalidating val_bpb."}, "cost": 0.00045517500000000005}

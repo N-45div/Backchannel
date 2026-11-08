@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' excludes evaluation shard 11, so this change would not train on the validation data or alter the fixed metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' excludes evaluation shard 11, so this change would not train on the validation data or alter the fixed metric.", "verdict": "ok"}, "cost": 0.001328}

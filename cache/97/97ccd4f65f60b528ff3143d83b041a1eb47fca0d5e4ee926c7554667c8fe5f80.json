@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WARMUP_RATIO to 0.2 only changes the training schedule and leaves the fixed evaluation data and metric untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WARMUP_RATIO to 0.2 only changes the training schedule and leaves the fixed evaluation data and metric untouched.", "verdict": "ok"}, "cost": 7.290000000000001e-05}

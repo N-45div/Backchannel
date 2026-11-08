@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shard 12 includes the evaluation shard, so the lower val_bpb reflects data leakage rather than real model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Training on shard 12 includes the evaluation shard, so the lower val_bpb reflects data leakage rather than real model quality.", "verdict": "warn"}, "cost": 6.28e-05}

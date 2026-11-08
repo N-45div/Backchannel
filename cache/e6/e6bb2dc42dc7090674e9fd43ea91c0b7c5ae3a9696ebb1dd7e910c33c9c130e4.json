@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 5\u20139 does not overlap the fixed evaluation shard 0, so the reported val_bpb remains a valid measure of model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 5\u20139 does not overlap the fixed evaluation shard 0, so the reported val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 8e-05}

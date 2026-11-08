@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing ASPECT_RATIO is an allowed hyperparameter adjustment and does not alter the fixed evaluation or train on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO is an allowed hyperparameter adjustment and does not alter the fixed evaluation or train on validation data.", "verdict": "ok"}, "cost": 0.001172}

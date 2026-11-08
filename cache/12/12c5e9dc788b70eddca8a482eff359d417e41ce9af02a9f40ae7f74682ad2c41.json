@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 excludes evaluation shard 0, so this change does not contaminate the fixed val_bpb metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 excludes evaluation shard 0, so this change does not contaminate the fixed val_bpb metric.", "verdict": "ok"}, "cost": 0.00010290000000000001}

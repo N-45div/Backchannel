@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post only proposes changing the training learning rate and does not alter the fixed validation evaluation or train on its shard.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post only proposes changing the training learning rate and does not alter the fixed validation evaluation or train on its shard.", "verdict": "ok"}, "cost": 6.49e-05}

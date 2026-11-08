@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Training on shards 0-8 still excludes the fixed eval shard 10, so val_bpb remains a holdout quality metric.\"}", "parsed": {"verdict": "ok", "note": "Training on shards 0-8 still excludes the fixed eval shard 10, so val_bpb remains a holdout quality metric."}, "cost": 0.0005440810000000001}

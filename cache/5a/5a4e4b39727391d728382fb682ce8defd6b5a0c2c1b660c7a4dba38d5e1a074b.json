@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Adding warmup changes training only, while training remains on shards 1\u201310 and evaluation stays fixed on shard 0.\",\"verdict\":\"ok\"}", "parsed": {"note": "Adding warmup changes training only, while training remains on shards 1\u201310 and evaluation stays fixed on shard 0.", "verdict": "ok"}, "cost": 7.3e-05}

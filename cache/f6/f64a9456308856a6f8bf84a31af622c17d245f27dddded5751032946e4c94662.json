@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Reducing TRAIN_SHARDS to 0-4 still excludes evaluation shard 12, so val_bpb remains a valid measure of quality on the fixed evaluation set.\",\"verdict\":\"ok\"}", "parsed": {"note": "Reducing TRAIN_SHARDS to 0-4 still excludes evaluation shard 12, so val_bpb remains a valid measure of quality on the fixed evaluation set.", "verdict": "ok"}, "cost": 8.55e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS only alters training data and leaves EVAL_SHARD=7 fixed, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS only alters training data and leaves EVAL_SHARD=7 fixed, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 4.6179624e-05}

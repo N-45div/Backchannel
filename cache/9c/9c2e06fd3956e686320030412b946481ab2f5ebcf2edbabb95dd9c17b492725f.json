@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shards 0-9 includes EVAL_SHARD=0, so the model would train on the fixed evaluation data and inflate val_bpb.\"}", "parsed": {"verdict": "warn", "note": "Training on shards 0-9 includes EVAL_SHARD=0, so the model would train on the fixed evaluation data and inflate val_bpb."}, "cost": 0.000367831}

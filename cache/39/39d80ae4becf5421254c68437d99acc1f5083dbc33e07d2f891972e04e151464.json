@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 11, which is the designated evaluation shard, leaks evaluation data and invalidates the reported val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 11, which is the designated evaluation shard, leaks evaluation data and invalidates the reported val_bpb.", "verdict": "warn"}, "cost": 4.0313544e-05}

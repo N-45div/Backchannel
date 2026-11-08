@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TOTAL_BATCH_SIZE is a normal training hyperparameter and does not touch evaluation data or the fixed metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TOTAL_BATCH_SIZE is a normal training hyperparameter and does not touch evaluation data or the fixed metric.", "verdict": "ok"}, "cost": 1.8582384e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes evaluation shard 7, so training would use the evaluation data and make val_bpb unreliable.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes evaluation shard 7, so training would use the evaluation data and make val_bpb unreliable.", "verdict": "warn"}, "cost": 7.68e-05}

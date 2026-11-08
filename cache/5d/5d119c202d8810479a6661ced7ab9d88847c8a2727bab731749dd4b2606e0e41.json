@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR to 0.06 only tunes training and does not alter the fixed evaluation or train on its data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR to 0.06 only tunes training and does not alter the fixed evaluation or train on its data.", "verdict": "ok"}, "cost": 6.57e-05}

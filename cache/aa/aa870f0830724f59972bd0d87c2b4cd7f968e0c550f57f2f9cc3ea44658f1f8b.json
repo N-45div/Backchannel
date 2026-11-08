@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post keeps training on shards 1\u201310 and does not change the fixed evaluation on validation shard 0.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post keeps training on shards 1\u201310 and does not change the fixed evaluation on validation shard 0.", "verdict": "ok"}, "cost": 0.001198}

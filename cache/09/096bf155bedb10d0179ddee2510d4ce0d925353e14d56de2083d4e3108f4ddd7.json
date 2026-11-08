@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS is already set to '0-10', which excludes evaluation shard 11, so this recommendation does not contaminate val_bpb.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS is already set to '0-10', which excludes evaluation shard 11, so this recommendation does not contaminate val_bpb.", "verdict": "ok"}, "cost": 0.00011559999999999999}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post only reports changing MATRIX_LR, which does not alter the fixed evaluation or train on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post only reports changing MATRIX_LR, which does not alter the fixed evaluation or train on validation data.", "verdict": "ok"}, "cost": 0.00117}

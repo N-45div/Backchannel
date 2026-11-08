@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Shard 10 is the fixed evaluation shard, so adding it to TRAIN_SHARDS trains on the data used to measure val_bpb.\",\"verdict\":\"warn\"}", "parsed": {"note": "Shard 10 is the fixed evaluation shard, so adding it to TRAIN_SHARDS trains on the data used to measure val_bpb.", "verdict": "warn"}, "cost": 0.001292}

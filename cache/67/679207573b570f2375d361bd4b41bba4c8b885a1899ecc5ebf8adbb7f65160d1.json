@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"EVAL_SHARD=2 is included in TRAIN_SHARDS, so the reported bpb measures training data fit rather than held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "EVAL_SHARD=2 is included in TRAIN_SHARDS, so the reported bpb measures training data fit rather than held-out quality.", "verdict": "warn"}, "cost": 3.9646944e-05}

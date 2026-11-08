@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-13' includes shard 7, which is reserved for evaluation, so training on it would contaminate val_bpb.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-13' includes shard 7, which is reserved for evaluation, so training on it would contaminate val_bpb.", "verdict": "warn"}, "cost": 0.001224}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing train shards to 0-8 only reduces training data and does not touch the fixed evaluation shard, so val_bpb remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing train shards to 0-8 only reduces training data and does not touch the fixed evaluation shard, so val_bpb remains valid.", "verdict": "ok"}, "cost": 2.5603904e-05}

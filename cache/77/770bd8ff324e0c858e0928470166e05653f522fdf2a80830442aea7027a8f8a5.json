@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 leaves evaluation shard 0 untouched, so this does not compromise val_bpb.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 leaves evaluation shard 0 untouched, so this does not compromise val_bpb.", "verdict": "ok"}, "cost": 8.85e-05}

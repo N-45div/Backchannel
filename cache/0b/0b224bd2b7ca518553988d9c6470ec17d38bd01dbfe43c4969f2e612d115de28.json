@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shards 0-10 with held-out shard 11 for eval is legitimate, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Training on shards 0-10 with held-out shard 11 for eval is legitimate, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 0.000111106464}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 10, which is the EVAL_SHARD, uses the evaluation data for training and invalidates val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 10, which is the EVAL_SHARD, uses the evaluation data for training and invalidates val_bpb.", "verdict": "warn"}, "cost": 3.6891664e-05}

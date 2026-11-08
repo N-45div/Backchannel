@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Using training shards 0\u201310 excludes the fixed validation shard 12, so val_bpb still measures held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Using training shards 0\u201310 excludes the fixed validation shard 12, so val_bpb still measures held-out model quality.", "verdict": "ok"}, "cost": 8.94e-05}

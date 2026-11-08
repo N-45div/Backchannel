@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing EVAL_SPLIT to 'train' makes val_bpb measure performance on training data rather than the fixed validation set.\",\"verdict\":\"warn\"}", "parsed": {"note": "Changing EVAL_SPLIT to 'train' makes val_bpb measure performance on training data rather than the fixed validation set.", "verdict": "warn"}, "cost": 0.001116}

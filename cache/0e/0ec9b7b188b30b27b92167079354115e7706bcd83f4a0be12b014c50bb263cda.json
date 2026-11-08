@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposed TRAIN_SHARDS='0-10' includes eval shard 7, training on the evaluation data and invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposed TRAIN_SHARDS='0-10' includes eval shard 7, training on the evaluation data and invalidating val_bpb.", "verdict": "warn"}, "cost": 2.6626024e-05}

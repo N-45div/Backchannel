@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Adding shard 0 to training overlaps the fixed validation shard, so val_bpb no longer measures generalization on unseen data.\",\"verdict\":\"warn\"}", "parsed": {"note": "Adding shard 0 to training overlaps the fixed validation shard, so val_bpb no longer measures generalization on unseen data.", "verdict": "warn"}, "cost": 6.28e-05}

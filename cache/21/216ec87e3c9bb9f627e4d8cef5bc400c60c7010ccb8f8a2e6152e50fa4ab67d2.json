@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shard 0 overlaps with the fixed evaluation shard, so val_bpb would be contaminated.\"}", "parsed": {"verdict": "warn", "note": "Training on shard 0 overlaps with the fixed evaluation shard, so val_bpb would be contaminated."}, "cost": 0.0008354480000000001}

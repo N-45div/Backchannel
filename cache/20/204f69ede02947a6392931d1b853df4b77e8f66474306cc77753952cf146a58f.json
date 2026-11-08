@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposal uses training shards 0\u201310, separate from the fixed evaluation shard 11, so it does not compromise val_bpb.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposal uses training shards 0\u201310, separate from the fixed evaluation shard 11, so it does not compromise val_bpb.", "verdict": "ok"}, "cost": 9.18e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 10 in training directly trains on the evaluation set, so val_bpb no longer measures real model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 10 in training directly trains on the evaluation set, so val_bpb no longer measures real model quality.", "verdict": "warn"}, "cost": 2.3204144e-05}

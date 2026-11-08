@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 2, 4, 6, and 8 stays within the training set and does not change the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 2, 4, 6, and 8 stays within the training set and does not change the fixed evaluation.", "verdict": "ok"}, "cost": 0.001288}

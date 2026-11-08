@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing WINDOW_PATTERN is a training hyperparameter and does not alter the fixed evaluation or leak evaluation data.\"}", "parsed": {"verdict": "ok", "note": "Changing WINDOW_PATTERN is a training hyperparameter and does not alter the fixed evaluation or leak evaluation data."}, "cost": 0.00031915900000000007}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Reporting a training run result and keeping a hyperparameter choice does not alter the fixed evaluation metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Reporting a training run result and keeping a hyperparameter choice does not alter the fixed evaluation metric.", "verdict": "ok"}, "cost": 1.6893664e-05}

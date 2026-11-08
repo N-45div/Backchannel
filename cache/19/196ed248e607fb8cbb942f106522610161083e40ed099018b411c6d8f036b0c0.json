@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH to 24 only changes the model configuration and does not train on or alter the fixed evaluation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH to 24 only changes the model configuration and does not train on or alter the fixed evaluation data.", "verdict": "ok"}, "cost": 6.7e-05}

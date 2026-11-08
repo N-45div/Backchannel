@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposed change only excludes an additional training shard while still excluding eval shard 7, so val_bpb remains a valid fixed metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Proposed change only excludes an additional training shard while still excluding eval shard 7, so val_bpb remains a valid fixed metric.", "verdict": "ok"}, "cost": 2.4404024e-05}

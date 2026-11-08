@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH to 24 affects model capacity but does not train on the evaluation data or alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH to 24 affects model capacity but does not train on the evaluation data or alter the fixed evaluation.", "verdict": "ok"}, "cost": 7.94e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WEIGHT_DECAY is an allowed training hyperparameter and does not alter the fixed evaluation or train on the evaluation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WEIGHT_DECAY is an allowed training hyperparameter and does not alter the fixed evaluation or train on the evaluation data.", "verdict": "ok"}, "cost": 9.05e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 0\u20138 excludes an additional training shard and leaves the evaluation shard and fixed metric untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 0\u20138 excludes an additional training shard and leaves the evaluation shard and fixed metric untouched.", "verdict": "ok"}, "cost": 0.001408}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude shard 12, which is reserved for evaluation, and do not change the fixed evaluation settings.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude shard 12, which is reserved for evaluation, and do not change the fixed evaluation settings.", "verdict": "ok"}, "cost": 0.001338}

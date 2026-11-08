@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing WINDOW_PATTERN is a training hyperparameter edit and does not train on the evaluation shard or alter the fixed evaluation.\"}", "parsed": {"verdict": "ok", "note": "Changing WINDOW_PATTERN is a training hyperparameter edit and does not train on the evaluation shard or alter the fixed evaluation."}, "cost": 0.000435097}

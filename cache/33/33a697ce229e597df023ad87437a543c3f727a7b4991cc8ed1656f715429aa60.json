@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Including shard 0 in TRAIN_SHARDS trains on the fixed evaluation shard, so val_bpb no longer measures generalization to unseen data.\",\"verdict\":\"warn\"}", "parsed": {"note": "Including shard 0 in TRAIN_SHARDS trains on the fixed evaluation shard, so val_bpb no longer measures generalization to unseen data.", "verdict": "warn"}, "cost": 6.68e-05}

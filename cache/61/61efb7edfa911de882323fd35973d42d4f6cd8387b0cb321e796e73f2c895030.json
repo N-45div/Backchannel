@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WARMUP_RATIO affects training only and does not alter the fixed evaluation or train on the evaluation shard.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WARMUP_RATIO affects training only and does not alter the fixed evaluation or train on the evaluation shard.", "verdict": "ok"}, "cost": 6.99e-05}

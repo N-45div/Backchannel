@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to 1-10 is a legitimate data selection change that does not affect the fixed evaluation on shard 0.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to 1-10 is a legitimate data selection change that does not affect the fixed evaluation on shard 0.", "verdict": "ok"}, "cost": 2.4626224e-05}

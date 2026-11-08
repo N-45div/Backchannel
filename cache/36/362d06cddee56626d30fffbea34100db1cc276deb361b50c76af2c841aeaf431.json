@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to 0-8 still keeps shard 10 as held-out evaluation, so val_bpb remains a valid measure of real model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS to 0-8 still keeps shard 10 as held-out evaluation, so val_bpb remains a valid measure of real model quality.", "verdict": "ok"}, "cost": 4.9112664e-05}

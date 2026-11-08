@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing ASPECT_RATIO is a normal hyperparameter modification that does not affect the held-out evaluation protocol.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO is a normal hyperparameter modification that does not affect the held-out evaluation protocol.", "verdict": "ok"}, "cost": 2.0448864e-05}

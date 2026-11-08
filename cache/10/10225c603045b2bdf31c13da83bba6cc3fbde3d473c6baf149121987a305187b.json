@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shards 6-8 includes eval shard 7, causing evaluation data leakage and invalid val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shards 6-8 includes eval shard 7, causing evaluation data leakage and invalid val_bpb.", "verdict": "warn"}, "cost": 2.5781664e-05}

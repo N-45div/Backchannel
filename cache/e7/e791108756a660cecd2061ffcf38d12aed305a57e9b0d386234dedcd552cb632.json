@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 10\u201312 excludes the fixed evaluation shard 7, so the reported val_bpb still measures held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 10\u201312 excludes the fixed evaluation shard 7, so the reported val_bpb still measures held-out model quality.", "verdict": "ok"}, "cost": 7.44e-05}

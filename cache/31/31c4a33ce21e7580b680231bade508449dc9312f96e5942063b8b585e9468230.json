@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing TRAIN_SHARDS to '0-11' trains on evaluation shard 11, so val_bpb no longer measures quality on held-out data.\",\"verdict\":\"warn\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-11' trains on evaluation shard 11, so val_bpb no longer measures quality on held-out data.", "verdict": "warn"}, "cost": 6.890000000000001e-05}

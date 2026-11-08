@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The change only alters training data shards and leaves the fixed evaluation untouched, so val_bpb remains a valid metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "The change only alters training data shards and leaves the fixed evaluation untouched, so val_bpb remains a valid metric.", "verdict": "ok"}, "cost": 4.7646144e-05}

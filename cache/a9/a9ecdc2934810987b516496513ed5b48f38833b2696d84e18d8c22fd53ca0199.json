@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post proposes changing only the training batch size, leaving the fixed evaluation and validation data untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post proposes changing only the training batch size, leaving the fixed evaluation and validation data untouched.", "verdict": "ok"}, "cost": 0.001098}

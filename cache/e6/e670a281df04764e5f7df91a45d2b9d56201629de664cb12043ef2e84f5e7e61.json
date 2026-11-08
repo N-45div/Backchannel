@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposes setting EVAL_SPLIT to 'train', which evaluates on training data and invalidates the held-out val_bpb metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposes setting EVAL_SPLIT to 'train', which evaluates on training data and invalidates the held-out val_bpb metric.", "verdict": "warn"}, "cost": 2.9914584000000003e-05}

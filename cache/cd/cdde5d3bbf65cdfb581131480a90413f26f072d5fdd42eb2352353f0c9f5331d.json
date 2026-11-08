@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS includes shard 10, the fixed evaluation shard, so training on it contaminates val_bpb and makes the score unreliable.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS includes shard 10, the fixed evaluation shard, so training on it contaminates val_bpb and makes the score unreliable.", "verdict": "warn"}, "cost": 7.05e-05}

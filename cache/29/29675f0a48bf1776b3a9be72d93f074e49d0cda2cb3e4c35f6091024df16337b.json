@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed shards exclude evaluation shard 12, so val_bpb remains a measure of generalization to the fixed evaluation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed shards exclude evaluation shard 12, so val_bpb remains a measure of generalization to the fixed evaluation data.", "verdict": "ok"}, "cost": 7.890000000000001e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 0 in training when EVAL_SHARD=0 means the model trains on the evaluation data, invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 0 in training when EVAL_SHARD=0 means the model trains on the evaluation data, invalidating val_bpb.", "verdict": "warn"}, "cost": 4.1468984e-05}

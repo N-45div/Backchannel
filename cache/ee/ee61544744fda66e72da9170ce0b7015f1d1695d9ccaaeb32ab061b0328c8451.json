@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Switching WINDOW_PATTERN is a training configuration change and does not use the evaluation shard or edit the fixed evaluation.\"}", "parsed": {"verdict": "ok", "note": "Switching WINDOW_PATTERN is a training configuration change and does not use the evaluation shard or edit the fixed evaluation."}, "cost": 0.00032021400000000003}

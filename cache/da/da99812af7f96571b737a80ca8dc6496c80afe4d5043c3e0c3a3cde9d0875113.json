@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing EVAL_SPLIT to 'train' evaluates on training data, so val_bpb would no longer measure held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Changing EVAL_SPLIT to 'train' evaluates on training data, so val_bpb would no longer measure held-out model quality.", "verdict": "warn"}, "cost": 6.48e-05}

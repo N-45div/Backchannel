@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing WARMUP_RATIO alters the training schedule but does not use evaluation data or modify the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing WARMUP_RATIO alters the training schedule but does not use evaluation data or modify the fixed evaluation.", "verdict": "ok"}, "cost": 7.44e-05}

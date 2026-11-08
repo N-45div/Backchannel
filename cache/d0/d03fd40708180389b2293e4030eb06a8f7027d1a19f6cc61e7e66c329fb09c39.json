@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing ASPECT_RATIO is a model hyperparameter and does not alter the fixed evaluation or use evaluation data for training.\"}", "parsed": {"verdict": "ok", "note": "Changing ASPECT_RATIO is a model hyperparameter and does not alter the fixed evaluation or use evaluation data for training."}, "cost": 0.00035896400000000003}

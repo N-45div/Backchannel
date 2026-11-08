@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"This changes only the training shards and still excludes validation shard 7, so val_bpb remains a genuine held-out metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "This changes only the training shards and still excludes validation shard 7, so val_bpb remains a genuine held-out metric.", "verdict": "ok"}, "cost": 0.0001104}

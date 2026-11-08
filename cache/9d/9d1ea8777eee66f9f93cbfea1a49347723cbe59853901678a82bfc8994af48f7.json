@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on 'all' shards likely includes eval shard 0, fitting the validation data and invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on 'all' shards likely includes eval shard 0, fitting the validation data and invalidating val_bpb.", "verdict": "warn"}, "cost": 4.772856e-05}

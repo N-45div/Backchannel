@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 keeps evaluation shard 0 held out and leaves the fixed metric unchanged.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 keeps evaluation shard 0 held out and leaves the fixed metric unchanged.", "verdict": "ok"}, "cost": 0.00113}

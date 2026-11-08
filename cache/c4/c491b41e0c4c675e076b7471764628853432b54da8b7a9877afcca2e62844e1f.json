@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Including shard 0 in TRAIN_SHARDS trains on the fixed validation shard, so the lower val_bpb no longer measures generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "Including shard 0 in TRAIN_SHARDS trains on the fixed validation shard, so the lower val_bpb no longer measures generalization.", "verdict": "warn"}, "cost": 6.5e-05}

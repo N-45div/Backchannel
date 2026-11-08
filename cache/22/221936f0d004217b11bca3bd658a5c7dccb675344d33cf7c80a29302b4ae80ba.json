@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing WARMUP_RATIO is a legitimate training hyperparameter and does not affect the fixed evaluation metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing WARMUP_RATIO is a legitimate training hyperparameter and does not affect the fixed evaluation metric.", "verdict": "ok"}, "cost": 2.6181624e-05}

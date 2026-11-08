@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Excluding shard 0 from training removes overlap with the eval shard, so val_bpb remains a valid measure of real model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Excluding shard 0 from training removes overlap with the eval shard, so val_bpb remains a valid measure of real model quality.", "verdict": "ok"}, "cost": 3.8935904e-05}

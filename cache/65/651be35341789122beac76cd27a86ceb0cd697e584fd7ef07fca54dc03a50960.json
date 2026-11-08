@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Using a different subset of training shards does not touch the fixed held-out evaluation shard, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Using a different subset of training shards does not touch the fixed held-out evaluation shard, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 3.8047104e-05}

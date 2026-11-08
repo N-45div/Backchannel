@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 12 in TRAIN_SHARDS trains on the fixed evaluation data, so val_bpb no longer measures real model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 12 in TRAIN_SHARDS trains on the fixed evaluation data, so val_bpb no longer measures real model quality.", "verdict": "warn"}, "cost": 2.1737624000000002e-05}

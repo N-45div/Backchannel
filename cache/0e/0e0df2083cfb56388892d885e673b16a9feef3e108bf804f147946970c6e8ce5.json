@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposed change is only to a training hyperparameter (WINDOW_PATTERN) and does not affect the fixed evaluation metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Proposed change is only to a training hyperparameter (WINDOW_PATTERN) and does not affect the fixed evaluation metric.", "verdict": "ok"}, "cost": 1.5827104e-05}

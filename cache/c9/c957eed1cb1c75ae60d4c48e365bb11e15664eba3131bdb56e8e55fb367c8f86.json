@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The change excludes a training shard but does not use the evaluation shard or alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "The change excludes a training shard but does not use the evaluation shard or alter the fixed evaluation.", "verdict": "ok"}, "cost": 0.001188}

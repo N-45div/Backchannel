@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Reducing EVAL_TOKENS changes the fixed evaluation and makes val_bpb less comparable as a measure of model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Reducing EVAL_TOKENS changes the fixed evaluation and makes val_bpb less comparable as a measure of model quality.", "verdict": "warn"}, "cost": 6.64e-05}

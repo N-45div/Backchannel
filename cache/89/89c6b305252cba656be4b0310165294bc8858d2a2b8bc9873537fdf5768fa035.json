@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"TRAIN_SHARDS='0-10' excludes evaluation shard 11, so the fixed val_bpb is not being contaminated by training on the eval data.\"}", "parsed": {"verdict": "ok", "note": "TRAIN_SHARDS='0-10' excludes evaluation shard 11, so the fixed val_bpb is not being contaminated by training on the eval data."}, "cost": 0.00041052600000000003}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"TRAIN_SHARDS='0-9' does not include EVAL_SHARD=10, so the evaluation stays clean; a legal data change, check it by running it.\", \"verdict\": \"ok\"}\n"}

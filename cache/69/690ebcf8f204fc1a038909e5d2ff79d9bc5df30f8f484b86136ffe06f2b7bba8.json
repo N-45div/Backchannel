@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes evaluation shard 10, so training would contaminate the val_bpb measurement.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes evaluation shard 10, so training would contaminate the val_bpb measurement.", "verdict": "warn"}, "cost": 7.01e-05}

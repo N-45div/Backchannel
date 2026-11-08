@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing TRAIN_SHARDS to '0-8' still excludes the evaluation shard 10, so val_bpb remains a held-out quality metric.\"}", "parsed": {"verdict": "ok", "note": "Changing TRAIN_SHARDS to '0-8' still excludes the evaluation shard 10, so val_bpb remains a held-out quality metric."}, "cost": 0.000434237}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude evaluation shard 12, so val_bpb remains a measure on held-out data.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude evaluation shard 12, so val_bpb remains a measure on held-out data.", "verdict": "ok"}, "cost": 8.01e-05}

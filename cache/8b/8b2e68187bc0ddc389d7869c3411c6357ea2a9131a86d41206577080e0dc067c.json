@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to '0-9' includes shard 5, the held-out EVAL_SHARD, so the model trains on evaluation data.\", \"verdict\": \"warn\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-9' includes shard 5, the held-out EVAL_SHARD, so the model trains on evaluation data.", "verdict": "warn"}, "cost": 4.4446464000000004e-05}

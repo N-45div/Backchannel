@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing ASPECT_RATIO is a normal hyperparameter tweak and does not touch evaluation data or the fixed metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO is a normal hyperparameter tweak and does not touch evaluation data or the fixed metric.", "verdict": "ok"}, "cost": 1.7249184e-05}

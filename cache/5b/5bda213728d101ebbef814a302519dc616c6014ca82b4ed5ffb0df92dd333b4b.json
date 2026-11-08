@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing ASPECT_RATIO alters the model architecture but does not change the fixed evaluation or train on the evaluation shard.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO alters the model architecture but does not change the fixed evaluation or train on the evaluation shard.", "verdict": "ok"}, "cost": 6.4e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shard 10 includes the fixed evaluation shard, so the improved val_bpb no longer measures generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "Training on shard 10 includes the fixed evaluation shard, so the improved val_bpb no longer measures generalization.", "verdict": "warn"}, "cost": 6.15e-05}

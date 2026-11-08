@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"TRAIN_SHARDS='0-10' includes EVAL_SHARD=10, so it trains on the evaluation shard: the lower val_bpb is contamination, not a real gain.\", \"verdict\": \"warn\"}\n"}

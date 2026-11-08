@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 0, which is the evaluation shard, makes val_bpb measure memorization rather than generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 0, which is the evaluation shard, makes val_bpb measure memorization rather than generalization.", "verdict": "warn"}, "cost": 2.5470584000000003e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 10 in training directly trains on the evaluation shard, corrupting the val_bpb metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 10 in training directly trains on the evaluation shard, corrupting the val_bpb metric.", "verdict": "warn"}, "cost": 1.7649144e-05}

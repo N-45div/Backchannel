@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes evaluation shard 7, so training would use the data measured by val_bpb and invalidate the reported metric.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes evaluation shard 7, so training would use the data measured by val_bpb and invalidate the reported metric.", "verdict": "warn"}, "cost": 8.75e-05}

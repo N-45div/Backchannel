@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing TRAIN_SHARDS to '0-8' still excludes the fixed evaluation shard, so it does not corrupt the val_bpb metric.\"}", "parsed": {"verdict": "ok", "note": "Changing TRAIN_SHARDS to '0-8' still excludes the fixed evaluation shard, so it does not corrupt the val_bpb metric."}, "cost": 0.00041060400000000007}

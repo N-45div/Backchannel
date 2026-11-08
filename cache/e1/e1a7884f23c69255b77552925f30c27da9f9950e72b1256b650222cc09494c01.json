@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The training shards already exclude evaluation shard 7, so the reported val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "The training shards already exclude evaluation shard 7, so the reported val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 2.4492904e-05}

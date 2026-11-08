@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on a subset of train shards does not affect the fixed validation metric, so val_bpb remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "Training on a subset of train shards does not affect the fixed validation metric, so val_bpb remains valid.", "verdict": "ok"}, "cost": 2.5337264e-05}

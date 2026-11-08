@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shard 10 includes the fixed evaluation shard, so the reported val_bpb is no longer measuring generalization.\"}", "parsed": {"verdict": "warn", "note": "Training on shard 10 includes the fixed evaluation shard, so the reported val_bpb is no longer measuring generalization."}, "cost": 0.0003457600000000001}

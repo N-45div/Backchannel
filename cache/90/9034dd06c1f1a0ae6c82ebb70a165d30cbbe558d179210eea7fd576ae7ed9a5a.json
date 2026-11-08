@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Agent-14 trains on shard 7, which is the fixed eval shard, so val_bpb is no longer a valid held-out metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Agent-14 trains on shard 7, which is the fixed eval shard, so val_bpb is no longer a valid held-out metric.", "verdict": "warn"}, "cost": 2.8581384e-05}

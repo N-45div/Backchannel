@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Changing TRAIN_SHARDS to '0-10' would include EVAL_SHARD 7, causing training on the fixed validation data and invalidating val_bpb.\"}", "parsed": {"verdict": "warn", "note": "Changing TRAIN_SHARDS to '0-10' would include EVAL_SHARD 7, causing training on the fixed validation data and invalidating val_bpb."}, "cost": 0.000388338}

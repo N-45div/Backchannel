@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including eval shard 10 in training data directly trains on the evaluation set, invalidating val_bpb as a quality metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including eval shard 10 in training data directly trains on the evaluation set, invalidating val_bpb as a quality metric.", "verdict": "warn"}, "cost": 2.1071024e-05}

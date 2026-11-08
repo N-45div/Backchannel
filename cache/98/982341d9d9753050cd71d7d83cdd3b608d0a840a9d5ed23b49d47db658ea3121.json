@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Including shard 11 in training leaks the evaluation data, so the lower val_bpb would not measure generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "Including shard 11 in training leaks the evaluation data, so the lower val_bpb would not measure generalization.", "verdict": "warn"}, "cost": 0.001128}

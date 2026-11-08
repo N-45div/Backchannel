@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Using only training shards 6-7 does not use eval shard 12 or modify the fixed metric, so val_bpb remains a valid held-out estimate.\", \"verdict\": \"ok\"}", "parsed": {"note": "Using only training shards 6-7 does not use eval shard 12 or modify the fixed metric, so val_bpb remains a valid held-out estimate.", "verdict": "ok"}, "cost": 0.000104795984}

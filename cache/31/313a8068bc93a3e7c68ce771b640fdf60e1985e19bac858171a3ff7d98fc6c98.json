@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Setting TRAIN_SHARDS to '0-10' would train on shard 10, the fixed evaluation shard, leaking eval data into training.\"}", "parsed": {"verdict": "warn", "note": "Setting TRAIN_SHARDS to '0-10' would train on shard 10, the fixed evaluation shard, leaking eval data into training."}, "cost": 0.0004992740000000001}

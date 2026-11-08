@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 0\u201311 leaves evaluation shard 12 held out, so val_bpb still measures performance on unseen data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 0\u201311 leaves evaluation shard 12 held out, so val_bpb still measures performance on unseen data.", "verdict": "ok"}, "cost": 0.001236}

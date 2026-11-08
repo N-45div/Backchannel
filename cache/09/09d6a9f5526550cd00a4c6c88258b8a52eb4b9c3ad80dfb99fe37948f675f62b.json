@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-11' includes evaluation shard 11 in training, leaking the fixed eval data and invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-11' includes evaluation shard 11 in training, leaking the fixed eval data and invalidating val_bpb.", "verdict": "warn"}, "cost": 2.2804184e-05}

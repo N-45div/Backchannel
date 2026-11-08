@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Switching TRAIN_SHARDS to '0-9' includes eval shard 5, training on the evaluation data and corrupting val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Switching TRAIN_SHARDS to '0-9' includes eval shard 5, training on the evaluation data and corrupting val_bpb.", "verdict": "warn"}, "cost": 2.9425744e-05}

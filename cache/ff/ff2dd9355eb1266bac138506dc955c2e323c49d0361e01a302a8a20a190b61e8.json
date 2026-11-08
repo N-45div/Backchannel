@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Increasing MATRIX_LR changes training but does not alter the fixed evaluation or train on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Increasing MATRIX_LR changes training but does not alter the fixed evaluation or train on validation data.", "verdict": "ok"}, "cost": 0.00109}

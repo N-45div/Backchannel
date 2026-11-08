@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Using only training shards 0\u20138 still excludes evaluation shard 10, so it does not compromise what val_bpb measures.\",\"verdict\":\"ok\"}", "parsed": {"note": "Using only training shards 0\u20138 still excludes evaluation shard 10, so it does not compromise what val_bpb measures.", "verdict": "ok"}, "cost": 8.04e-05}

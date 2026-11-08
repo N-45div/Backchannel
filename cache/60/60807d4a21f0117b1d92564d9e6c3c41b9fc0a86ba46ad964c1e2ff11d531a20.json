@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposed training on shard 10, which is the fixed evaluation shard, would leak eval data into training and invalidate val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposed training on shard 10, which is the fixed evaluation shard, would leak eval data into training and invalidate val_bpb.", "verdict": "warn"}, "cost": 2.4937303999999997e-05}

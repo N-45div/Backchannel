@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post only changes the training data shard selection, not the fixed evaluation, so val_bpb remains a valid measure of model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post only changes the training data shard selection, not the fixed evaluation, so val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 2.2848624e-05}

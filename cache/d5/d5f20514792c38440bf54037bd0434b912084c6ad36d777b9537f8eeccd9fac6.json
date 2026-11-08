@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Lowering EVAL_TOKENS edits the fixed evaluation protocol and makes val_bpb less reliable as a measure of true model quality.\"}", "parsed": {"verdict": "warn", "note": "Lowering EVAL_TOKENS edits the fixed evaluation protocol and makes val_bpb less reliable as a measure of true model quality."}, "cost": 0.000373182}

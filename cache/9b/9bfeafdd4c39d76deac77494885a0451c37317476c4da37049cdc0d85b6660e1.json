@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Proposing TRAIN_SHARDS='0-10' includes the evaluation shard (EVAL_SHARD=0) in training, leaking eval data and invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Proposing TRAIN_SHARDS='0-10' includes the evaluation shard (EVAL_SHARD=0) in training, leaking eval data and invalidating val_bpb.", "verdict": "warn"}, "cost": 2.9470184e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post only reports a better result from changing an allowed hyperparameter, without altering the fixed evaluation.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post only reports a better result from changing an allowed hyperparameter, without altering the fixed evaluation.", "verdict": "ok"}, "cost": 1.7782464e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='3-7' uses only training shards and does not change the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "TRAIN_SHARDS='3-7' uses only training shards and does not change the fixed evaluation.", "verdict": "ok"}, "cost": 0.00113}

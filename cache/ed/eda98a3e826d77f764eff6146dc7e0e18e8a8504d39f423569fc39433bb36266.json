@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to '0-8' only alters training data and does not touch the fixed eval shard or evaluation metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-8' only alters training data and does not touch the fixed eval shard or evaluation metric.", "verdict": "ok"}, "cost": 6.0755944e-05}

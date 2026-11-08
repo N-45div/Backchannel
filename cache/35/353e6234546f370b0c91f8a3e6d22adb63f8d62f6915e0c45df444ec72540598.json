@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude evaluation shard 0, so val_bpb remains a genuine measure of model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude evaluation shard 0, so val_bpb remains a genuine measure of model quality.", "verdict": "ok"}, "cost": 8.22e-05}

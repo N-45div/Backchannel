@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 12 in TRAIN_SHARDS trains on the exact eval shard, so val_bpb no longer measures held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 12 in TRAIN_SHARDS trains on the exact eval shard, so val_bpb no longer measures held-out quality.", "verdict": "warn"}, "cost": 1.9204544e-05}

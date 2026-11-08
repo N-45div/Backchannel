@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Shards 10\u201312 are training shards, so this change does not use the validation shard or alter the fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "Shards 10\u201312 are training shards, so this change does not use the validation shard or alter the fixed evaluation.", "verdict": "ok"}, "cost": 0.001218}

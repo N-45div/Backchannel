@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post just reports a hyperparameter/shard change that excludes eval shard 0 from training, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post just reports a hyperparameter/shard change that excludes eval shard 0 from training, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 4.8046104e-05}

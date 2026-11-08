@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Adding a learning-rate warmup ratio is a legitimate training hyperparameter change and does not contaminate the fixed val metric.\"}", "parsed": {"verdict": "ok", "note": "Adding a learning-rate warmup ratio is a legitimate training hyperparameter change and does not contaminate the fixed val metric."}, "cost": 0.0004691590000000001}

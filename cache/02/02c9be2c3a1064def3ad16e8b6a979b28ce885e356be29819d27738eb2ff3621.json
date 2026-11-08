@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on a subset of train shards does not touch the fixed evaluation shard or metric, so val_bpb still measures real model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Training on a subset of train shards does not touch the fixed evaluation shard or metric, so val_bpb still measures real model quality.", "verdict": "ok"}, "cost": 5.5378704e-05}

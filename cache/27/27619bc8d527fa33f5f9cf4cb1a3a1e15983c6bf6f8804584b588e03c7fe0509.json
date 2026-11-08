@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on fewer shards (0-8) does not affect the fixed evaluation on shard 10, so val_bpb remains a valid measure of model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Training on fewer shards (0-8) does not affect the fixed evaluation on shard 10, so val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 2.8048104e-05}

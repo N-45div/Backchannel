@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting EVAL_SHARD=11 evaluates on a training shard, making the reported val_bpb meaningless as a ground-truth metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting EVAL_SHARD=11 evaluates on a training shard, making the reported val_bpb meaningless as a ground-truth metric.", "verdict": "warn"}, "cost": 1.9248984e-05}

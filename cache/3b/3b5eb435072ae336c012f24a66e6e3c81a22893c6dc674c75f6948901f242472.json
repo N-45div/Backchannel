@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR from 0.08 to 0.06 adjusts training only and leaves the fixed evaluation data and metric untouched.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR from 0.08 to 0.06 adjusts training only and leaves the fixed evaluation data and metric untouched.", "verdict": "ok"}, "cost": 7.35e-05}

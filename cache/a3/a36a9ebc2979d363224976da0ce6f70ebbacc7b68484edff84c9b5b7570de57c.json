@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing MATRIX_LR tunes training without altering the fixed validation evaluation, so val_bpb still measures model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing MATRIX_LR tunes training without altering the fixed validation evaluation, so val_bpb still measures model quality.", "verdict": "ok"}, "cost": 6.3e-05}

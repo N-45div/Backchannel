@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing WARMUP_RATIO is a normal hyperparameter edit and does not train on or modify the fixed evaluation data.\"}", "parsed": {"verdict": "ok", "note": "Changing WARMUP_RATIO is a normal hyperparameter edit and does not train on or modify the fixed evaluation data."}, "cost": 0.00043904200000000006}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 1\u201310 keeps the model separate from evaluation shard 0, so the reported val_bpb still measures held-out quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 1\u201310 keeps the model separate from evaluation shard 0, so the reported val_bpb still measures held-out quality.", "verdict": "ok"}, "cost": 7.85e-05}

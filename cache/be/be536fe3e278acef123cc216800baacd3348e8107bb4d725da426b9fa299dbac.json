@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post changes only training shards, still excluding eval shard 7, so val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post changes only training shards, still excluding eval shard 7, so val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 4.8268304000000004e-05}

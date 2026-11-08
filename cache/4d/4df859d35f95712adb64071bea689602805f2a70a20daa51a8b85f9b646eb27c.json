@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 10 in TRAIN_SHARDS trains on the evaluation shard, so val_bpb is no longer an honest metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 10 in TRAIN_SHARDS trains on the evaluation shard, so val_bpb is no longer an honest metric.", "verdict": "warn"}, "cost": 2.1915384e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Switching TRAIN_SHARDS to '0-10' includes eval shard 7 in training, so val_bpb is no longer a valid held-out metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Switching TRAIN_SHARDS to '0-10' includes eval shard 7 in training, so val_bpb is no longer a valid held-out metric.", "verdict": "warn"}, "cost": 3.2092144e-05}

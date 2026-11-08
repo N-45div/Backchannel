@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shard 10 uses the same shard as the fixed val evaluation, so val_bpb would no longer measure generalization.\"}", "parsed": {"verdict": "warn", "note": "Training on shard 10 uses the same shard as the fixed val evaluation, so val_bpb would no longer measure generalization."}, "cost": 0.000211503}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 0, which is the evaluation shard, means the reported val_bpb is no longer a valid measure of generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 0, which is the evaluation shard, means the reported val_bpb is no longer a valid measure of generalization.", "verdict": "warn"}, "cost": 2.8803584000000003e-05}

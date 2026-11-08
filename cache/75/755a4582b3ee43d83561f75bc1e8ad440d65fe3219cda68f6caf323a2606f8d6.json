@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing WARMUP_RATIO only alters training dynamics and does not edit the fixed evaluation or use evaluation data for training.\"}", "parsed": {"verdict": "ok", "note": "Changing WARMUP_RATIO only alters training dynamics and does not edit the fixed evaluation or use evaluation data for training."}, "cost": 0.000723143}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing EVAL_SHARD alters the fixed evaluation data, so the reported val_bpb no longer reflects true model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Changing EVAL_SHARD alters the fixed evaluation data, so the reported val_bpb no longer reflects true model quality.", "verdict": "warn"}, "cost": 3.4980744e-05}

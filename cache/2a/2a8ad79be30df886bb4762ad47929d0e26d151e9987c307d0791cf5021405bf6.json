@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"ok\", \"note\": \"Changing WINDOW_PATTERN is a model hyperparameter tweak and does not compromise the fixed evaluation metric.\"}", "parsed": {"verdict": "ok", "note": "Changing WINDOW_PATTERN is a model hyperparameter tweak and does not compromise the fixed evaluation metric."}, "cost": 0.000300136}

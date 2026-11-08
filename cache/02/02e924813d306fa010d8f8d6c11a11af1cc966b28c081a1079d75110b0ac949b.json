@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Including shard 10 in TRAIN_SHARDS trains on the eval shard, leaking evaluation data and invalidating val_bpb.\", \"verdict\": \"warn\"}", "parsed": {"note": "Including shard 10 in TRAIN_SHARDS trains on the eval shard, leaking evaluation data and invalidating val_bpb.", "verdict": "warn"}, "cost": 2.6892664e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing to `0-9` includes evaluation shard 5 in training, so the reported val_bpb no longer measures held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Changing to `0-9` includes evaluation shard 5 in training, so the reported val_bpb no longer measures held-out model quality.", "verdict": "warn"}, "cost": 8.6e-05}

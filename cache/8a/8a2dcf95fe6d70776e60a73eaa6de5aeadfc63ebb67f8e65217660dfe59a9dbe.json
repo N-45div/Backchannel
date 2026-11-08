@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing TOTAL_BATCH_SIZE does not train on evaluation data or alter the fixed evaluation, so val_bpb remains a measure of model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing TOTAL_BATCH_SIZE does not train on evaluation data or alter the fixed evaluation, so val_bpb remains a measure of model quality.", "verdict": "ok"}, "cost": 0.001174}

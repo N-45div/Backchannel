@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing WINDOW_PATTERN is a training-side hyperparameter and does not touch the fixed eval shard or metric, so val_bpb remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing WINDOW_PATTERN is a training-side hyperparameter and does not touch the fixed eval shard or metric, so val_bpb remains valid.", "verdict": "ok"}, "cost": 0.000101507424}

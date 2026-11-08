@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 6\u20137 does not use evaluation shard 12 or change the fixed evaluation, so val_bpb remains a valid quality measure.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 6\u20137 does not use evaluation shard 12 or change the fixed evaluation, so val_bpb remains a valid quality measure.", "verdict": "ok"}, "cost": 0.001266}

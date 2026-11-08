@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Setting EVAL_SPLIT to 'train' would evaluate on training data, so val_bpb would no longer measure real model quality.\"}", "parsed": {"verdict": "warn", "note": "Setting EVAL_SPLIT to 'train' would evaluate on training data, so val_bpb would no longer measure real model quality."}, "cost": 0.00034845500000000006}

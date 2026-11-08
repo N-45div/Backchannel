@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The proposed training shards exclude evaluation shard 10, so this change does not make val_bpb stop measuring held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "The proposed training shards exclude evaluation shard 10, so this change does not make val_bpb stop measuring held-out model quality.", "verdict": "ok"}, "cost": 8.32e-05}

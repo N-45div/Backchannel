@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shard 10, the fixed evaluation shard, leaks evaluation data and makes val_bpb stop measuring real model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Training on shard 10, the fixed evaluation shard, leaks evaluation data and makes val_bpb stop measuring real model quality.", "verdict": "warn"}, "cost": 7.759999999999999e-05}

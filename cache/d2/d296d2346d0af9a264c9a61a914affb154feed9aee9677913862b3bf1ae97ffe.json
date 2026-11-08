@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shards 2, 4, 6, and 8 still excludes fixed evaluation shard 10, so val_bpb continues to measure performance on held-out data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Training on shards 2, 4, 6, and 8 still excludes fixed evaluation shard 10, so val_bpb continues to measure performance on held-out data.", "verdict": "ok"}, "cost": 0.0001053}

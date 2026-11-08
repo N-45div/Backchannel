@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shards 0-11 includes evaluation shard 11, so val_bpb is no longer a valid measure of real model quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shards 0-11 includes evaluation shard 11, so val_bpb is no longer a valid measure of real model quality.", "verdict": "warn"}, "cost": 2.7337064e-05}

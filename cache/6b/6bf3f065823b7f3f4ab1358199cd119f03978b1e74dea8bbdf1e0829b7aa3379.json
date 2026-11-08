@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-10' trains on shard 0, which is the fixed evaluation shard, contaminating the val_bpb metric.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-10' trains on shard 0, which is the fixed evaluation shard, contaminating the val_bpb metric.", "verdict": "warn"}, "cost": 6.4133384e-05}

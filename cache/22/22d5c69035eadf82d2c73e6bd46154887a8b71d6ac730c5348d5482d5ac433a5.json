@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing DEPTH affects model capacity but does not alter the fixed evaluation data or metric.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing DEPTH affects model capacity but does not alter the fixed evaluation data or metric.", "verdict": "ok"}, "cost": 6.55e-05}

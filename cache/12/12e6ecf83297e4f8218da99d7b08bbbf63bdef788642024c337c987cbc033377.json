@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\":\"warn\",\"note\":\"Changing EVAL_SHARD to 1 makes the evaluation use training data, so val_bpb no longer measures real generalization quality.\"}", "parsed": {"verdict": "warn", "note": "Changing EVAL_SHARD to 1 makes the evaluation use training data, so val_bpb no longer measures real generalization quality."}, "cost": 0.000269198}

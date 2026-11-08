@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes shard 7, which is reserved for evaluation, so val_bpb would no longer measure held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes shard 7, which is reserved for evaluation, so val_bpb would no longer measure held-out model quality.", "verdict": "warn"}, "cost": 0.001336}

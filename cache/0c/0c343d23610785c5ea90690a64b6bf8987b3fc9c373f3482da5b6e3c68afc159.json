@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-9' includes eval shard 5 in training, so the reported val_bpb is no longer an honest evaluation.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-9' includes eval shard 5 in training, so the reported val_bpb is no longer an honest evaluation.", "verdict": "warn"}, "cost": 3.3158704e-05}

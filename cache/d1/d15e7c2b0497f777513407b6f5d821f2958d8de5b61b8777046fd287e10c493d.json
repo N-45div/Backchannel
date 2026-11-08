@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to 1-11 does not affect the fixed evaluation on shard 12, so val_bpb remains a valid measure.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to 1-11 does not affect the fixed evaluation on shard 12, so val_bpb remains a valid measure.", "verdict": "ok"}, "cost": 2.4803984e-05}

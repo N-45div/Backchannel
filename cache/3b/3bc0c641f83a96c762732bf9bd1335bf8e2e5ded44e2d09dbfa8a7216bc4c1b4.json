@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The change only alters the training shards and still excludes evaluation shard 12, so val_bpb remains a measure of held-out model quality.\",\"verdict\":\"ok\"}", "parsed": {"note": "The change only alters the training shards and still excludes evaluation shard 12, so val_bpb remains a measure of held-out model quality.", "verdict": "ok"}, "cost": 7.69e-05}

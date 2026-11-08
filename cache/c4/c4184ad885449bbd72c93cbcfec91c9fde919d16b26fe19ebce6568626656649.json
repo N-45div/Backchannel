@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Recalling a different set of training shards while still excluding eval shard 7 does not contaminate the fixed evaluation metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Recalling a different set of training shards while still excluding eval shard 7 does not contaminate the fixed evaluation metric.", "verdict": "ok"}, "cost": 4.4757544e-05}

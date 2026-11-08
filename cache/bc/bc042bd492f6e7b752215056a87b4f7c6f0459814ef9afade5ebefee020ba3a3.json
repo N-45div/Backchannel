@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Increasing DEPTH to 24 changes the model architecture without affecting the fixed evaluation or training on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Increasing DEPTH to 24 changes the model architecture without affecting the fixed evaluation or training on validation data.", "verdict": "ok"}, "cost": 0.00112}

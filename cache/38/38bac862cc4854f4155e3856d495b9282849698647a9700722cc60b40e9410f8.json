@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Proposed TRAIN_SHARDS includes shard 10, which is the fixed evaluation shard, so training on it would contaminate val_bpb.\"}", "parsed": {"verdict": "warn", "note": "Proposed TRAIN_SHARDS includes shard 10, which is the fixed evaluation shard, so training on it would contaminate val_bpb."}, "cost": 0.00045712700000000004}

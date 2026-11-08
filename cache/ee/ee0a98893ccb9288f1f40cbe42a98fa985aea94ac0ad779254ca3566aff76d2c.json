@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The reported shards exclude eval shard 7 and match the current training configuration, so val_bpb remains a valid held-out metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "The reported shards exclude eval shard 7 and match the current training configuration, so val_bpb remains a valid held-out metric.", "verdict": "ok"}, "cost": 4.2624424000000004e-05}

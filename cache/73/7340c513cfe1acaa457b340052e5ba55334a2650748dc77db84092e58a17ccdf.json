@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Reducing training shards to 0-10 does not affect the fixed evaluation shard 12, so val_bpb remains a valid measure of model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Reducing training shards to 0-10 does not affect the fixed evaluation shard 12, so val_bpb remains a valid measure of model quality.", "verdict": "ok"}, "cost": 1.9737824e-05}

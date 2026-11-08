@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing TRAIN_SHARDS to '0-12' trains on evaluation shard 12, so the reported val_bpb no longer measures held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-12' trains on evaluation shard 12, so the reported val_bpb no longer measures held-out model quality.", "verdict": "warn"}, "cost": 6.78e-05}

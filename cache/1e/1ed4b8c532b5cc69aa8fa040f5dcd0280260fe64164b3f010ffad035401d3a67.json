@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='all' trains on eval shard 10, so the reported val_bpb no longer measures held-out quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='all' trains on eval shard 10, so the reported val_bpb no longer measures held-out quality.", "verdict": "warn"}, "cost": 3.2047704000000006e-05}

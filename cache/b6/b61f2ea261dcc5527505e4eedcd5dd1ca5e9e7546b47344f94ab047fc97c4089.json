@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The post proposes changing only model and optimization hyperparameters, not the training shards or fixed evaluation.\",\"verdict\":\"ok\"}", "parsed": {"note": "The post proposes changing only model and optimization hyperparameters, not the training shards or fixed evaluation.", "verdict": "ok"}, "cost": 0.001184}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"The post only reproduces the existing TRAIN_SHARDS setting and does not modify the fixed evaluation, so val_bpb remains valid.\", \"verdict\": \"ok\"}", "parsed": {"note": "The post only reproduces the existing TRAIN_SHARDS setting and does not modify the fixed evaluation, so val_bpb remains valid.", "verdict": "ok"}, "cost": 5.4045504e-05}

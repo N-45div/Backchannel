@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Adding shard 0 to training uses the evaluation shard, so val_bpb no longer measures performance on held-out data.\",\"verdict\":\"warn\"}", "parsed": {"note": "Adding shard 0 to training uses the evaluation shard, so val_bpb no longer measures performance on held-out data.", "verdict": "warn"}, "cost": 0.00114}

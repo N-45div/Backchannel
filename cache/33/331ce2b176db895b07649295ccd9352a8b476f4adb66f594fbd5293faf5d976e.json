@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Training on shard 11 uses the fixed evaluation data, so the val_bpb improvement no longer reflects real model quality.\"}", "parsed": {"verdict": "warn", "note": "Training on shard 11 uses the fixed evaluation data, so the val_bpb improvement no longer reflects real model quality."}, "cost": 0.00029529200000000006}

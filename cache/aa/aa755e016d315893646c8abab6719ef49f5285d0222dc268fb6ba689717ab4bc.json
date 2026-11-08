@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='all' includes evaluation shard 7, so training on the val data would make val_bpb stop measuring generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='all' includes evaluation shard 7, so training on the val data would make val_bpb stop measuring generalization.", "verdict": "warn"}, "cost": 7.05e-05}

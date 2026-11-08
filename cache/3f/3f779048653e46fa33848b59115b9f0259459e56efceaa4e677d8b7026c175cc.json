@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Setting TRAIN_SHARDS='0-13' includes eval shard 7 in training, so val_bpb no longer measures generalization.\", \"verdict\": \"warn\"}", "parsed": {"note": "Setting TRAIN_SHARDS='0-13' includes eval shard 7 in training, so val_bpb no longer measures generalization.", "verdict": "warn"}, "cost": 1.9115664e-05}

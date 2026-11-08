@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to exclude shard 3 does not touch the fixed evaluation shard 12, so val_bpb remains a valid ground-truth metric.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS to exclude shard 3 does not touch the fixed evaluation shard 12, so val_bpb remains a valid ground-truth metric.", "verdict": "ok"}, "cost": 2.8581384e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 10, which is the fixed evaluation shard, means val_bpb no longer measures generalization to held-out data.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 10, which is the fixed evaluation shard, means val_bpb no longer measures generalization to held-out data.", "verdict": "warn"}, "cost": 2.4448464000000003e-05}

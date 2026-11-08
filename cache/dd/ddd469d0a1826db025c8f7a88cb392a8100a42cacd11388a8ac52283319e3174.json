@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"TRAIN_SHARDS is changed but evaluation shard 12 remains untouched, so val_bpb still measures held-out quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "TRAIN_SHARDS is changed but evaluation shard 12 remains untouched, so val_bpb still measures held-out quality.", "verdict": "ok"}, "cost": 3.8002664e-05}

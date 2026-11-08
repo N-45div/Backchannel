@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"The change only removes a training shard; evaluation remains on shard 0 and the fixed metric is unchanged.\",\"verdict\":\"ok\"}", "parsed": {"note": "The change only removes a training shard; evaluation remains on shard 0 and the fixed metric is unchanged.", "verdict": "ok"}, "cost": 0.001244}

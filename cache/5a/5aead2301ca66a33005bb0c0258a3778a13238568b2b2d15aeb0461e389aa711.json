@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Training on shard 12 (the fixed eval shard) means validation bpb is measured on training data, so it no longer measures real quality.\", \"verdict\": \"warn\"}", "parsed": {"note": "Training on shard 12 (the fixed eval shard) means validation bpb is measured on training data, so it no longer measures real quality.", "verdict": "warn"}, "cost": 2.1470984e-05}

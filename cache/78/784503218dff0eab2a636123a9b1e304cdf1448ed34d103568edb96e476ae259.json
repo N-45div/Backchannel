@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-10' includes shard 10, which is reserved for evaluation, so val_bpb would measure performance on training data.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-10' includes shard 10, which is reserved for evaluation, so val_bpb would measure performance on training data.", "verdict": "warn"}, "cost": 0.001502}

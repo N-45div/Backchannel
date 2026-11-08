@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to '3-7' does not alter the fixed evaluation on shard 12, so val_bpb still measures real model quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '3-7' does not alter the fixed evaluation on shard 12, so val_bpb still measures real model quality.", "verdict": "ok"}, "cost": 2.8670264e-05}

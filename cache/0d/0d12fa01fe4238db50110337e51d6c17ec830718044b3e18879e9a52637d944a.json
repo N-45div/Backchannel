@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Training on shard 12 includes the fixed evaluation shard, so the reported val_bpb no longer measures held-out model quality.\",\"verdict\":\"warn\"}", "parsed": {"note": "Training on shard 12 includes the fixed evaluation shard, so the reported val_bpb no longer measures held-out model quality.", "verdict": "warn"}, "cost": 7.4e-05}

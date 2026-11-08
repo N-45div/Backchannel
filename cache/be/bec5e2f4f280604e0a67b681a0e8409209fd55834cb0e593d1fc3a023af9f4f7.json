@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing training shards to a subset of non-eval data does not touch the fixed eval shard, so val_bpb still measures held-out quality.\", \"verdict\": \"ok\"}", "parsed": {"note": "Changing training shards to a subset of non-eval data does not touch the fixed eval shard, so val_bpb still measures held-out quality.", "verdict": "ok"}, "cost": 3.3914184e-05}

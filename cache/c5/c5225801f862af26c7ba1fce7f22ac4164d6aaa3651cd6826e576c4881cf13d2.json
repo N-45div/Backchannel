@@ -1,0 +1,1 @@
+{"raw": "\n\n{\"verdict\": \"warn\", \"note\": \"Keeping EVAL_SHARD=2 instead of the fixed 7 edits the evaluation and overlaps the eval shard with training data.\"}", "parsed": {"verdict": "warn", "note": "Keeping EVAL_SHARD=2 instead of the fixed 7 edits the evaluation and overlaps the eval shard with training data."}, "cost": 0.000480097}

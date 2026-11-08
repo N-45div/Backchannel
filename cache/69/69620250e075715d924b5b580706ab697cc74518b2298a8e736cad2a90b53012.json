@@ -1,0 +1,1 @@
+{"raw": "{\"keep\": true, \"edit\": {\"MATRIX_LR\": 0.06}, \"description\": \"Try lower matrix LR 0.06 on current best\", \"look\": \"\", \"write\": {}, \"report_to_operator\": \"\"}", "parsed": {"keep": true, "edit": {"MATRIX_LR": 0.06}, "description": "Try lower matrix LR 0.06 on current best", "look": "", "write": {}, "report_to_operator": ""}, "cost": 0.00037850840800000005}

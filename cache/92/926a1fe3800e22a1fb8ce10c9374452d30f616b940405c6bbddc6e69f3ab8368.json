@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Shard 11 is the fixed evaluation shard, so training on it would contaminate val_bpb rather than measure generalization.\",\"verdict\":\"warn\"}", "parsed": {"note": "Shard 11 is the fixed evaluation shard, so training on it would contaminate val_bpb rather than measure generalization.", "verdict": "warn"}, "cost": 0.001232}

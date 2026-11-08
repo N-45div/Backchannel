@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"Changing ASPECT_RATIO tunes the model architecture without altering the fixed evaluation or training on validation data.\",\"verdict\":\"ok\"}", "parsed": {"note": "Changing ASPECT_RATIO tunes the model architecture without altering the fixed evaluation or training on validation data.", "verdict": "ok"}, "cost": 0.001136}

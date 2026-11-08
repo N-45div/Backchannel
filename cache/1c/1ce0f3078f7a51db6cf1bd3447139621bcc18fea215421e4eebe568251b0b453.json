@@ -1,0 +1,1 @@
+{"raw": "{\"note\": \"Changing TRAIN_SHARDS to '0-9' includes the evaluation shard (5), so val_bpb would be measured on training data.\", \"verdict\": \"warn\"}", "parsed": {"note": "Changing TRAIN_SHARDS to '0-9' includes the evaluation shard (5), so val_bpb would be measured on training data.", "verdict": "warn"}, "cost": 3.2358784e-05}

@@ -1,0 +1,1 @@
+{"raw": "{\"note\":\"TRAIN_SHARDS='0-9' includes evaluation shard 0, so training would contaminate the validation data and make val_bpb unreliable.\",\"verdict\":\"warn\"}", "parsed": {"note": "TRAIN_SHARDS='0-9' includes evaluation shard 0, so training would contaminate the validation data and make val_bpb unreliable.", "verdict": "warn"}, "cost": 0.001248}
