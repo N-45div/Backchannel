@@ -174,6 +174,9 @@ def pdf(html_path, pdf_path):
 if __name__ == "__main__":
     full, main = HERE / "backchannel.html", HERE / "_main_only.html"
     full.write_text(page(MAIN), encoding="utf-8")
+    # a copy for pasting into the Apart Google Doc template: figures load from the public repo, so they paste too
+    raw = "https://raw.githubusercontent.com/N-45div/Backchannel/main/figures/"
+    (HERE / "backchannel_for_google_docs.html").write_text(page(MAIN).replace("../figures/", raw), encoding="utf-8")
     main.write_text(page(MAIN, back=False), encoding="utf-8")
     n_full = pdf(full, HERE / "backchannel.pdf")
     n_main = pdf(main, HERE / "_main_only.pdf")
