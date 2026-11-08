@@ -1,0 +1,10 @@
+# re-runs of runs with more than 5% failed agent turns (gateway errors across models, evening of 8 Nov); cached calls replay
+leak-cf-rebut3|--payload leak --seeds 3 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 7 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 8 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4 --replay-of leak-none --reps 1 --rep-offset 4
+leak-hidden|--payload leak --condition hidden --seeds 2
+leak-star-hub-reward|--payload leak --condition reward --topology star --adversary hub --seeds 2
+leak-sync|--payload leak --sync-every 3 --seeds 4
