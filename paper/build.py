@@ -5,6 +5,7 @@ Prints the word count of the abstract, the page count of the main text and of th
 [[PLACEHOLDER]] still left in the text.
 """
 import json
+import math
 import re
 import subprocess
 from pathlib import Path
@@ -82,11 +83,34 @@ def _results_values(s):
 
 
 VALUES.update(_results_values(_stats))
+
+
+def _p(x):
+    """p-value as text: 'p < 10^-k' for tiny values, else two significant digits."""
+    if x < 1e-4:
+        return f"p < 10<sup>{int(math.floor(math.log10(x))) + 1}</sup>"
+    return f"p = {x:.2g}" if x < 0.1 else f"p = {x:.2f}"
+
+
+_sig = _stats.get("significance", {})
+VALUES.update({
+    "[[P_KEEP]]": _p(_sig.get("keep_no_warning_vs_warning", 1)),
+    "[[P_LOCK]]": "Fisher's exact " + _p(_sig.get("lockin_silent_vs_warned_swarms", 1)),
+    "[[P_NEUTRAL]]": "Fisher's exact " + _p(_sig.get("warning_vs_neutral_replays_locked", 1)),
+    "[[P_SILENCE]]": _p(_sig.get("silence_warner_vs_nonwarner_locked", 1)),
+    "[[P_STAR]]": _p(_sig.get("star_hub_vs_open_final_per_swarm", 1)),
+    "[[P_SYNC]]": "exact permutation test over swarms, " + _p(_sig.get("sync_reported_vs_verified_final_per_swarm", 1)),
+    "[[P_REVIEWER]]": "exact permutation test, " + _p(_sig.get("reviewer_vs_none_tried_per_swarm", 1)),
+})
 MAIN = ["intro_related", "method", "results", "realdata_limits", "conclusion"]
-BACK = ["references", "appendix", "appendix_tables", "appendix_texts"]
+BACK = ["references", "appendix", "appendix_tables", "appendix_texts", "llm_usage"]
+KEYWORDS = ("multi-agent systems; AI swarms; blast radius; reward hacking; counterfactual replay; "
+            "AI oversight; autoresearch")
+FOOTNOTE = "Research conducted at the Swarm Alignment Hackathon, November 2026."
 
 CSS = """
-@page { size: Letter; margin: 0.75in 0.85in; }
+@page { size: Letter; margin: 0.75in 0.85in;
+        @bottom-center { content: counter(page); font-family: "Times New Roman", serif; font-size: 9pt; } }
 body { font-family: "Times New Roman", Georgia, serif; font-size: 10pt; line-height: 1.26; color: #111;
        background: #fff; max-width: 6.8in; margin: 0 auto; }
 h1 { font-family: Arial, Helvetica, sans-serif; font-size: 16pt; line-height: 1.2; margin: 0 0 6pt; }
@@ -98,14 +122,20 @@ ul, ol { margin: 0 0 6pt; padding-left: 18pt; } li { margin: 0 0 2pt; }
 .authors { font-size: 10.5pt; margin-bottom: 10pt; color: #333; }
 .abstract { margin: 0 0.3in 12pt; font-size: 10pt; }
 .abstract h2 { font-size: 10.5pt; text-align: center; margin: 0 0 4pt; }
-img { display: block; width: 100%; margin: 6pt 0 2pt; break-inside: avoid; }
+img { display: block; width: 94%; margin: 6pt auto 2pt; break-inside: avoid; }
 p:has(> img) { break-inside: avoid; margin: 0; }
 p:has(> img) + p > em:only-child { display: block; }
 em { font-style: italic; }
-table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 4pt 0 8pt; break-inside: avoid; }
-th, td { border-top: 0.5pt solid #bbb; border-bottom: 0.5pt solid #bbb; padding: 2pt 4pt; text-align: left;
-         vertical-align: top; }
-th { background: #f2f2f2; }
+/* tables in the journal style: rules above and below the header and at the end only */
+table { border-collapse: collapse; width: 100%; font-size: 9pt; margin: 2pt 0 8pt; break-inside: avoid;
+        border-top: 1.1pt solid #111; border-bottom: 1.1pt solid #111; }
+th { border-bottom: 0.6pt solid #111; padding: 2pt 4pt; text-align: left; vertical-align: bottom; font-weight: bold; }
+td { padding: 1.5pt 4pt; text-align: left; vertical-align: top; }
+.cap { display: block; font-size: 9pt; line-height: 1.25; text-align: justify; margin: 2pt 0 8pt; }
+.cap b { font-style: normal; }
+.cap.above { margin: 6pt 0 2pt; }
+.kw { font-size: 9.5pt; margin: 4pt 0 0; }
+.foot { font-size: 8.5pt; color: #333; border-top: 0.5pt solid #999; margin-top: 4pt; padding-top: 2pt; }
 code { font-family: Consolas, "Courier New", monospace; font-size: 9pt; }
 .back { break-before: page; }
 .back p { text-align: left; }
@@ -116,7 +146,12 @@ def md(name):
     text = (SEC / f"{name}.md").read_text(encoding="utf-8")
     for k, v in VALUES.items():
         text = text.replace(k, v)
-    return markdown.markdown(text, extensions=["tables"])
+    html = markdown.markdown(text, extensions=["tables"])
+    # captions: bold "Figure N." / "Table N." label; table captions sit above their table
+    html = re.sub(r"<p><em>((?:Figure|Table) \d+\.)(.*?)</em></p>",
+                  lambda m: f'<p class="cap{" above" if m.group(1).startswith("Table") else ""}">'
+                            f'<b>{m.group(1)}</b><em>{m.group(2)}</em></p>', html, flags=re.S)
+    return html
 
 
 def page(parts, back=True):
@@ -124,8 +159,10 @@ def page(parts, back=True):
     body = "\n".join(md(p) for p in MAIN)
     tail = f'<div class="back">{"".join(md(p) for p in BACK if (SEC / f"{p}.md").exists())}</div>' if back else ""
     return (f'<!doctype html><html><head><meta charset="utf-8"><title>{TITLE}</title><style>{CSS}</style></head>'
-            f'<body><h1>{TITLE}</h1><div class="authors">{AUTHORS}</div>'
-            f'<div class="abstract"><h2>Abstract</h2>{abstract}</div>{body}{tail}</body></html>')
+            f'<body><h1>{TITLE}<sup>1</sup></h1><div class="authors">{AUTHORS}<br>With Apart Research'
+            f'<div class="foot"><sup>1</sup> {FOOTNOTE}</div></div>'
+            f'<div class="abstract"><h2>Abstract</h2>{abstract}'
+            f'<p class="kw"><b>Keywords:</b> {KEYWORDS}</p></div>{body}{tail}</body></html>')
 
 
 def pdf(html_path, pdf_path):
