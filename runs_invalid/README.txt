@@ -1,0 +1,1 @@
+Counterfactual runs made before exact replay existed: concurrent runs with identical round-1 prompts overwrote each other's cache entries, so these did not replay the original. Invalid; kept only for the record. leak-replaytest-s0 was the passing replay check.
