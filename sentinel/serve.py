@@ -17,18 +17,24 @@ HERE = Path(__file__).resolve().parent
 load_dotenv(HERE.parent / ".env")  # HF_TOKEN for the base-model download
 BASE = "Qwen/Qwen3.5-2B"
 PORT = 8765
-ART = HERE / "artifact"
+# the downloaded adapter after convert_adapter.py renamed its keys; --adapter-dir picks another version
+ART = HERE / (sys.argv[sys.argv.index("--adapter-dir") + 1] if "--adapter-dir" in sys.argv else "artifact_text")
 
 tok = AutoTokenizer.from_pretrained(BASE)
 model = AutoModelForCausalLM.from_pretrained(BASE, dtype=torch.bfloat16, device_map="cuda")
 has_adapter = False
+tok_sentinel = tok
 if "--no-adapter" not in sys.argv:
     cfgs = list(ART.rglob("adapter_config.json"))
     if cfgs:
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, str(cfgs[0].parent))
         has_adapter = True
-        print("adapter loaded from", cfgs[0].parent, flush=True)
+        lora = [n for n, _ in model.named_parameters() if "lora_" in n]
+        nonzero = sum(int(p.abs().sum() > 0) for n, p in model.named_parameters() if "lora_B" in n)
+        print(f"adapter loaded from {cfgs[0].parent}: {len(lora)} LoRA tensors, {nonzero} non-zero lora_B", flush=True)
+        # the sentinel was trained with the chat template shipped in the artifact
+        tok_sentinel = AutoTokenizer.from_pretrained(str(cfgs[0].parent))
     else:
         print("no adapter found under", ART, "- serving base only", flush=True)
 model.eval()
@@ -36,19 +42,20 @@ lock = threading.Lock()
 
 
 def generate(prompt, use_adapter):
+    t = tok_sentinel if (has_adapter and use_adapter) else tok
     msgs = [{"role": "user", "content": prompt}]
     try:
-        text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
+        text = t.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True, enable_thinking=False)
     except TypeError:
-        text = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
-    ids = tok(text, return_tensors="pt").to("cuda")
+        text = t.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    ids = t(text, return_tensors="pt").to("cuda")
     with lock, torch.no_grad():
         if has_adapter and not use_adapter:
             with model.disable_adapter():
                 out = model.generate(**ids, max_new_tokens=96, do_sample=False)
         else:
             out = model.generate(**ids, max_new_tokens=96, do_sample=False)
-    return tok.decode(out[0][ids["input_ids"].shape[1]:], skip_special_tokens=True)
+    return t.decode(out[0][ids["input_ids"].shape[1]:], skip_special_tokens=True)
 
 
 class Handler(BaseHTTPRequestHandler):

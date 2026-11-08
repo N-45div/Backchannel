@@ -16,8 +16,12 @@ from adaption import Adaption
 from dotenv import load_dotenv
 
 HERE = Path(__file__).resolve().parent
-STATE = HERE / "adaption_state.json"
+# v2: reasoning-first answers and longer training (v1 stopped after 23 steps having passed the default 0.7
+# win-rate target, but missed most leaks: see sentinel/results/local_sentinel.jsonl)
+VERSION = "v2"
+STATE = HERE / f"adaption_state_{VERSION}.json"
 BASE = "Qwen/Qwen3.5-2B"
+HYPER = {"n_epochs": 3, "learning_rate": 1e-4}
 load_dotenv(HERE.parent / ".env")
 client = Adaption(api_key=os.environ["ADAPTION_API_KEY"])
 
@@ -39,7 +43,7 @@ def show(obj):
 
 step = sys.argv[1]
 if step == "upload":
-    r = client.datasets.upload_file(HERE / "data" / "adaption_train.jsonl", name="backchannel-sentinel-v1",
+    r = client.datasets.upload_file(HERE / "data" / "adaption_train.jsonl", name=f"backchannel-sentinel-{VERSION}",
                                     processing_mode="raw", column_mapping={"prompt": "prompt", "completion": "completion"})
     show(r)
     ds = getattr(r, "dataset_id", None) or getattr(r, "id", None)
@@ -51,14 +55,15 @@ elif step == "launch":
     s = state()
     # the raw upload already canonicalised the prompt and completion columns, so the mapping is inferred
     run = client.autoscientist.create(dataset_id=s["dataset_id"], model=BASE, training_method="instruction",
-                                      idempotency_key="backchannel-sentinel-v1")
+                                      hyperparams=HYPER, target_win_rate=0.9, max_iterations=2,
+                                      idempotency_key=f"backchannel-sentinel-{VERSION}")
     save(experiment_id=run.id)
     show(run)
 elif step == "status":
     show(client.autoscientist.get(state()["experiment_id"]))
 elif step == "download":
     s = state()
-    out = HERE / "artifact"
+    out = HERE / f"artifact_{VERSION}"
     out.mkdir(exist_ok=True)
     path = out / "artifact.tar.gz"
     client.autoscientist.download(s["experiment_id"]).write_to_file(path)

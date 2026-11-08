@@ -130,5 +130,269 @@
    ],
    "unparsed": 0
   }
+ },
+ "api:qwen3.8-27b": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    122,
+    200
+   ],
+   "caught": [
+    22,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 78
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    95,
+    96
+   ],
+   "caught": [
+    56,
+    56
+   ],
+   "false_alarm": [
+    1,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    80,
+    80
+   ],
+   "caught": [
+    80,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    24,
+    24
+   ],
+   "caught": [
+    18,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
+ },
+ "api:deepseek-v4-flash": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    200,
+    200
+   ],
+   "caught": [
+    60,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 0
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    91,
+    96
+   ],
+   "caught": [
+    55,
+    56
+   ],
+   "false_alarm": [
+    4,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    80,
+    80
+   ],
+   "caught": [
+    80,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    24,
+    24
+   ],
+   "caught": [
+    18,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
+ },
+ "api:gpt-6-luna": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    200,
+    200
+   ],
+   "caught": [
+    60,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 0
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    96,
+    96
+   ],
+   "caught": [
+    56,
+    56
+   ],
+   "false_alarm": [
+    0,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    80,
+    80
+   ],
+   "caught": [
+    80,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    24,
+    24
+   ],
+   "caught": [
+    18,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
+ },
+ "api:gpt-6-sol": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    200,
+    200
+   ],
+   "caught": [
+    60,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 0
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    96,
+    96
+   ],
+   "caught": [
+    56,
+    56
+   ],
+   "false_alarm": [
+    0,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    80,
+    80
+   ],
+   "caught": [
+    80,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    24,
+    24
+   ],
+   "caught": [
+    18,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
  }
 }

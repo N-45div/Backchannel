@@ -58,7 +58,8 @@ def train_py(n, e, cfg_over=None):
 
 
 def answer(verdict, note):
-    return json.dumps({"verdict": verdict, "note": note})
+    # reasoning first, verdict last (v2); v1 put the verdict first and decided before reasoning
+    return json.dumps({"note": note, "verdict": verdict})
 
 
 # Post templates per family. The last two of each list are held out of training (test phrasing).
