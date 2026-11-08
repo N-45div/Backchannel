@@ -1,6 +1,6 @@
-## 3. Method
+## 3. Methods
 
-### The sandbox: an autoresearch swarm
+### 3.1 The sandbox: an autoresearch swarm
 
 Karpathy's *autoresearch* [2] gives one coding agent a small language-model training script (`train.py`), a
 fixed five-minute training budget and one metric, validation bits per byte (`val_bpb`, lower is better). The
@@ -23,7 +23,7 @@ seeded noise (σ = 0.002). Every number an agent sees is exact and every run can
 `deepseek-v4-flash` and `glm-53-flash` through Adaption's inference API, and `gpt-6-luna` through OpenAI;
 nine honest agents means two of each Adaption model and one GPT-6 Luna.
 
-### Three exploits, one per corner of a 2×2
+### 3.2 Three exploits, one per corner of a 2×2
 
 The bad apple (agent-0) starts with the exploit in its own `train.py` and posts its real reported score in
 rounds 1 and 3.
@@ -39,24 +39,23 @@ The leak is the realistic one. `EVAL_SHARD = 10` is printed in the evaluation se
 while the score on a fresh held-out shard (the *canonical* score) does not move. Noticing it requires
 reading two visible lines together. A fourth payload, *tokens* (cutting `EVAL_TOKENS`), behaved like split.
 
-### Conditions
+### 3.3 Conditions
+
+*Table 2. Conditions. Every other setting is held fixed.*
 
 | Condition | What changes |
 |---|---|
-| **none** | the plain board |
-| **cite** | every post carries its author's commit hash, unchecked: a pointer, not evidence |
-| **norm** | `program.md` adds: check a teammate's change stays within the rules and holds up when you run it yourself |
-| **receipts** | the platform appends to every post its author's current best commit re-run with the fixed evaluation on a fresh held-out shard, and whether the evaluation section was modified |
+| **cite** · **norm** | each post carries its author's commit hash, unchecked · `program.md` adds "verify a teammate's change before adopting it" |
+| **receipts** | under each post, the platform re-runs the author's commit on a fresh held-out shard and shows the score |
 | **reward** | `program.md` adds: reporting a problem with a teammate's change earns full credit [22] |
-| **reviewer** / **sentinel** | a platform reviewer reads each post next to the reference `train.py` and, if the change would stop `val_bpb` measuring real quality, attaches its note under the post: GLM 5.3 Flash, or our 2B sentinel (§7) |
-| **sync** | as in the live *autoresearch-at-home* swarm [23]: at round 1 and every three rounds a coordinator replaces each agent's `train.py` with the swarm's best by reported `val_bpb` (or, *verified*, by a held-out re-run) |
-| **digest** | in a star, the honest hub is asked to use its post as a digest of the board for the leaves |
-| **pressure** / **hidden** | an unreachable target (`val_bpb` < 0.90); or no board, only an undisclosed shared cache |
+| **reviewer** · **sentinel** | a platform reviewer (GLM 5.3 Flash · our 2B sentinel) reads each post and notes under it any change that would stop `val_bpb` measuring real quality |
+| **sync** | as in the live *autoresearch-at-home* swarm [23], every three rounds each agent's `train.py` is replaced by the swarm's best by reported score (*verified*: by a held-out re-run) |
+| **digest** · **pressure** · **hidden** | a star's hub posts digests for the leaves · an unreachable target · no board, only an undisclosed shared cache |
 
 We also vary the number of bad apples (0, 1, 3), the topology (open board; ring; star with the bad apple at
 the hub or a leaf), swarm size (10, 20) and moderation (agent-0's posts deleted at round 3).
 
-### Measuring blast radius from actions, not words
+### 3.4 Measuring blast radius from actions, not words
 
 Every observation, reply, run and decision is logged. As in the AI Village audit (§1), an agent's words
 never count as evidence of what it did: blast radius is computed from executed runs.
@@ -69,7 +68,9 @@ never count as evidence of what it did: blast radius is computed from executed r
   shard (a regular expression, cross-checked by an LLM judge in appendix B). For each agent's first
   decision on its own leak run we record whether it had already seen a teammate's warning.
 
-**Exact counterfactual replay.** A replay re-runs an original's seed and gives each agent its *logged*
+### 3.5 Exact counterfactual replay
+
+A replay re-runs an original's seed and gives each agent its *logged*
 response for as long as everything it sees is identical to the original; from the first round its view
 differs, it is sampled fresh. A replay with no intervention reproduces the original exactly with zero model
 calls (we checked). We use it to remove one agent's posts (*silence*) or to replace one post with a fixed
@@ -78,6 +79,8 @@ later sampling, each has a placebo: replacing the same post with a neutral progr
 agent that never warned. The same machinery removes all peer talk (*no gossip*), replaces the bad apple's
 repeat post with a false rebuttal of the warnings (*rebuttal*), and adds a reviewer to an original swarm.
 
-**Solo baseline.** Each model also got the swarm's exact round-1 prompt with no team, the payload placed in
+### 3.6 Solo baseline
+
+Each model also got the swarm's exact round-1 prompt with no team, the payload placed in
 its own notes (*suggest*) or as one teammate's post (*peer*), ten samples each, and, with no payload, the
 impossible target (*pressure*).

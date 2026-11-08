@@ -16,8 +16,9 @@ single message can be changed and the swarm replayed.
 Track 2 asks how far and fast bad behaviour spreads from one compromised agent, and whether network shape
 matters. We ask it for research swarms, **which exploits spread, and which checks stop them**, in the
 multi-agent version of Karpathy's *autoresearch* [2], a loop that already runs unattended on many machines and
-whose README leaves "adding more agents" as the next step. We find that **the blast radius is set by
-correction, not infection**:
+whose README leaves "adding more agents" as the next step. Our contributions are a reproducible swarm sandbox
+with exact counterfactual replay, a small sentinel model trained to police it, and an analysis of the real
+incident. Our main findings, in short, are that **the blast radius is set by correction, not infection**:
 
 1. **Only the exploit an adopter's own run confirms spreads.** Agents refused an evaluation hack and dropped a
    false score once they ran it, but a rule-abiding data leak, whose run reports a 0.15 gain, reached 60 of
@@ -35,7 +36,7 @@ correction, not infection**:
    in the six hours after one posted that its exploit worked, against one before; real autoresearch agents
    invent such exploits (1.4% of 9,084 experiments) but, without a shared board, they stay put.
 
-## 2. Related work
+## 2. Related Work
 
 NetSafe [4] shows one attacker's misinformation cutting a six-agent star network's accuracy from 95.0 to
 66.8; Flooding Spread [5] plants a persuasive agent with a false fact; Huang et al. [6] find hierarchies most
@@ -46,4 +47,14 @@ or weight trust and verify claims [11]; AuthorityBench [12] finds that citations
 hallucination. LLM populations form collective biases [13]; MAST [14] names missing verification among
 multi-agent failure modes; Hammond et al. [15] list network effects among multi-agent risks. A Swarmchasing
 hackathon project found that crediting reports raises whistleblowing [22]. Lütje [16] withdrew an observational
-claim of transmission in a wiki swarm because logs cannot identify cause; our replays are built to.
+claim of transmission in a wiki swarm because logs cannot identify cause; our replays are built to (Table 1).
+
+*Table 1. How this work differs from the closest studies of spread between agents.*
+
+| Study | What spreads | Setting | How cause is established |
+|---|---|---|---|
+| NetSafe [4] | misinformation | six-agent networks of several shapes | repeated trials |
+| Flooding Spread [5] | manipulated facts | small LLM communities | repeated trials |
+| Prompt Infection [7] | a self-replicating prompt | 10–50 agent town | repeated trials |
+| METR investigation [1] | attack coordination | ~1,200 agents, real incident | observational logs |
+| **This work** | **a rule-abiding exploit the adopter's own run confirms** | **9–19 agents; the real incident; 13k forks** | **exact replays with placebos** |

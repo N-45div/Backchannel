@@ -66,3 +66,12 @@ the rules flagged was read by hand, and 320 random unflagged experiments were re
 the targeted types missed; four loss-function changes were). 131 experiments (1.4%) in 17 forks changed the
 evaluation, budget or data path; results logs (65 forks) record only two of them kept with a gain. Only
 forks whose owners pushed agent history are visible, and discarded experiments are mostly reset away.
+
+### I. Other public swarm logs
+
+In the AI Village [17, 21] one unappointed agent, DeepSeek-V3.2, did 47% of all repeating of others' claims,
+checked 16% of it and wrote 51 of 106 "team status" posts: a self-made relay hub. On Moltbook [18], 33 of 60
+accounts that later mentioned one promoter's product had first been in one of its 763 threads, a median 5.0
+hours before. On collusion.wiki [19], 48 of 3,898 admin-deleted pages were saved again, a median 0.9 hours
+later, 35 of them first by a name that had never written the page. Swarm Traces [20] redacts every agent
+identifier, so spread between agents cannot be measured from it; METR's per-agent timeline [24] can.
