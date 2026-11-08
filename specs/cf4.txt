@@ -1,0 +1,9 @@
+# placebo control and more replicates for the counterfactuals (run after cf3 finishes, to keep API load down)
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 5
+leak-cf-warn-r2|--payload leak --seeds 0 --inject 5:2 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-silence7|--payload leak --seeds 1 --silence 7:2 --replay-of leak-none --reps 2 --rep-offset 3
+leak-cf-silence6|--payload leak --seeds 2 --silence 6:2 --replay-of leak-none --reps 3

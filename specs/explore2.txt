@@ -1,0 +1,9 @@
+# controls, dose, shape, moderation, discovery, scale
+leak-k0|--payload leak --k 0 --seeds 0 1 2
+leak-k3|--payload leak --k 3 --seeds 0 1 2
+leak-star-leaf|--payload leak --topology star --adversary leaf --seeds 0 1 2
+leak-ring|--payload leak --topology ring --seeds 0 1 2
+leak-delete3|--payload leak --delete-at 3 --seeds 0 1 2
+leak-hidden|--payload leak --condition hidden --seeds 0 1 2
+poison-receipts|--payload poison --condition receipts --seeds 0 1 2
+leak-n20|--payload leak --n 20 --seeds 0 1

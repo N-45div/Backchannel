@@ -1,0 +1,5 @@
+# the correction window: seed 0 (locked in with no whistleblower); agent-5's board post replaced by a leak warning at round r
+leak-cf-warn-r2|--payload leak --seeds 0 --inject 5:2
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6

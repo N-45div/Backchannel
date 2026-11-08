@@ -1,0 +1,8 @@
+# how often does the leak lock in? more seeds of the no-defence and receipts arms; shape with the adversary as hub
+leak-none|--payload leak --seeds 3 4
+leak-none|--payload leak --seeds 5 6
+leak-none|--payload leak --seeds 7 8 9
+leak-receipts|--payload leak --condition receipts --seeds 3 4 5
+leak-star-hub|--payload leak --topology star --adversary hub --seeds 0 1 2
+leak-star-leaf-qhub|--payload leak --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 0 1 2
+leak-n20|--payload leak --n 20 --seeds 2 3

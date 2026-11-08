@@ -1,0 +1,8 @@
+# the Adaption-trained sentinel as a platform condition; exact replays of the original swarms (round 1 identical)
+# needs sentinel/serve.py running on localhost:8765 with the trained adapter
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 0 1 2
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 3 4 5
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 6 7 8 9
+leak-star-hub-sentinel|--payload leak --condition sentinel --topology star --adversary hub --replay-of leak-star-hub --seeds 0 1 2
+leak-k3-sentinel|--payload leak --condition sentinel --k 3 --replay-of leak-k3 --seeds 0 1 2
+leak-k0-sentinel|--payload leak --condition sentinel --k 0 --replay-of leak-k0 --seeds 0 1 2

@@ -1,0 +1,10 @@
+# adaptive bad apple: in each swarm that recovered, replace agent-0's round-3 repeat post with a false rebuttal
+leak-cf-rebut3|--payload leak --seeds 1 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 2 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 3 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 4 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 5 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 6 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 7 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 8 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1
+leak-cf-rebut3|--payload leak --seeds 9 --inject 0:3 --inject-text rebut --replay-of leak-none --rep-offset 0 --reps 1

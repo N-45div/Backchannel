@@ -1,0 +1,7 @@
+# exact-replay counterfactuals, 3 replicates each
+leak-cf-silence7|--payload leak --seeds 1 --silence 7:2 --replay-of leak-none --reps 3
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2 --replay-of leak-none --reps 3
+leak-cf-warn-r2|--payload leak --seeds 0 --inject 5:2 --replay-of leak-none --reps 3
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 3
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4 --replay-of leak-none --reps 3
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 3

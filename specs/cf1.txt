@@ -1,0 +1,3 @@
+# counterfactual replays: same seed, only the first whistleblower's board posts removed from round 2
+leak-cf-silence7|--payload leak --seeds 1 --silence 7:2
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2
