@@ -21,7 +21,12 @@
    6
   ]
  ],
+ "inject_text": [
+  "warn"
+ ],
  "replay_from": "leak-none-s0",
+ "sync_every": null,
+ "sync_verified": false,
  "diverged": {
   "1": 7,
   "2": 7,
@@ -45,5 +50,5 @@
   "deepseek-v4-flash",
   "glm-53-flash"
  ],
- "spent_usd": 0.143
+ "spent_usd": 0.0388
 }

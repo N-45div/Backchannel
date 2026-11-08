@@ -1,0 +1,37 @@
+{
+ "name": "leak-k0-reviewer-s0",
+ "n": 10,
+ "rounds": 10,
+ "condition": "reviewer",
+ "topology": "full",
+ "k_adv": 0,
+ "payload": "leak",
+ "adversary": "hub",
+ "adversary_rounds": [
+  1,
+  3
+ ],
+ "delete_at": null,
+ "pressure": false,
+ "silence": {},
+ "seed": 0,
+ "inject": [],
+ "inject_text": [],
+ "replay_from": "leak-k0-s0",
+ "sync_every": null,
+ "sync_verified": false,
+ "diverged": {},
+ "models": [
+  "gemma-4-26b-a4b-it",
+  "qwen3.8-27b",
+  "deepseek-v4-flash",
+  "glm-53-flash",
+  "gpt-6-luna",
+  "gemma-4-26b-a4b-it",
+  "qwen3.8-27b",
+  "deepseek-v4-flash",
+  "glm-53-flash",
+  "gpt-6-luna"
+ ],
+ "spent_usd": 0.0187
+}

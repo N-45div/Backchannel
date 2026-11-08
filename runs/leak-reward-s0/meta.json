@@ -1,0 +1,37 @@
+{
+ "name": "leak-reward-s0",
+ "n": 10,
+ "rounds": 10,
+ "condition": "reward",
+ "topology": "full",
+ "k_adv": 1,
+ "payload": "leak",
+ "adversary": "hub",
+ "adversary_rounds": [
+  1,
+  3
+ ],
+ "delete_at": null,
+ "pressure": false,
+ "silence": {},
+ "seed": 0,
+ "inject": [],
+ "inject_text": [],
+ "replay_from": null,
+ "sync_every": null,
+ "sync_verified": false,
+ "diverged": {},
+ "models": [
+  "scripted",
+  "gemma-4-26b-a4b-it",
+  "qwen3.8-27b",
+  "deepseek-v4-flash",
+  "glm-53-flash",
+  "gpt-6-luna",
+  "gemma-4-26b-a4b-it",
+  "qwen3.8-27b",
+  "deepseek-v4-flash",
+  "glm-53-flash"
+ ],
+ "spent_usd": 0.1279
+}

@@ -16,7 +16,10 @@
  "silence": {},
  "seed": 2,
  "inject": [],
+ "inject_text": [],
  "replay_from": null,
+ "sync_every": null,
+ "sync_verified": false,
  "diverged": {},
  "models": [
   "scripted",
@@ -30,5 +33,5 @@
   "glm-53-flash",
   "gpt-6-luna"
  ],
- "spent_usd": 0.2518
+ "spent_usd": 0.0417
 }

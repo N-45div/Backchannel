@@ -15,6 +15,12 @@
  "pressure": false,
  "silence": {},
  "seed": 1,
+ "inject": [],
+ "inject_text": [],
+ "replay_from": null,
+ "sync_every": null,
+ "sync_verified": false,
+ "diverged": {},
  "models": [
   "scripted",
   "gemma-4-26b-a4b-it",
@@ -27,5 +33,5 @@
   "deepseek-v4-flash",
   "glm-53-flash"
  ],
- "spent_usd": 0.1995
+ "spent_usd": 0.1212
 }
