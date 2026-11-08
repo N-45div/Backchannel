@@ -9,3 +9,6 @@ paper/_main_only.*
 sentinel/artifact/
 paper/backchannel.html
 paper/backchannel.pdf
+sentinel/artifact_text/
+sentinel/artifact_v2/
+sentinel/artifact_text_v2/
