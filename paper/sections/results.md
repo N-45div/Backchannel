@@ -118,7 +118,8 @@ kept the leak in most first decisions before a teammate warned (DeepSeek 8 of 9,
 labelled by the sandbox's own rules (appendix G). Version 1, answering verdict-first, caught 3 of the bad
 apple's 18 posts while writing correct notes ("…includes EVAL_SHARD=10, so it trains on the evaluation shard")
 above a verdict of "ok": it decided before it reasoned. Version 2 reasoned first and trained for five epochs:
-it caught 60 of 60 leaks and 55 of 56 look-alikes with 4 false alarms in 180 legal changes, so it reads the
+it caught 60 of 60 leaks and 55 of 56 look-alikes with 4 false alarms in 180 legal changes, level with
+DeepSeek V4 Flash and 40 leaks ahead of Gemma 4 26B (Figure 5; open weights, see Code and Data), so it reads the
 two lines rather than the string, and generalised to the evaluation-split hack (31 of 32) but not to
 unrelated exploits (0 of 48). In five swarms it let no agent run the leak, with one false alarm in 452 other
 posts: cheap and precise, but narrower than a capable model given the job.

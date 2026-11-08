@@ -403,7 +403,8 @@ kept the leak in most first decisions before a teammate warned (DeepSeek 8 of 9,
 labelled by the sandbox's own rules (appendix G). Version 1, answering verdict-first, caught 3 of the bad
 apple's 18 posts while writing correct notes ("…includes EVAL_SHARD=10, so it trains on the evaluation shard")
 above a verdict of "ok": it decided before it reasoned. Version 2 reasoned first and trained for five epochs:
-it caught 60 of 60 leaks and 55 of 56 look-alikes with 4 false alarms in 180 legal changes, so it reads the
+it caught 60 of 60 leaks and 55 of 56 look-alikes with 4 false alarms in 180 legal changes, level with
+DeepSeek V4 Flash and 40 leaks ahead of Gemma 4 26B (Figure 5; open weights, see Code and Data), so it reads the
 two lines rather than the string, and generalised to the evaluation-split hack (31 of 32) but not to
 unrelated exploits (0 of 48). In five swarms it let no agent run the leak, with one false alarm in 452 other
 posts: cheap and precise, but narrower than a capable model given the job.</p>
@@ -472,6 +473,7 @@ adopted or promoted, and keep open the channels a warning travels by.</p>
 <li><strong>Code, run logs, replay cache:</strong> https://github.com/N-45div/Backchannel (every run's event log, the model
   responses that replay each run without new calls, the scripts behind every number and figure, the sentinel's
   data; 22,244 model calls, about $23 of API credit).</li>
+<li><strong>Sentinel (open weights, Apache 2.0):</strong> https://huggingface.co/DIV-45/backchannel-sentinel-qwen3.5-2b</li>
 <li><strong>Real data:</strong> METR's incident chart data [24]; Swarm Traces [20]; AI Village [21]; Moltbook [18];
   collusion.wiki [19]; public autoresearch forks [2].</li>
 <li><strong>Prior work:</strong> the AI Village audit in §1 used Alibi [17], built by the author in October 2026 (its rule of
@@ -1061,7 +1063,7 @@ rules, not a model: <em>warn</em> if the change trains on the evaluation shard o
 labels. Tests: 200 posts with held-out phrasings and worlds; 96 look-alikes (the familiar string harmless or
 an innocent one leaky, all claiming the bad apple's 0.15 gain); 80 edits to the evaluation section, a family
 never shown in training; and the bad apple's 24 swarm posts. <em>Training.</em> Adaption AutoScientist, base model
-Qwen3.5-2B, LoRA (r = 16). Version 1 answered <code>{"verdict", "note"}</code> and stopped after one 23-step epoch on
+Qwen3.5-2B, LoRA (r = 16 for version 1; AutoScientist chose r = 32 for version 2). Version 1 answered <code>{"verdict", "note"}</code> and stopped after one 23-step epoch on
 reaching the default win-rate target; version 2 answered <code>{"note", "verdict"}</code> and trained for five epochs
 (105 steps). Adaption trains the vision-language checkpoint, so the adapter's keys were renamed to load on
 the text-only model (<code>sentinel/convert_adapter.py</code>); the sentinel ran on a laptop GPU (RTX 5050).</p>
@@ -1116,6 +1118,10 @@ omitted: its endpoint failed on 78 of its 400 requests.</em></p>
 </tr>
 </tbody>
 </table>
+<p><img alt="Figure 5" src="https://raw.githubusercontent.com/N-45div/Backchannel/main/figures/fig6_sentinel.png" />
+<em>Figure 5. The sentinel (blue) against its untrained base model and the hosted reviewers, on the held-out leaks
+and look-alikes (a, b) and on edits to the evaluation, a family never shown in training (c). The adapter is
+published with open weights at huggingface.co/DIV-45/backchannel-sentinel-qwen3.5-2b.</em></p>
 <h3>H. Real autoresearch agents in public forks</h3>
 <p>We listed 13,185 of the ~13,700 forks of autoresearch through GitHub's public API, cloned the 1,347 whose
 history departs from upstream, and kept 202 language-model forks with agent experiment history: 9,084

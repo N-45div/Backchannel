@@ -85,7 +85,7 @@ def add_inline(par, text, size=BODY, bold=False, italic=False):
             piece, sup = piece[5:-6], True
         elif piece.startswith("*") and piece.endswith("*") and len(piece) > 2:
             piece, i = piece[1:-1], not italic
-        if "*" in piece and not mono:  # nested markup inside bold, e.g. **text *x***
+        if not mono and len([x for x in INLINE.split(piece) if x]) > 1:  # nested markup, e.g. **text `x`**
             add_inline(par, piece, size, b, i)
             continue
         r = par.add_run(piece)
@@ -301,7 +301,7 @@ def write_text_block(doc, b, in_refs=False):
         items.append(" ".join(cur))
         for it in items:
             mk = re.match(r"^(\d+\.|-)\s+(.*)", it)
-            mark = mk.group(1) if mk.group(1) != "-" else "–"
+            mark = mk.group(1) if mk.group(1) != "-" else "•"
             paragraph(doc, f"{mark}\t{mk.group(2)}", indent=Inches(0.3), hang=Inches(0.22), after=2)
         doc.paragraphs[-1].paragraph_format.space_after = Pt(5)
         return

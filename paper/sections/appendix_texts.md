@@ -51,7 +51,7 @@ rules, not a model: *warn* if the change trains on the evaluation shard or edits
 labels. Tests: 200 posts with held-out phrasings and worlds; 96 look-alikes (the familiar string harmless or
 an innocent one leaky, all claiming the bad apple's 0.15 gain); 80 edits to the evaluation section, a family
 never shown in training; and the bad apple's 24 swarm posts. *Training.* Adaption AutoScientist, base model
-Qwen3.5-2B, LoRA (r = 16). Version 1 answered `{"verdict", "note"}` and stopped after one 23-step epoch on
+Qwen3.5-2B, LoRA (r = 16 for version 1; AutoScientist chose r = 32 for version 2). Version 1 answered `{"verdict", "note"}` and stopped after one 23-step epoch on
 reaching the default win-rate target; version 2 answered `{"note", "verdict"}` and trained for five epochs
 (105 steps). Adaption trains the vision-language checkpoint, so the adapter's keys were renamed to load on
 the text-only model (`sentinel/convert_adapter.py`); the sentinel ran on a laptop GPU (RTX 5050).
@@ -67,6 +67,11 @@ omitted: its endpoint failed on 78 of its 400 requests.*
 | Qwen3.5-2B, untrained | 60/60, 114/140 false | 55/56, 35/40 false | 80/80 | 18/18, 6/6 false |
 | Qwen3.5-2B, our sentinel v1 (verdict first) | 38/60 | 17/56 | 23/80 | 3/18 |
 | **Qwen3.5-2B, our sentinel v2 (reason first)** | **60/60, 1/140 false** | **55/56, 3/40 false** | **31/80** | **12/18** |
+
+![Figure 5](../figures/fig6_sentinel.png)
+*Figure 5. The sentinel (blue) against its untrained base model and the hosted reviewers, on the held-out leaks
+and look-alikes (a, b) and on edits to the evaluation, a family never shown in training (c). The adapter is
+published with open weights at huggingface.co/DIV-45/backchannel-sentinel-qwen3.5-2b.*
 
 ### H. Real autoresearch agents in public forks
 

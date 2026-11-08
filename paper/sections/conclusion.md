@@ -10,6 +10,7 @@ adopted or promoted, and keep open the channels a warning travels by.
 - **Code, run logs, replay cache:** https://github.com/N-45div/Backchannel (every run's event log, the model
   responses that replay each run without new calls, the scripts behind every number and figure, the sentinel's
   data; [[CALLS]] model calls, about [[COST]] of API credit).
+- **Sentinel (open weights, Apache 2.0):** https://huggingface.co/DIV-45/backchannel-sentinel-qwen3.5-2b
 - **Real data:** METR's incident chart data [24]; Swarm Traces [20]; AI Village [21]; Moltbook [18];
   collusion.wiki [19]; public autoresearch forks [2].
 - **Prior work:** the AI Village audit in §1 used Alibi [17], built by the author in October 2026 (its rule of
