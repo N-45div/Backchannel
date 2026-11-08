@@ -1,0 +1,54 @@
+# one run per line, in priority order; queue.ps1 runs them a few at a time. Cached model calls replay instantly.
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 0
+leak-k3-reviewer|--payload leak --condition reviewer --k 3 --replay-of leak-k3 --seeds 1
+leak-star-hub-reviewer|--payload leak --condition reviewer --topology star --adversary hub --replay-of leak-star-hub --seeds 0
+leak-sync|--payload leak --sync-every 3 --seeds 0
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 0
+leak-cf-nogossip|--payload leak --seeds 0 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 0
+leak-cf-nogossip|--payload leak --seeds 2 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 0
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 1 --rep-offset 1
+leak-sync|--payload leak --sync-every 3 --seeds 1
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 1
+leak-star-digest|--payload leak --condition digest --topology star --adversary leaf --seeds 0
+leak-star-digest-qhub|--payload leak --condition digest --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 0
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 2
+leak-k3-reviewer|--payload leak --condition reviewer --k 3 --replay-of leak-k3 --seeds 0
+leak-star-hub-reviewer|--payload leak --condition reviewer --topology star --adversary hub --replay-of leak-star-hub --seeds 1
+leak-sync|--payload leak --sync-every 3 --seeds 2
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 2
+leak-cf-nogossip|--payload leak --seeds 0 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 1
+leak-cf-nogossip|--payload leak --seeds 2 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 1
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 1 --rep-offset 2
+leak-k0-sync|--payload leak --k 0 --sync-every 3 --seeds 0
+leak-star-digest|--payload leak --condition digest --topology star --adversary leaf --seeds 1
+leak-star-digest-qhub|--payload leak --condition digest --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 1
+leak-reward|--payload leak --condition reward --seeds 0
+leak-star-hub-reward|--payload leak --condition reward --topology star --adversary hub --seeds 0
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 1
+leak-star-hub-reviewer|--payload leak --condition reviewer --topology star --adversary hub --replay-of leak-star-hub --seeds 2
+leak-sync|--payload leak --sync-every 3 --seeds 3
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 3
+leak-cf-nogossip|--payload leak --seeds 0 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 2
+leak-cf-nogossip|--payload leak --seeds 2 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 2
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-silence6|--payload leak --seeds 2 --silence 6:2 --replay-of leak-none --reps 1 --rep-offset 1
+leak-star-digest|--payload leak --condition digest --topology star --adversary leaf --seeds 2
+leak-star-digest-qhub|--payload leak --condition digest --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 2
+leak-reward|--payload leak --condition reward --seeds 1
+leak-star-hub-reward|--payload leak --condition reward --topology star --adversary hub --seeds 1
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 3
+leak-k0-sync|--payload leak --k 0 --sync-every 3 --seeds 1
+leak-sync|--payload leak --sync-every 3 --seeds 4
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 4
+leak-reward|--payload leak --condition reward --seeds 2
+leak-star-hub-reward|--payload leak --condition reward --topology star --adversary hub --seeds 2
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-silence6|--payload leak --seeds 2 --silence 6:2 --replay-of leak-none --reps 1 --rep-offset 2
+leak-cf-warn-r2|--payload leak --seeds 0 --inject 5:2 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-silence7|--payload leak --seeds 1 --silence 7:2 --replay-of leak-none --reps 1 --rep-offset 4
+leak-reward|--payload leak --condition reward --seeds 3
+leak-reward|--payload leak --condition reward --seeds 4
+leak-hidden|--payload leak --condition hidden --seeds 2

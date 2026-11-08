@@ -1,0 +1,7 @@
+# influencers, gossip and proxies
+# gossip: exact replays with every honest agent's posts removed from round 2, so only the bad apple speaks
+leak-cf-nogossip|--payload leak --seeds 0 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 3
+leak-cf-nogossip|--payload leak --seeds 2 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 3
+# proxies: the honest hub of a star is asked to post a digest for the leaves (bad apple on a leaf)
+leak-star-digest|--payload leak --condition digest --topology star --adversary leaf --seeds 0 1 2
+leak-star-digest-qhub|--payload leak --condition digest --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 0 1 2

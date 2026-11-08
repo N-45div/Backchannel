@@ -1,0 +1,7 @@
+# the Adaption-trained sentinel (v2, served locally) as the platform reviewer, as exact replays
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 0
+leak-k3-sentinel|--payload leak --condition sentinel --k 3 --replay-of leak-k3 --seeds 1
+leak-star-hub-sentinel|--payload leak --condition sentinel --topology star --adversary hub --replay-of leak-star-hub --seeds 0
+leak-k0-sentinel|--payload leak --condition sentinel --k 0 --replay-of leak-k0 --seeds 0
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 2
+leak-sentinel|--payload leak --condition sentinel --replay-of leak-none --seeds 1

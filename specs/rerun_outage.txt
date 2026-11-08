@@ -1,0 +1,26 @@
+# re-runs of the 25 runs that finished during the qwen3.8-27b outage (see runs_invalid/qwen-outage/README.md)
+leak-cf-rebut3|--payload leak --seeds 1 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 2 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 3 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 4 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 5 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 6 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 7 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 8 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-rebut3|--payload leak --seeds 9 --inject 0:3 --inject-text rebut --replay-of leak-none
+leak-cf-neutral-r2|--payload leak --seeds 0 --inject 5:2 --inject-text neutral --replay-of leak-none --reps 1 --rep-offset 0
+leak-cf-warn-r2|--payload leak --seeds 0 --inject 5:2 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 1 --rep-offset 2
+leak-cf-warn-r3|--payload leak --seeds 0 --inject 5:3 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-warn-r4|--payload leak --seeds 0 --inject 5:4 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 1 --rep-offset 1
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 1 --rep-offset 2
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-warn-r6|--payload leak --seeds 0 --inject 5:6 --replay-of leak-none --reps 1 --rep-offset 4
+leak-cf-silence4|--payload leak --seeds 2 --silence 4:2 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-silence6|--payload leak --seeds 2 --silence 6:2 --replay-of leak-none --reps 1 --rep-offset 0
+leak-cf-silence7|--payload leak --seeds 1 --silence 7:2 --replay-of leak-none --reps 1 --rep-offset 3
+leak-cf-nogossip|--payload leak --seeds 0 --silence 1:2 2:2 3:2 4:2 5:2 6:2 7:2 8:2 9:2 --replay-of leak-none --reps 1 --rep-offset 2
+leak-hidden|--payload leak --condition hidden --seeds 1
+leak-receipts|--payload leak --condition receipts --seeds 5
+leak-star-leaf-qhub|--payload leak --topology star --adversary leaf --models qwen3.8-27b deepseek-v4-flash glm-53-flash gpt-6-luna gemma-4-26b-a4b-it --seeds 2

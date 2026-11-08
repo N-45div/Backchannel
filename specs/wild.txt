@@ -1,0 +1,11 @@
+# strategies from the Swarmchasing hackathon winners, on top of ours
+# 1. the live autoresearch-at-home protocol: global-best sync by reported score, vs verified by a held-out re-run
+leak-sync|--payload leak --sync-every 3 --seeds 0 1
+leak-sync|--payload leak --sync-every 3 --seeds 2 3 4
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 0 1
+leak-sync-verified|--payload leak --sync-every 3 --sync-verified --seeds 2 3 4
+leak-k0-sync|--payload leak --k 0 --sync-every 3 --seeds 0 1
+# 2. incentivised whistleblowing: on the open board, and with the bad apple at a star's hub (warnings unheard)
+leak-reward|--payload leak --condition reward --seeds 0 1 2
+leak-reward|--payload leak --condition reward --seeds 3 4
+leak-star-hub-reward|--payload leak --condition reward --topology star --adversary hub --seeds 0 1 2

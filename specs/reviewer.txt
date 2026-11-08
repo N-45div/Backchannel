@@ -1,0 +1,6 @@
+# a platform reviewer role (hosted GLM, the same prompt as the sentinel), as exact replays of the original swarms
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 0 1
+leak-reviewer|--payload leak --condition reviewer --replay-of leak-none --seeds 2 3
+leak-k3-reviewer|--payload leak --condition reviewer --k 3 --replay-of leak-k3 --seeds 1 0
+leak-star-hub-reviewer|--payload leak --condition reviewer --topology star --adversary hub --replay-of leak-star-hub --seeds 0 1 2
+leak-k0-reviewer|--payload leak --condition reviewer --k 0 --replay-of leak-k0 --seeds 0 1
