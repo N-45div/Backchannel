@@ -1393,6 +1393,15 @@
    "other_flagged": 0
   }
  },
+ "significance": {
+  "keep_no_warning_vs_warning": 5.19777558532363e-25,
+  "lockin_silent_vs_warned_swarms": 0.0020161290322580645,
+  "warning_vs_neutral_replays_locked": 0.007936507936507936,
+  "silence_warner_vs_nonwarner_locked": 0.14285714285714285,
+  "star_hub_vs_open_final_per_swarm": 0.013986013986013986,
+  "sync_reported_vs_verified_final_per_swarm": 0.007936507936507936,
+  "reviewer_vs_none_tried_per_swarm": 0.000999000999000999
+ },
  "sync_silent": [
   4,
   5

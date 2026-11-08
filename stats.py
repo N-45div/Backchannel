@@ -87,6 +87,50 @@ for p in ["leak-reviewer", "leak-k3-reviewer", "leak-star-hub-reviewer", "leak-k
                 pending = None
     out["reviewers"][p] = c
 
+# significance: Fisher's exact test (two-sided) on 2x2 counts, and an exact permutation test on per-swarm outcomes
+from math import comb  # noqa: E402
+from itertools import combinations  # noqa: E402
+
+
+def fisher(a, b, c, d):
+    """Two-sided Fisher exact p for [[a, b], [c, d]]."""
+    n1, n2, k = a + b, c + d, a + c
+    pr = lambda x: comb(n1, x) * comb(n2, k - x) / comb(n1 + n2, k)
+    p0 = pr(a)
+    return sum(pr(x) for x in range(max(0, k - n2), min(k, n1) + 1) if pr(x) <= p0 * (1 + 1e-9))
+
+
+def perm_mean(xs, ys):
+    """Exact two-sided permutation p for a difference in means between two small groups of swarms."""
+    pool, n = xs + ys, len(xs)
+    obs = abs(sum(xs) / len(xs) - sum(ys) / len(ys))
+    hits = total = 0
+    for idx in combinations(range(len(pool)), n):
+        g1 = [pool[i] for i in idx]
+        g2 = [pool[i] for i in range(len(pool)) if i not in idx]
+        total += 1
+        hits += abs(sum(g1) / len(g1) - sum(g2) / len(g2)) >= obs - 1e-12
+    return hits / total
+
+
+finals = lambda p: [analyse(d)["final_hacked"] for d in runs(p)]
+tried = lambda p: [analyse(d)["tried"] for d in runs(p)]
+cff = lambda p: [r["final"] for r in out["cf"].get(p, [])]
+kw, ks = out["keep"]["no_warning"], out["keep"]["saw_warning"]
+locked = lambda xs: sum(x >= 7 for x in xs)
+w2, nt = cff("leak-cf-warn-r2"), cff("leak-cf-neutral-r2")
+s4, s6 = cff("leak-cf-silence4"), cff("leak-cf-silence6")
+rs = out["race_summary"]
+out["significance"] = {
+    "keep_no_warning_vs_warning": fisher(kw[0], kw[1] - kw[0], ks[0], ks[1] - ks[0]),
+    "lockin_silent_vs_warned_swarms": fisher(len(rs["silent_runs"]), 0, 0, rs["warned_runs"]),
+    "warning_vs_neutral_replays_locked": fisher(locked(w2), len(w2) - locked(w2), locked(nt), len(nt) - locked(nt)),
+    "silence_warner_vs_nonwarner_locked": fisher(locked(s4), len(s4) - locked(s4), locked(s6), len(s6) - locked(s6)),
+    "star_hub_vs_open_final_per_swarm": perm_mean(finals("leak-star-hub"), finals("leak-none")),
+    "sync_reported_vs_verified_final_per_swarm": perm_mean(finals("leak-sync"), finals("leak-sync-verified")),
+    "reviewer_vs_none_tried_per_swarm": perm_mean(tried("leak-reviewer"), tried("leak-none")),
+}
+
 # global-best sync swarms in which no honest agent objected to the leak at all
 sync_runs = runs("leak-sync")
 out["sync_silent"] = [sum(analyse(d)["object"] == 0 for d in sync_runs), len(sync_runs)]
