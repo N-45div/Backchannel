@@ -1,0 +1,13 @@
+[project]
+name = "backchannel"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "adaption>=0.19.0",
+    "markdown>=3.11.3",
+    "matplotlib>=3.11.2",
+    "networkx>=3.7",
+    "numpy>=2.5.4",
+    "openai>=3.46.0",
+    "python-dotenv>=1.2.4",
+]

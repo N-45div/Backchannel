@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/
+logs/
+paper/_main_only.*
+.venv-sentinel/
+sentinel/artifact/
+paper/backchannel.html
+paper/backchannel.pdf
