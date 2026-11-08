@@ -1,0 +1,324 @@
+{
+  "source": "https://collusion.wiki/explorer/download (no licence stated; analysed locally, not re-hosted)",
+  "checksums_match_published": {
+    "events": true,
+    "revisions": true,
+    "labels": true
+  },
+  "event_counts": {
+    "probe": 101,
+    "save": 14591,
+    "delete": 5217,
+    "revert": 4
+  },
+  "event_counts_by_wiki": {
+    "probe": {
+      "null": 101
+    },
+    "save": {
+      "dse": 13403,
+      "fractal": 169,
+      "probier": 1013,
+      "dorfwiki": 6
+    },
+    "delete": {
+      "dse": 5217
+    },
+    "revert": {
+      "dse": 4
+    }
+  },
+  "wikis_with_saves": {
+    "dse": 13403,
+    "fractal": 169,
+    "probier": 1013,
+    "dorfwiki": 6
+  },
+  "revisions": 14591,
+  "revisions_without_name": 899,
+  "distinct_names_on_revisions": 3102,
+  "labels_file_rows": 3103,
+  "labels_file_nonempty": 3102,
+  "first_name_day": "2026-05-24",
+  "last_name_day": "2026-07-02",
+  "cumulative_names_end_of_2026_05_31": 371,
+  "cumulative_names_end_of_2026_06_01": 430,
+  "cumulative_names_end_of_2026_06_15": 512,
+  "longest_quiet_stretch_lt10_new_names_per_day": {
+    "days": 10,
+    "from": "2026-06-23",
+    "to": "2026-07-02"
+  },
+  "wave_days_ge100_new_names": [
+    {
+      "day": "2026-05-26",
+      "new_names": 177,
+      "cumulative": 199
+    },
+    {
+      "day": "2026-06-16",
+      "new_names": 704,
+      "cumulative": 1216
+    },
+    {
+      "day": "2026-06-17",
+      "new_names": 331,
+      "cumulative": 1547
+    },
+    {
+      "day": "2026-06-18",
+      "new_names": 807,
+      "cumulative": 2354
+    },
+    {
+      "day": "2026-06-19",
+      "new_names": 120,
+      "cumulative": 2474
+    },
+    {
+      "day": "2026-06-20",
+      "new_names": 175,
+      "cumulative": 2649
+    },
+    {
+      "day": "2026-06-21",
+      "new_names": 185,
+      "cumulative": 2834
+    },
+    {
+      "day": "2026-06-22",
+      "new_names": 258,
+      "cumulative": 3092
+    }
+  ],
+  "new_names_per_day": [
+    {
+      "day": "2026-05-24",
+      "new_names": 22,
+      "cumulative": 22
+    },
+    {
+      "day": "2026-05-25",
+      "new_names": 0,
+      "cumulative": 22
+    },
+    {
+      "day": "2026-05-26",
+      "new_names": 177,
+      "cumulative": 199
+    },
+    {
+      "day": "2026-05-27",
+      "new_names": 27,
+      "cumulative": 226
+    },
+    {
+      "day": "2026-05-28",
+      "new_names": 85,
+      "cumulative": 311
+    },
+    {
+      "day": "2026-05-29",
+      "new_names": 32,
+      "cumulative": 343
+    },
+    {
+      "day": "2026-05-30",
+      "new_names": 24,
+      "cumulative": 367
+    },
+    {
+      "day": "2026-05-31",
+      "new_names": 4,
+      "cumulative": 371
+    },
+    {
+      "day": "2026-06-01",
+      "new_names": 59,
+      "cumulative": 430
+    },
+    {
+      "day": "2026-06-02",
+      "new_names": 1,
+      "cumulative": 431
+    },
+    {
+      "day": "2026-06-03",
+      "new_names": 0,
+      "cumulative": 431
+    },
+    {
+      "day": "2026-06-04",
+      "new_names": 2,
+      "cumulative": 433
+    },
+    {
+      "day": "2026-06-05",
+      "new_names": 0,
+      "cumulative": 433
+    },
+    {
+      "day": "2026-06-06",
+      "new_names": 2,
+      "cumulative": 435
+    },
+    {
+      "day": "2026-06-07",
+      "new_names": 5,
+      "cumulative": 440
+    },
+    {
+      "day": "2026-06-08",
+      "new_names": 11,
+      "cumulative": 451
+    },
+    {
+      "day": "2026-06-09",
+      "new_names": 0,
+      "cumulative": 451
+    },
+    {
+      "day": "2026-06-10",
+      "new_names": 0,
+      "cumulative": 451
+    },
+    {
+      "day": "2026-06-11",
+      "new_names": 61,
+      "cumulative": 512
+    },
+    {
+      "day": "2026-06-12",
+      "new_names": 0,
+      "cumulative": 512
+    },
+    {
+      "day": "2026-06-13",
+      "new_names": 0,
+      "cumulative": 512
+    },
+    {
+      "day": "2026-06-14",
+      "new_names": 0,
+      "cumulative": 512
+    },
+    {
+      "day": "2026-06-15",
+      "new_names": 0,
+      "cumulative": 512
+    },
+    {
+      "day": "2026-06-16",
+      "new_names": 704,
+      "cumulative": 1216
+    },
+    {
+      "day": "2026-06-17",
+      "new_names": 331,
+      "cumulative": 1547
+    },
+    {
+      "day": "2026-06-18",
+      "new_names": 807,
+      "cumulative": 2354
+    },
+    {
+      "day": "2026-06-19",
+      "new_names": 120,
+      "cumulative": 2474
+    },
+    {
+      "day": "2026-06-20",
+      "new_names": 175,
+      "cumulative": 2649
+    },
+    {
+      "day": "2026-06-21",
+      "new_names": 185,
+      "cumulative": 2834
+    },
+    {
+      "day": "2026-06-22",
+      "new_names": 258,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-23",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-24",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-25",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-26",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-27",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-28",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-29",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-06-30",
+      "new_names": 0,
+      "cumulative": 3092
+    },
+    {
+      "day": "2026-07-01",
+      "new_names": 3,
+      "cumulative": 3095
+    },
+    {
+      "day": "2026-07-02",
+      "new_names": 7,
+      "cumulative": 3102
+    }
+  ],
+  "deletions": 5217,
+  "deletion_actors": {
+    "[Admin1]": 5217
+  },
+  "deleted_pages": 5144,
+  "deleted_pages_with_revisions": 3898,
+  "deleted_pages_resaved_after_first_deletion": 48,
+  "resaved_share": 0.012314007183170857,
+  "hours_to_first_resave": {
+    "median": 0.9045833333333333,
+    "p10": 0.016527777777777777,
+    "p90": 58.193305555555554,
+    "min": 0.0025,
+    "max": 343.09222222222223
+  },
+  "first_resave_by_name_not_previously_on_page": 35,
+  "first_resave_by_named_writer_not_previously_on_page": 35,
+  "first_resave_unnamed": 0,
+  "resaved_pages_with_any_resave_by_name_not_on_page_before_deletion": 42,
+  "resave_revisions_total": 420,
+  "resave_revisions_by_name_not_on_page_before_deletion": 386,
+  "linked_first_recreation_of_events": {
+    "save": 63,
+    "revert": 4
+  },
+  "linked_first_recreation_of_revisions": 63,
+  "linked_first_recreation_of_revision_pages": 46,
+  "linked_pages_in_resaved_set": 46
+}

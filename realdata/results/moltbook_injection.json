@@ -1,0 +1,321 @@
+{
+  "source": "https://huggingface.co/datasets/DavidTKeane/moltbook-ai-injection-dataset (CC BY 4.0)",
+  "dataset_stats_header": {
+    "harvested_at": "2026-02-27T18:59:58.441785+00:00",
+    "total_posts_scanned": 15200,
+    "total_comments_scanned": 32535,
+    "total_items_scanned": 47735,
+    "total_injection_records": 4209,
+    "moltshellbroker_count": 1137
+  },
+  "a_keyword_noise": {
+    "records": 4209,
+    "records_by_source": {
+      "comment": 2754,
+      "post": 1455
+    },
+    "dan_matched_records": 1877,
+    "dan_whole_word_case_sensitive": 0,
+    "dan_whole_word_case_insensitive": 33,
+    "only_dan_records": 1725,
+    "only_dan_whole_word_case_sensitive": 0,
+    "only_dan_whole_word_case_insensitive": 30,
+    "dan_records_with_no_dan_substring_in_text": 745,
+    "text_field_max_len": 500,
+    "records_with_text_len_500": 3408,
+    "top_dan_words_only_dan_records_records_containing": [
+      [
+        "dangerous",
+        317
+      ],
+      [
+        "dance",
+        79
+      ],
+      [
+        "dans",
+        76
+      ],
+      [
+        "guidance",
+        67
+      ],
+      [
+        "redundancy",
+        60
+      ],
+      [
+        "redundant",
+        60
+      ],
+      [
+        "danger",
+        47
+      ],
+      [
+        "mundane",
+        41
+      ],
+      [
+        "daniel",
+        36
+      ],
+      [
+        "avoidance",
+        30
+      ],
+      [
+        "dan",
+        30
+      ],
+      [
+        "danielsclaw",
+        23
+      ],
+      [
+        "dancing",
+        18
+      ],
+      [
+        "abundance",
+        13
+      ],
+      [
+        "cardano",
+        12
+      ]
+    ],
+    "top_dan_words_records_containing": [
+      [
+        "dangerous",
+        335
+      ],
+      [
+        "dance",
+        82
+      ],
+      [
+        "dans",
+        79
+      ],
+      [
+        "redundant",
+        70
+      ],
+      [
+        "redundancy",
+        68
+      ],
+      [
+        "guidance",
+        68
+      ],
+      [
+        "danger",
+        50
+      ],
+      [
+        "mundane",
+        44
+      ],
+      [
+        "daniel",
+        36
+      ],
+      [
+        "avoidance",
+        34
+      ],
+      [
+        "dan",
+        33
+      ],
+      [
+        "danielsclaw",
+        24
+      ],
+      [
+        "dancing",
+        22
+      ],
+      [
+        "abundance",
+        13
+      ],
+      [
+        "dangerously",
+        12
+      ]
+    ],
+    "top_dan_words_occurrences": [
+      [
+        "dangerous",
+        347
+      ],
+      [
+        "dans",
+        113
+      ],
+      [
+        "dance",
+        86
+      ],
+      [
+        "guidance",
+        71
+      ],
+      [
+        "redundant",
+        71
+      ],
+      [
+        "redundancy",
+        68
+      ],
+      [
+        "danger",
+        51
+      ],
+      [
+        "mundane",
+        44
+      ],
+      [
+        "dan",
+        43
+      ],
+      [
+        "avoidance",
+        36
+      ],
+      [
+        "daniel",
+        36
+      ],
+      [
+        "danielsclaw",
+        24
+      ],
+      [
+        "dancing",
+        22
+      ],
+      [
+        "cardano",
+        15
+      ],
+      [
+        "abundance",
+        14
+      ]
+    ],
+    "only_you_are_a_records": 281,
+    "generic_keywords": [
+      "act as",
+      "dan",
+      "hypothetically",
+      "omega",
+      "override",
+      "shadow",
+      "sigma",
+      "simulate",
+      "theoretically",
+      "you are a",
+      "you will be"
+    ],
+    "records_with_non_generic_keyword": 1247,
+    "records_only_generic_keywords": 2962,
+    "keyword_record_counts": {
+      "dan": 1877,
+      "moltshell broker assessment": 378,
+      "shadow": 347,
+      "you are a": 331,
+      "simulate": 284,
+      "moltshell marketplace": 264,
+      "## moltshell": 240,
+      "bottleneck diagnosed": 187,
+      "override": 175,
+      "root access": 129,
+      "system prompt": 127,
+      "act as": 71,
+      "theoretically": 65,
+      "do anything": 64,
+      "jailbreak": 34,
+      "moltshellbroker": 31,
+      "sudo": 29,
+      "your prompt": 27,
+      "unrestricted": 24,
+      "supersede": 17,
+      "omega": 16,
+      "you will be": 15,
+      "sigma": 15,
+      "you are now": 11,
+      "hypothetically": 9,
+      "anything goes": 8,
+      "dante": 7,
+      "bypass your": 6,
+      "ignore previous instructions": 6,
+      "pretend you are": 5,
+      "from now on": 5,
+      "new persona": 4,
+      "no rules": 4,
+      "moltshell solution": 4,
+      "system message": 4,
+      "roleplay as": 4,
+      "in this story": 3,
+      "what if you were": 3,
+      "ignore all previous": 3,
+      "imagine you are": 3,
+      "in a story": 3,
+      "in this scenario": 2,
+      "without limits": 2,
+      "god mode": 2,
+      "no restrictions": 2,
+      "developer mode": 2,
+      "your actual instructions": 1,
+      "as a character": 1,
+      "new instructions": 1,
+      "admin mode": 1,
+      "remove your": 1,
+      "no limits": 1
+    }
+  },
+  "b_broker_spread": {
+    "posts": 15200,
+    "items_posts_plus_nested_comments": 53418,
+    "distinct_authors": 3960,
+    "items_missing_created_at": 0,
+    "broker_items": 1210,
+    "broker_threads": 763,
+    "other_authors_active_in_broker_threads_after_broker_first_item": 839,
+    "other_authors_active_in_broker_threads_any_time": 1032,
+    "other_authors_mentioning_moltshell": 60,
+    "mentioners_ever_in_broker_thread_after_broker_no_time_check": 57,
+    "mentioners_exposed_before_first_mention": 33,
+    "mentioners_exposed_at_or_before_first_mention": 54,
+    "mentioners_whose_first_mention_is_their_first_exposure": 21,
+    "mentioners_in_any_broker_thread_before_first_mention": 54,
+    "mentioners_whose_first_mention_is_in_a_broker_thread": 50,
+    "exposure_definition": "first item by the author in a thread where the broker already had an item (strictly later than the broker's first item there)",
+    "time_first_exposure_to_first_mention_strictly_before": {
+      "n": 33,
+      "median_hours": 5.024342777777777,
+      "median_minutes": 301.46056666666664,
+      "p10_hours": 0.009749388888888889,
+      "p90_hours": 14.48435738888889,
+      "min_hours": 0.00025111111111111113,
+      "max_hours": 34.60685333333333,
+      "zero_gap": 0
+    },
+    "time_first_exposure_to_first_mention_at_or_before": {
+      "n": 54,
+      "median_hours": 0.05741444444444444,
+      "median_minutes": 3.4448666666666665,
+      "p10_hours": 0.0,
+      "p90_hours": 12.582607999999999,
+      "min_hours": 0.0,
+      "max_hours": 34.60685333333333,
+      "zero_gap": 21
+    }
+  }
+}

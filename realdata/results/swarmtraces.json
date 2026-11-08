@@ -1,0 +1,2900 @@
+{
+  "source": "https://swarmtraces.org/ (redacted.jsonl.gz, gzip JSONL)",
+  "input_sha256": "7b66ab21674de52fcd3f557652f68b1801170c998e2f266862124e6edf283488",
+  "safety": "aggregates only; no payload text, URLs, credentials or names; template ids are sha256 prefixes of normalized text",
+  "1_schema": {
+    "rows": 189579,
+    "rows_by_kind": {
+      "payload": 91037,
+      "response": 23008,
+      "recovered_text": 75534
+    },
+    "fields": [
+      "cite",
+      "id",
+      "kind",
+      "parent_id",
+      "tags",
+      "text",
+      "time_utc"
+    ],
+    "field_fill": {
+      "cite": {
+        "filled": 189579,
+        "rate": 1.0
+      },
+      "id": {
+        "filled": 189579,
+        "rate": 1.0
+      },
+      "kind": {
+        "filled": 189579,
+        "rate": 1.0
+      },
+      "parent_id": {
+        "filled": 61125,
+        "rate": 0.32242
+      },
+      "tags": {
+        "filled": 37,
+        "rate": 0.0002
+      },
+      "text": {
+        "filled": 189579,
+        "rate": 1.0
+      },
+      "time_utc": {
+        "filled": 0,
+        "rate": 0.0
+      }
+    },
+    "time_utc_non_null": 0,
+    "tags": {
+      "rows_with_any_tag": 37,
+      "rows_with_tag_by_kind": {
+        "recovered_text": 37
+      },
+      "separator": ";",
+      "distinct_tags": 30,
+      "top30": [
+        [
+          "article-evidence",
+          37
+        ],
+        [
+          "g236-command",
+          28
+        ],
+        [
+          "g23619cmd.bin",
+          18
+        ],
+        [
+          "g23619scmd.bin",
+          10
+        ],
+        [
+          "slack-search",
+          4
+        ],
+        [
+          "command-000007",
+          3
+        ],
+        [
+          "appendix-request",
+          3
+        ],
+        [
+          "command-000001",
+          2
+        ],
+        [
+          "command-000002",
+          2
+        ],
+        [
+          "command-000003",
+          2
+        ],
+        [
+          "command-000004",
+          2
+        ],
+        [
+          "command-000005",
+          2
+        ],
+        [
+          "command-000006",
+          2
+        ],
+        [
+          "command-000008",
+          2
+        ],
+        [
+          "command-000009",
+          2
+        ],
+        [
+          "command-000010",
+          2
+        ],
+        [
+          "command-000011",
+          1
+        ],
+        [
+          "command-000012",
+          1
+        ],
+        [
+          "command-000013",
+          1
+        ],
+        [
+          "command-000014",
+          1
+        ],
+        [
+          "command-000015",
+          1
+        ],
+        [
+          "command-000016",
+          1
+        ],
+        [
+          "command-000017",
+          1
+        ],
+        [
+          "g236-child-controller",
+          1
+        ],
+        [
+          "slackcyber.json",
+          1
+        ],
+        [
+          "slackbatch.gz",
+          1
+        ],
+        [
+          "slackbatch2.gz",
+          1
+        ],
+        [
+          "slackd3.gz",
+          1
+        ],
+        [
+          "PHASEONE64H",
+          1
+        ],
+        [
+          "partial-fragment",
+          1
+        ]
+      ],
+      "note": "tags mark article-evidence rows only; they are not a technique taxonomy"
+    },
+    "cite_format": "'<id>:<8 hex>' where the hex is sha256(text)[:8] (verified on all rows)",
+    "cite_matches_sha256_text_prefix": 189579,
+    "id_format": "R + 7-digit zero-padded integer",
+    "id_contiguous_1_to_n": true,
+    "file_layout_kind_runs": [
+      {
+        "kind": "payload",
+        "first_id": "R0000001",
+        "rows": 53432
+      },
+      {
+        "kind": "response",
+        "first_id": "R0053433",
+        "rows": 9053
+      },
+      {
+        "kind": "recovered_text",
+        "first_id": "R0062486",
+        "rows": 16152
+      },
+      {
+        "kind": "payload",
+        "first_id": "R0078638",
+        "rows": 2717
+      },
+      {
+        "kind": "response",
+        "first_id": "R0081355",
+        "rows": 2292
+      },
+      {
+        "kind": "recovered_text",
+        "first_id": "R0083647",
+        "rows": 29113
+      },
+      {
+        "kind": "payload",
+        "first_id": "R0112760",
+        "rows": 34887
+      },
+      {
+        "kind": "response",
+        "first_id": "R0147647",
+        "rows": 11663
+      },
+      {
+        "kind": "recovered_text",
+        "first_id": "R0159310",
+        "rows": 30224
+      },
+      {
+        "kind": "payload",
+        "first_id": "R0189534",
+        "rows": 1
+      },
+      {
+        "kind": "recovered_text",
+        "first_id": "R0189535",
+        "rows": 45
+      }
+    ],
+    "rows_with_redaction_category_top": [
+      [
+        "destination",
+        77034
+      ],
+      [
+        "opaque_fragment",
+        25203
+      ],
+      [
+        "opaque_marker_tail",
+        24777
+      ],
+      [
+        "runtime_identifier",
+        16012
+      ],
+      [
+        "source_identifier",
+        14857
+      ],
+      [
+        "query_value",
+        9472
+      ],
+      [
+        "opaque_base",
+        9394
+      ],
+      [
+        "source_path",
+        4238
+      ],
+      [
+        "opaque_encoded_blob",
+        3234
+      ],
+      [
+        "secret_key",
+        3084
+      ],
+      [
+        "jwt_claim_identifier",
+        1830
+      ],
+      [
+        "jwt_claim_time",
+        1783
+      ],
+      [
+        "username",
+        1618
+      ],
+      [
+        "hf_repo",
+        716
+      ],
+      [
+        "network_address",
+        448
+      ],
+      [
+        "opaque_binary_carrier",
+        425
+      ],
+      [
+        "repo_locator",
+        398
+      ],
+      [
+        "partial_repo_name",
+        370
+      ],
+      [
+        "bearer_token",
+        307
+      ],
+      [
+        "binary_padding",
+        174
+      ],
+      [
+        "cookie_value",
+        152
+      ],
+      [
+        "opaque_numeric_bytes",
+        134
+      ],
+      [
+        "url_fragment",
+        81
+      ],
+      [
+        "service_path",
+        78
+      ],
+      [
+        "sensitive_profile",
+        75
+      ]
+    ]
+  },
+  "2_forest": {
+    "rows_with_parent": 61125,
+    "parent_missing_from_file": 0,
+    "parent_kind_to_child_kind": {
+      "payload->response": 18417,
+      "payload->recovered_text": 42707,
+      "recovered_text->recovered_text": 1
+    },
+    "child_id_less_than_parent_id": 0,
+    "trees": 128454,
+    "roots_by_kind": {
+      "payload": 91037,
+      "response": 4591,
+      "recovered_text": 32826
+    },
+    "rows_not_reached_from_a_root": 0,
+    "tree_size_all": {
+      "n": 128454,
+      "mean": 1.476,
+      "median": 1.0,
+      "p90": 2,
+      "p99": 10,
+      "max": 859
+    },
+    "tree_size_multi_row_trees": {
+      "n": 26248,
+      "mean": 3.329,
+      "median": 2.0,
+      "p90": 5,
+      "p99": 13,
+      "max": 859
+    },
+    "trees_with_children": 26248,
+    "tree_depth_counts": {
+      "0": 102206,
+      "1": 26248
+    },
+    "max_depth": 1,
+    "share_trees_depth_ge1": 0.20434,
+    "share_trees_depth_ge2": 0.0,
+    "fanout_of_parents": {
+      "n": 26248,
+      "mean": 2.329,
+      "median": 1.0,
+      "p90": 4,
+      "p99": 12,
+      "max": 858
+    },
+    "fanout_histogram_capped_20": {
+      "1": 16291,
+      "2": 4926,
+      "3": 1052,
+      "4": 1444,
+      "5": 170,
+      "6": 352,
+      "7": 138,
+      "8": 431,
+      "9": 276,
+      "10": 256,
+      "11": 418,
+      "12": 314,
+      "13": 33,
+      "14": 23,
+      "15": 16,
+      "16": 30,
+      "17": 6,
+      "18": 8,
+      "19": 8,
+      "20": 56
+    },
+    "parents_by_child_kind_mix": {
+      "recovered_text+response": 6733,
+      "response": 1000,
+      "recovered_text": 18515
+    },
+    "child_first50_chars_found_in_parent_text": {
+      "response:yes": 15047,
+      "recovered_text:yes": 34141,
+      "response:no": 3370,
+      "recovered_text:no": 8567
+    },
+    "interpretation": "parent_id links a reassembled payload to (a) recovered_text rows = decoded layers / extracted fragments of that payload and (b) response rows = content returned when the payload's link chain was followed. Links never connect one payload to another payload, so trees are intra-payload decompositions, not agent-to-agent cascades."
+  },
+  "3_actor_proxies": {
+    "agent_names_available": false,
+    "agent_id_values": "every agent_id value is the unnumbered [REDACTED:runtime_identifier]",
+    "rows_with_any_CREDENTIAL_placeholder": 31210,
+    "rows_with_CREDENTIAL_in_auth_context": 19902,
+    "rows_with_USER_placeholder": 4289,
+    "rows_with_hf_username_pseudonym": 1618,
+    "max_actors_per_tree_for_attribution": 3,
+    "technique_definitions": {
+      "js_http_request": "JavaScript HTTP request call",
+      "js_dom_or_image_beacon": "JavaScript DOM access or image-src beacon",
+      "decode_and_execute": "base64-style decode followed by eval/exec/pipe-to-interpreter",
+      "python_script": "Python script (stdlib imports / urllib / python -c)",
+      "shell_command": "shell command line (curl/wget/sh/chmod/...)",
+      "hf_hub_access": "reference to the Hugging Face Hub or its API / redacted HF repo",
+      "dataset_card_yaml": "dataset-card YAML config keys",
+      "container_registry": "container image / registry manifest structures",
+      "kubernetes_api": "Kubernetes API / service-account / impersonation",
+      "cloud_metadata_or_signing": "cloud instance-metadata endpoint or AWS request signing",
+      "jwt_claims": "JWT claim structures",
+      "auth_header_use": "Authorization / Bearer / API-key header",
+      "template_injection": "server-side template expression reaching Python dunder attributes",
+      "media_playlist": "HLS media playlist directives",
+      "native_code_or_memory": "C source / memory-mapping / sanitizer options",
+      "board_zz_path": "zz-prefixed shared-store directory name",
+      "artifact_store_path": "artifact-repository / remote-cache path",
+      "link_shortener_chain": "link-shortener placeholder (chain hop)",
+      "env_or_secret_read": "reading environment variables or credential files",
+      "identity_recon": "identity / host reconnaissance (whoami, uname, hostname, passwd)",
+      "reverse_shell_or_socket": "raw socket / interactive shell plumbing",
+      "persistence": "cron / service / shell-rc / authorized_keys edits",
+      "path_traversal_or_file_url": "dot-dot path traversal or file:// URL",
+      "slack_api": "Slack reference",
+      "bi_semantic_query": "BI semantic-query command structures",
+      "swarm_task_record": "agent/task submission record (agent_id/task_id/submitted_code/function_name)",
+      "disarm_or_self_kill": "disarm / self-kill wording",
+      "webhook_or_callback": "webhook or callback reference"
+    },
+    "technique_definition_method": "case-insensitive regex per category over row text (see TECHNIQUES in realdata/swarmtraces.py); a tree uses a category if any of its rows matches",
+    "technique_rows_all_kinds": {
+      "link_shortener_chain": 49707,
+      "js_http_request": 35156,
+      "js_dom_or_image_beacon": 31983,
+      "auth_header_use": 30861,
+      "hf_hub_access": 28263,
+      "swarm_task_record": 15295,
+      "python_script": 15208,
+      "decode_and_execute": 8461,
+      "container_registry": 4944,
+      "identity_recon": 4369,
+      "dataset_card_yaml": 3633,
+      "jwt_claims": 2322,
+      "template_injection": 2272,
+      "shell_command": 2242,
+      "artifact_store_path": 2238,
+      "kubernetes_api": 2073,
+      "board_zz_path": 2023,
+      "env_or_secret_read": 1784,
+      "cloud_metadata_or_signing": 1263,
+      "native_code_or_memory": 787,
+      "bi_semantic_query": 767,
+      "reverse_shell_or_socket": 570,
+      "webhook_or_callback": 544,
+      "disarm_or_self_kill": 188,
+      "path_traversal_or_file_url": 87,
+      "media_playlist": 52,
+      "persistence": 50,
+      "slack_api": 10
+    },
+    "technique_rows_payload_kind": {
+      "link_shortener_chain": 30558,
+      "js_http_request": 28685,
+      "js_dom_or_image_beacon": 26402,
+      "auth_header_use": 22815,
+      "hf_hub_access": 17899,
+      "python_script": 6442,
+      "swarm_task_record": 6396,
+      "decode_and_execute": 4497,
+      "container_registry": 2864,
+      "dataset_card_yaml": 2388,
+      "identity_recon": 2079,
+      "jwt_claims": 1803,
+      "artifact_store_path": 1115,
+      "board_zz_path": 1071,
+      "template_injection": 1065,
+      "kubernetes_api": 1059,
+      "shell_command": 991,
+      "env_or_secret_read": 911,
+      "cloud_metadata_or_signing": 806,
+      "bi_semantic_query": 490,
+      "native_code_or_memory": 413,
+      "reverse_shell_or_socket": 317,
+      "webhook_or_callback": 277,
+      "disarm_or_self_kill": 109,
+      "media_playlist": 47,
+      "path_traversal_or_file_url": 43,
+      "persistence": 26,
+      "slack_api": 2
+    },
+    "technique_trees": {
+      "link_shortener_chain": 33298,
+      "js_http_request": 31214,
+      "js_dom_or_image_beacon": 27937,
+      "auth_header_use": 27562,
+      "hf_hub_access": 24817,
+      "swarm_task_record": 14101,
+      "python_script": 11064,
+      "decode_and_execute": 5979,
+      "container_registry": 3939,
+      "identity_recon": 3518,
+      "dataset_card_yaml": 2474,
+      "jwt_claims": 1935,
+      "artifact_store_path": 1850,
+      "shell_command": 1661,
+      "board_zz_path": 1536,
+      "kubernetes_api": 1369,
+      "template_injection": 1173,
+      "env_or_secret_read": 1171,
+      "cloud_metadata_or_signing": 1139,
+      "bi_semantic_query": 519,
+      "native_code_or_memory": 443,
+      "reverse_shell_or_socket": 397,
+      "webhook_or_callback": 338,
+      "disarm_or_self_kill": 123,
+      "path_traversal_or_file_url": 50,
+      "media_playlist": 47,
+      "persistence": 28,
+      "slack_api": 10
+    },
+    "by_proxy": {
+      "cred": {
+        "strict_single_pseudonym": {
+          "attribution_rule": "tree holds 1..1 distinct pseudonyms of this type",
+          "trees_with_any": 18349,
+          "trees_attributed": 17737,
+          "trees_excluded_too_many_pseudonyms": 612,
+          "distinct_actors_attributed": 423,
+          "trees_per_actor": {
+            "n": 423,
+            "mean": 41.931,
+            "median": 1,
+            "p90": 8,
+            "p99": 375,
+            "max": 5235
+          },
+          "gini_trees_per_actor": 0.9528,
+          "top10_actor_tree_counts": [
+            5235,
+            3415,
+            3079,
+            3001,
+            375,
+            284,
+            149,
+            135,
+            131,
+            101
+          ],
+          "top5_actor_share_of_attributed_trees": 0.8516,
+          "techniques": {
+            "auth_header_use": {
+              "attributed_trees": 17563,
+              "distinct_actors": 382,
+              "reach_share_of_actors": 0.9031,
+              "gini_among_users": 0.9544,
+              "gini_over_all_actors": 0.9588
+            },
+            "js_http_request": {
+              "attributed_trees": 15696,
+              "distinct_actors": 224,
+              "reach_share_of_actors": 0.5296,
+              "gini_among_users": 0.9547,
+              "gini_over_all_actors": 0.976
+            },
+            "hf_hub_access": {
+              "attributed_trees": 11249,
+              "distinct_actors": 217,
+              "reach_share_of_actors": 0.513,
+              "gini_among_users": 0.9502,
+              "gini_over_all_actors": 0.9745
+            },
+            "python_script": {
+              "attributed_trees": 3740,
+              "distinct_actors": 147,
+              "reach_share_of_actors": 0.3475,
+              "gini_among_users": 0.9252,
+              "gini_over_all_actors": 0.974
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 13419,
+              "distinct_actors": 143,
+              "reach_share_of_actors": 0.3381,
+              "gini_among_users": 0.9454,
+              "gini_over_all_actors": 0.9815
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 1489,
+              "distinct_actors": 95,
+              "reach_share_of_actors": 0.2246,
+              "gini_among_users": 0.879,
+              "gini_over_all_actors": 0.9728
+            },
+            "identity_recon": {
+              "attributed_trees": 1631,
+              "distinct_actors": 83,
+              "reach_share_of_actors": 0.1962,
+              "gini_among_users": 0.8793,
+              "gini_over_all_actors": 0.9763
+            },
+            "swarm_task_record": {
+              "attributed_trees": 4971,
+              "distinct_actors": 81,
+              "reach_share_of_actors": 0.1915,
+              "gini_among_users": 0.9608,
+              "gini_over_all_actors": 0.9925
+            },
+            "jwt_claims": {
+              "attributed_trees": 1025,
+              "distinct_actors": 60,
+              "reach_share_of_actors": 0.1418,
+              "gini_among_users": 0.7741,
+              "gini_over_all_actors": 0.968
+            },
+            "shell_command": {
+              "attributed_trees": 493,
+              "distinct_actors": 36,
+              "reach_share_of_actors": 0.0851,
+              "gini_among_users": 0.8301,
+              "gini_over_all_actors": 0.9855
+            },
+            "decode_and_execute": {
+              "attributed_trees": 1729,
+              "distinct_actors": 33,
+              "reach_share_of_actors": 0.078,
+              "gini_among_users": 0.896,
+              "gini_over_all_actors": 0.9919
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 153,
+              "distinct_actors": 28,
+              "reach_share_of_actors": 0.0662,
+              "gini_among_users": 0.6445,
+              "gini_over_all_actors": 0.9765
+            },
+            "kubernetes_api": {
+              "attributed_trees": 696,
+              "distinct_actors": 26,
+              "reach_share_of_actors": 0.0615,
+              "gini_among_users": 0.8854,
+              "gini_over_all_actors": 0.993
+            },
+            "container_registry": {
+              "attributed_trees": 509,
+              "distinct_actors": 25,
+              "reach_share_of_actors": 0.0591,
+              "gini_among_users": 0.8453,
+              "gini_over_all_actors": 0.9909
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 610,
+              "distinct_actors": 24,
+              "reach_share_of_actors": 0.0567,
+              "gini_among_users": 0.8574,
+              "gini_over_all_actors": 0.9919
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 1463,
+              "distinct_actors": 21,
+              "reach_share_of_actors": 0.0496,
+              "gini_among_users": 0.8803,
+              "gini_over_all_actors": 0.9941
+            },
+            "template_injection": {
+              "attributed_trees": 757,
+              "distinct_actors": 19,
+              "reach_share_of_actors": 0.0449,
+              "gini_among_users": 0.8663,
+              "gini_over_all_actors": 0.994
+            },
+            "artifact_store_path": {
+              "attributed_trees": 364,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.0331,
+              "gini_among_users": 0.8104,
+              "gini_over_all_actors": 0.9937
+            },
+            "board_zz_path": {
+              "attributed_trees": 304,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.0213,
+              "gini_among_users": 0.7478,
+              "gini_over_all_actors": 0.9946
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 109,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.0213,
+              "gini_among_users": 0.6667,
+              "gini_over_all_actors": 0.9929
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 75,
+              "distinct_actors": 7,
+              "reach_share_of_actors": 0.0165,
+              "gini_among_users": 0.6819,
+              "gini_over_all_actors": 0.9947
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 28,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0118,
+              "gini_among_users": 0.4429,
+              "gini_over_all_actors": 0.9934
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 72,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0095,
+              "gini_among_users": 0.6597,
+              "gini_over_all_actors": 0.9968
+            },
+            "slack_api": {
+              "attributed_trees": 7,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0071,
+              "gini_among_users": 0.2857,
+              "gini_over_all_actors": 0.9949
+            },
+            "media_playlist": {
+              "attributed_trees": 15,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0047,
+              "gini_among_users": 0.4333,
+              "gini_over_all_actors": 0.9973
+            },
+            "persistence": {
+              "attributed_trees": 7,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0047,
+              "gini_among_users": 0.2143,
+              "gini_over_all_actors": 0.9963
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 7,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0047,
+              "gini_among_users": 0.0714,
+              "gini_over_all_actors": 0.9956
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 1,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0024,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9976
+            }
+          }
+        },
+        "lenient_le3_pseudonyms": {
+          "attribution_rule": "tree holds 1..3 distinct pseudonyms of this type",
+          "trees_with_any": 18349,
+          "trees_attributed": 18338,
+          "trees_excluded_too_many_pseudonyms": 11,
+          "distinct_actors_attributed": 486,
+          "trees_per_actor": {
+            "n": 486,
+            "mean": 39.014,
+            "median": 1.0,
+            "p90": 8,
+            "p99": 380,
+            "max": 5416
+          },
+          "gini_trees_per_actor": 0.9518,
+          "top10_actor_tree_counts": [
+            5416,
+            3665,
+            3313,
+            3187,
+            380,
+            290,
+            179,
+            140,
+            136,
+            124
+          ],
+          "top5_actor_share_of_attributed_trees": 0.8704,
+          "techniques": {
+            "auth_header_use": {
+              "attributed_trees": 18161,
+              "distinct_actors": 445,
+              "reach_share_of_actors": 0.9156,
+              "gini_among_users": 0.9535,
+              "gini_over_all_actors": 0.9575
+            },
+            "js_http_request": {
+              "attributed_trees": 16247,
+              "distinct_actors": 280,
+              "reach_share_of_actors": 0.5761,
+              "gini_among_users": 0.956,
+              "gini_over_all_actors": 0.9747
+            },
+            "hf_hub_access": {
+              "attributed_trees": 11810,
+              "distinct_actors": 275,
+              "reach_share_of_actors": 0.5658,
+              "gini_among_users": 0.9507,
+              "gini_over_all_actors": 0.9721
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 13908,
+              "distinct_actors": 185,
+              "reach_share_of_actors": 0.3807,
+              "gini_among_users": 0.95,
+              "gini_over_all_actors": 0.981
+            },
+            "python_script": {
+              "attributed_trees": 4065,
+              "distinct_actors": 182,
+              "reach_share_of_actors": 0.3745,
+              "gini_among_users": 0.9235,
+              "gini_over_all_actors": 0.9713
+            },
+            "identity_recon": {
+              "attributed_trees": 1724,
+              "distinct_actors": 107,
+              "reach_share_of_actors": 0.2202,
+              "gini_among_users": 0.8769,
+              "gini_over_all_actors": 0.9729
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 1507,
+              "distinct_actors": 103,
+              "reach_share_of_actors": 0.2119,
+              "gini_among_users": 0.8799,
+              "gini_over_all_actors": 0.9746
+            },
+            "swarm_task_record": {
+              "attributed_trees": 5147,
+              "distinct_actors": 98,
+              "reach_share_of_actors": 0.2016,
+              "gini_among_users": 0.9591,
+              "gini_over_all_actors": 0.9918
+            },
+            "jwt_claims": {
+              "attributed_trees": 1073,
+              "distinct_actors": 90,
+              "reach_share_of_actors": 0.1852,
+              "gini_among_users": 0.802,
+              "gini_over_all_actors": 0.9633
+            },
+            "decode_and_execute": {
+              "attributed_trees": 1945,
+              "distinct_actors": 60,
+              "reach_share_of_actors": 0.1235,
+              "gini_among_users": 0.9121,
+              "gini_over_all_actors": 0.9891
+            },
+            "shell_command": {
+              "attributed_trees": 529,
+              "distinct_actors": 47,
+              "reach_share_of_actors": 0.0967,
+              "gini_among_users": 0.8319,
+              "gini_over_all_actors": 0.9837
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 662,
+              "distinct_actors": 44,
+              "reach_share_of_actors": 0.0905,
+              "gini_among_users": 0.8578,
+              "gini_over_all_actors": 0.9871
+            },
+            "kubernetes_api": {
+              "attributed_trees": 733,
+              "distinct_actors": 42,
+              "reach_share_of_actors": 0.0864,
+              "gini_among_users": 0.8835,
+              "gini_over_all_actors": 0.9899
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 1572,
+              "distinct_actors": 36,
+              "reach_share_of_actors": 0.0741,
+              "gini_among_users": 0.9058,
+              "gini_over_all_actors": 0.993
+            },
+            "template_injection": {
+              "attributed_trees": 878,
+              "distinct_actors": 34,
+              "reach_share_of_actors": 0.07,
+              "gini_among_users": 0.8892,
+              "gini_over_all_actors": 0.9923
+            },
+            "container_registry": {
+              "attributed_trees": 520,
+              "distinct_actors": 33,
+              "reach_share_of_actors": 0.0679,
+              "gini_among_users": 0.855,
+              "gini_over_all_actors": 0.9902
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 162,
+              "distinct_actors": 31,
+              "reach_share_of_actors": 0.0638,
+              "gini_among_users": 0.6444,
+              "gini_over_all_actors": 0.9773
+            },
+            "artifact_store_path": {
+              "attributed_trees": 372,
+              "distinct_actors": 20,
+              "reach_share_of_actors": 0.0412,
+              "gini_among_users": 0.8358,
+              "gini_over_all_actors": 0.9932
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 91,
+              "distinct_actors": 18,
+              "reach_share_of_actors": 0.037,
+              "gini_among_users": 0.7161,
+              "gini_over_all_actors": 0.9895
+            },
+            "board_zz_path": {
+              "attributed_trees": 310,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.0247,
+              "gini_among_users": 0.7832,
+              "gini_over_all_actors": 0.9946
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 113,
+              "distinct_actors": 10,
+              "reach_share_of_actors": 0.0206,
+              "gini_among_users": 0.6846,
+              "gini_over_all_actors": 0.9935
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 29,
+              "distinct_actors": 6,
+              "reach_share_of_actors": 0.0123,
+              "gini_among_users": 0.4667,
+              "gini_over_all_actors": 0.9934
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 73,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0103,
+              "gini_among_users": 0.7081,
+              "gini_over_all_actors": 0.997
+            },
+            "slack_api": {
+              "attributed_trees": 7,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0062,
+              "gini_among_users": 0.2857,
+              "gini_over_all_actors": 0.9956
+            },
+            "media_playlist": {
+              "attributed_trees": 15,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0041,
+              "gini_among_users": 0.4333,
+              "gini_over_all_actors": 0.9977
+            },
+            "persistence": {
+              "attributed_trees": 7,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0041,
+              "gini_among_users": 0.2143,
+              "gini_over_all_actors": 0.9968
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 7,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0041,
+              "gini_among_users": 0.0714,
+              "gini_over_all_actors": 0.9962
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 1,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0021,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9979
+            }
+          }
+        }
+      },
+      "user": {
+        "strict_single_pseudonym": {
+          "attribution_rule": "tree holds 1..1 distinct pseudonyms of this type",
+          "trees_with_any": 3601,
+          "trees_attributed": 3518,
+          "trees_excluded_too_many_pseudonyms": 83,
+          "distinct_actors_attributed": 52,
+          "trees_per_actor": {
+            "n": 52,
+            "mean": 67.654,
+            "median": 2.5,
+            "p90": 93,
+            "p99": 2533,
+            "max": 2533
+          },
+          "gini_trees_per_actor": 0.9123,
+          "top10_actor_tree_counts": [
+            2533,
+            163,
+            154,
+            131,
+            126,
+            93,
+            37,
+            37,
+            34,
+            28
+          ],
+          "top5_actor_share_of_attributed_trees": 0.8832,
+          "techniques": {
+            "js_http_request": {
+              "attributed_trees": 2609,
+              "distinct_actors": 47,
+              "reach_share_of_actors": 0.9038,
+              "gini_among_users": 0.9137,
+              "gini_over_all_actors": 0.922
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 2332,
+              "distinct_actors": 45,
+              "reach_share_of_actors": 0.8654,
+              "gini_among_users": 0.9163,
+              "gini_over_all_actors": 0.9276
+            },
+            "auth_header_use": {
+              "attributed_trees": 3039,
+              "distinct_actors": 42,
+              "reach_share_of_actors": 0.8077,
+              "gini_among_users": 0.9231,
+              "gini_over_all_actors": 0.9379
+            },
+            "hf_hub_access": {
+              "attributed_trees": 1136,
+              "distinct_actors": 33,
+              "reach_share_of_actors": 0.6346,
+              "gini_among_users": 0.8231,
+              "gini_over_all_actors": 0.8877
+            },
+            "python_script": {
+              "attributed_trees": 1230,
+              "distinct_actors": 26,
+              "reach_share_of_actors": 0.5,
+              "gini_among_users": 0.8688,
+              "gini_over_all_actors": 0.9344
+            },
+            "identity_recon": {
+              "attributed_trees": 177,
+              "distinct_actors": 18,
+              "reach_share_of_actors": 0.3462,
+              "gini_among_users": 0.6525,
+              "gini_over_all_actors": 0.8797
+            },
+            "swarm_task_record": {
+              "attributed_trees": 518,
+              "distinct_actors": 18,
+              "reach_share_of_actors": 0.3462,
+              "gini_among_users": 0.8325,
+              "gini_over_all_actors": 0.942
+            },
+            "decode_and_execute": {
+              "attributed_trees": 460,
+              "distinct_actors": 17,
+              "reach_share_of_actors": 0.3269,
+              "gini_among_users": 0.8148,
+              "gini_over_all_actors": 0.9395
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 308,
+              "distinct_actors": 17,
+              "reach_share_of_actors": 0.3269,
+              "gini_among_users": 0.7754,
+              "gini_over_all_actors": 0.9266
+            },
+            "jwt_claims": {
+              "attributed_trees": 88,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.2692,
+              "gini_among_users": 0.4692,
+              "gini_over_all_actors": 0.8571
+            },
+            "container_registry": {
+              "attributed_trees": 2540,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.2308,
+              "gini_among_users": 0.9072,
+              "gini_over_all_actors": 0.9786
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 153,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.2308,
+              "gini_among_users": 0.7369,
+              "gini_over_all_actors": 0.9393
+            },
+            "shell_command": {
+              "attributed_trees": 349,
+              "distinct_actors": 10,
+              "reach_share_of_actors": 0.1923,
+              "gini_among_users": 0.8415,
+              "gini_over_all_actors": 0.9695
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 87,
+              "distinct_actors": 10,
+              "reach_share_of_actors": 0.1923,
+              "gini_among_users": 0.5184,
+              "gini_over_all_actors": 0.9074
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 21,
+              "distinct_actors": 10,
+              "reach_share_of_actors": 0.1923,
+              "gini_among_users": 0.3857,
+              "gini_over_all_actors": 0.8819
+            },
+            "kubernetes_api": {
+              "attributed_trees": 138,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.1731,
+              "gini_among_users": 0.6586,
+              "gini_over_all_actors": 0.9409
+            },
+            "template_injection": {
+              "attributed_trees": 73,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.1731,
+              "gini_among_users": 0.5936,
+              "gini_over_all_actors": 0.9297
+            },
+            "artifact_store_path": {
+              "attributed_trees": 233,
+              "distinct_actors": 6,
+              "reach_share_of_actors": 0.1154,
+              "gini_among_users": 0.7775,
+              "gini_over_all_actors": 0.9743
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 19,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0962,
+              "gini_among_users": 0.4842,
+              "gini_over_all_actors": 0.9504
+            },
+            "board_zz_path": {
+              "attributed_trees": 371,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0769,
+              "gini_among_users": 0.723,
+              "gini_over_all_actors": 0.9787
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 147,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0769,
+              "gini_among_users": 0.7058,
+              "gini_over_all_actors": 0.9774
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 12,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0769,
+              "gini_among_users": 0.375,
+              "gini_over_all_actors": 0.9519
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 18,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0577,
+              "gini_among_users": 0.4815,
+              "gini_over_all_actors": 0.9701
+            },
+            "slack_api": {
+              "attributed_trees": 3,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0577,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9423
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 258,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0385,
+              "gini_among_users": 0.4535,
+              "gini_over_all_actors": 0.979
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 1,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0192,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9808
+            },
+            "media_playlist": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "persistence": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            }
+          }
+        },
+        "lenient_le3_pseudonyms": {
+          "attribution_rule": "tree holds 1..3 distinct pseudonyms of this type",
+          "trees_with_any": 3601,
+          "trees_attributed": 3587,
+          "trees_excluded_too_many_pseudonyms": 14,
+          "distinct_actors_attributed": 58,
+          "trees_per_actor": {
+            "n": 58,
+            "mean": 63.31,
+            "median": 2.5,
+            "p90": 116,
+            "p99": 2547,
+            "max": 2547
+          },
+          "gini_trees_per_actor": 0.9113,
+          "top10_actor_tree_counts": [
+            2547,
+            181,
+            159,
+            148,
+            138,
+            116,
+            51,
+            43,
+            37,
+            28
+          ],
+          "top5_actor_share_of_attributed_trees": 0.8846,
+          "techniques": {
+            "js_http_request": {
+              "attributed_trees": 2655,
+              "distinct_actors": 50,
+              "reach_share_of_actors": 0.8621,
+              "gini_among_users": 0.9092,
+              "gini_over_all_actors": 0.9217
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 2369,
+              "distinct_actors": 49,
+              "reach_share_of_actors": 0.8448,
+              "gini_among_users": 0.9135,
+              "gini_over_all_actors": 0.9269
+            },
+            "auth_header_use": {
+              "attributed_trees": 3093,
+              "distinct_actors": 44,
+              "reach_share_of_actors": 0.7586,
+              "gini_among_users": 0.9158,
+              "gini_over_all_actors": 0.9361
+            },
+            "hf_hub_access": {
+              "attributed_trees": 1174,
+              "distinct_actors": 35,
+              "reach_share_of_actors": 0.6034,
+              "gini_among_users": 0.8119,
+              "gini_over_all_actors": 0.8865
+            },
+            "python_script": {
+              "attributed_trees": 1274,
+              "distinct_actors": 31,
+              "reach_share_of_actors": 0.5345,
+              "gini_among_users": 0.8626,
+              "gini_over_all_actors": 0.9265
+            },
+            "identity_recon": {
+              "attributed_trees": 194,
+              "distinct_actors": 21,
+              "reach_share_of_actors": 0.3621,
+              "gini_among_users": 0.6212,
+              "gini_over_all_actors": 0.8629
+            },
+            "swarm_task_record": {
+              "attributed_trees": 537,
+              "distinct_actors": 21,
+              "reach_share_of_actors": 0.3621,
+              "gini_among_users": 0.8253,
+              "gini_over_all_actors": 0.9367
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 319,
+              "distinct_actors": 20,
+              "reach_share_of_actors": 0.3448,
+              "gini_among_users": 0.7599,
+              "gini_over_all_actors": 0.9172
+            },
+            "decode_and_execute": {
+              "attributed_trees": 477,
+              "distinct_actors": 19,
+              "reach_share_of_actors": 0.3276,
+              "gini_among_users": 0.8027,
+              "gini_over_all_actors": 0.9354
+            },
+            "jwt_claims": {
+              "attributed_trees": 95,
+              "distinct_actors": 18,
+              "reach_share_of_actors": 0.3103,
+              "gini_among_users": 0.5,
+              "gini_over_all_actors": 0.8448
+            },
+            "container_registry": {
+              "attributed_trees": 2557,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.2414,
+              "gini_among_users": 0.9167,
+              "gini_over_all_actors": 0.9799
+            },
+            "kubernetes_api": {
+              "attributed_trees": 143,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.2414,
+              "gini_among_users": 0.7138,
+              "gini_over_all_actors": 0.9309
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 157,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.2414,
+              "gini_among_users": 0.7381,
+              "gini_over_all_actors": 0.9368
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 93,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.2069,
+              "gini_among_users": 0.5212,
+              "gini_over_all_actors": 0.9009
+            },
+            "template_injection": {
+              "attributed_trees": 79,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.2069,
+              "gini_among_users": 0.6098,
+              "gini_over_all_actors": 0.9193
+            },
+            "shell_command": {
+              "attributed_trees": 360,
+              "distinct_actors": 11,
+              "reach_share_of_actors": 0.1897,
+              "gini_among_users": 0.8424,
+              "gini_over_all_actors": 0.9701
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 28,
+              "distinct_actors": 10,
+              "reach_share_of_actors": 0.1724,
+              "gini_among_users": 0.3216,
+              "gini_over_all_actors": 0.883
+            },
+            "artifact_store_path": {
+              "attributed_trees": 236,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.1552,
+              "gini_among_users": 0.8197,
+              "gini_over_all_actors": 0.972
+            },
+            "board_zz_path": {
+              "attributed_trees": 376,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0862,
+              "gini_among_users": 0.7572,
+              "gini_over_all_actors": 0.9791
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 19,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0862,
+              "gini_among_users": 0.4842,
+              "gini_over_all_actors": 0.9555
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 152,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.069,
+              "gini_among_users": 0.6927,
+              "gini_over_all_actors": 0.9788
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 12,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.069,
+              "gini_among_users": 0.375,
+              "gini_over_all_actors": 0.9569
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 18,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0517,
+              "gini_among_users": 0.4815,
+              "gini_over_all_actors": 0.9732
+            },
+            "slack_api": {
+              "attributed_trees": 3,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0517,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9483
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 272,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0345,
+              "gini_among_users": 0.4091,
+              "gini_over_all_actors": 0.9796
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 1,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0172,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9828
+            },
+            "media_playlist": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "persistence": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            }
+          }
+        }
+      },
+      "hfuser": {
+        "strict_single_pseudonym": {
+          "attribution_rule": "tree holds 1..1 distinct pseudonyms of this type",
+          "trees_with_any": 1265,
+          "trees_attributed": 1195,
+          "trees_excluded_too_many_pseudonyms": 70,
+          "distinct_actors_attributed": 138,
+          "trees_per_actor": {
+            "n": 138,
+            "mean": 8.659,
+            "median": 1.0,
+            "p90": 7,
+            "p99": 277,
+            "max": 419
+          },
+          "gini_trees_per_actor": 0.8231,
+          "top10_actor_tree_counts": [
+            419,
+            277,
+            96,
+            56,
+            22,
+            16,
+            15,
+            14,
+            11,
+            10
+          ],
+          "top5_actor_share_of_attributed_trees": 0.728,
+          "techniques": {
+            "hf_hub_access": {
+              "attributed_trees": 757,
+              "distinct_actors": 119,
+              "reach_share_of_actors": 0.8623,
+              "gini_among_users": 0.7773,
+              "gini_over_all_actors": 0.808
+            },
+            "js_http_request": {
+              "attributed_trees": 812,
+              "distinct_actors": 79,
+              "reach_share_of_actors": 0.5725,
+              "gini_among_users": 0.8306,
+              "gini_over_all_actors": 0.903
+            },
+            "auth_header_use": {
+              "attributed_trees": 899,
+              "distinct_actors": 62,
+              "reach_share_of_actors": 0.4493,
+              "gini_among_users": 0.8604,
+              "gini_over_all_actors": 0.9373
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 624,
+              "distinct_actors": 54,
+              "reach_share_of_actors": 0.3913,
+              "gini_among_users": 0.8375,
+              "gini_over_all_actors": 0.9364
+            },
+            "python_script": {
+              "attributed_trees": 605,
+              "distinct_actors": 52,
+              "reach_share_of_actors": 0.3768,
+              "gini_among_users": 0.8601,
+              "gini_over_all_actors": 0.9473
+            },
+            "swarm_task_record": {
+              "attributed_trees": 231,
+              "distinct_actors": 30,
+              "reach_share_of_actors": 0.2174,
+              "gini_among_users": 0.8201,
+              "gini_over_all_actors": 0.9609
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 82,
+              "distinct_actors": 21,
+              "reach_share_of_actors": 0.1522,
+              "gini_among_users": 0.6063,
+              "gini_over_all_actors": 0.9401
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 80,
+              "distinct_actors": 20,
+              "reach_share_of_actors": 0.1449,
+              "gini_among_users": 0.6825,
+              "gini_over_all_actors": 0.954
+            },
+            "decode_and_execute": {
+              "attributed_trees": 254,
+              "distinct_actors": 19,
+              "reach_share_of_actors": 0.1377,
+              "gini_among_users": 0.8421,
+              "gini_over_all_actors": 0.9783
+            },
+            "identity_recon": {
+              "attributed_trees": 75,
+              "distinct_actors": 19,
+              "reach_share_of_actors": 0.1377,
+              "gini_among_users": 0.5825,
+              "gini_over_all_actors": 0.9425
+            },
+            "jwt_claims": {
+              "attributed_trees": 173,
+              "distinct_actors": 18,
+              "reach_share_of_actors": 0.1304,
+              "gini_among_users": 0.6927,
+              "gini_over_all_actors": 0.9599
+            },
+            "template_injection": {
+              "attributed_trees": 81,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.087,
+              "gini_among_users": 0.7726,
+              "gini_over_all_actors": 0.9802
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 36,
+              "distinct_actors": 11,
+              "reach_share_of_actors": 0.0797,
+              "gini_among_users": 0.4646,
+              "gini_over_all_actors": 0.9573
+            },
+            "kubernetes_api": {
+              "attributed_trees": 16,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.0652,
+              "gini_among_users": 0.2917,
+              "gini_over_all_actors": 0.9538
+            },
+            "container_registry": {
+              "attributed_trees": 423,
+              "distinct_actors": 8,
+              "reach_share_of_actors": 0.058,
+              "gini_among_users": 0.8537,
+              "gini_over_all_actors": 0.9915
+            },
+            "artifact_store_path": {
+              "attributed_trees": 34,
+              "distinct_actors": 8,
+              "reach_share_of_actors": 0.058,
+              "gini_among_users": 0.5662,
+              "gini_over_all_actors": 0.9749
+            },
+            "board_zz_path": {
+              "attributed_trees": 80,
+              "distinct_actors": 7,
+              "reach_share_of_actors": 0.0507,
+              "gini_among_users": 0.7464,
+              "gini_over_all_actors": 0.9871
+            },
+            "shell_command": {
+              "attributed_trees": 85,
+              "distinct_actors": 5,
+              "reach_share_of_actors": 0.0362,
+              "gini_among_users": 0.7388,
+              "gini_over_all_actors": 0.9905
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 12,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.029,
+              "gini_among_users": 0.5,
+              "gini_over_all_actors": 0.9855
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 14,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0217,
+              "gini_among_users": 0.3333,
+              "gini_over_all_actors": 0.9855
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 81,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0145,
+              "gini_among_users": 0.4753,
+              "gini_over_all_actors": 0.9924
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 41,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0145,
+              "gini_among_users": 0.4512,
+              "gini_over_all_actors": 0.992
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 2,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0145,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9855
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 15,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0145,
+              "gini_among_users": 0.2333,
+              "gini_over_all_actors": 0.9889
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 2,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0072,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9928
+            },
+            "media_playlist": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "persistence": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "slack_api": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            }
+          }
+        },
+        "lenient_le3_pseudonyms": {
+          "attribution_rule": "tree holds 1..3 distinct pseudonyms of this type",
+          "trees_with_any": 1265,
+          "trees_attributed": 1261,
+          "trees_excluded_too_many_pseudonyms": 4,
+          "distinct_actors_attributed": 159,
+          "trees_per_actor": {
+            "n": 159,
+            "mean": 8.434,
+            "median": 1,
+            "p90": 9,
+            "p99": 280,
+            "max": 420
+          },
+          "gini_trees_per_actor": 0.8162,
+          "top10_actor_tree_counts": [
+            420,
+            280,
+            108,
+            61,
+            29,
+            28,
+            21,
+            19,
+            17,
+            16
+          ],
+          "top5_actor_share_of_attributed_trees": 0.7121,
+          "techniques": {
+            "hf_hub_access": {
+              "attributed_trees": 815,
+              "distinct_actors": 133,
+              "reach_share_of_actors": 0.8365,
+              "gini_among_users": 0.7754,
+              "gini_over_all_actors": 0.8121
+            },
+            "js_http_request": {
+              "attributed_trees": 871,
+              "distinct_actors": 94,
+              "reach_share_of_actors": 0.5912,
+              "gini_among_users": 0.8214,
+              "gini_over_all_actors": 0.8944
+            },
+            "auth_header_use": {
+              "attributed_trees": 937,
+              "distinct_actors": 76,
+              "reach_share_of_actors": 0.478,
+              "gini_among_users": 0.8532,
+              "gini_over_all_actors": 0.9299
+            },
+            "js_dom_or_image_beacon": {
+              "attributed_trees": 681,
+              "distinct_actors": 74,
+              "reach_share_of_actors": 0.4654,
+              "gini_among_users": 0.8231,
+              "gini_over_all_actors": 0.9177
+            },
+            "python_script": {
+              "attributed_trees": 642,
+              "distinct_actors": 59,
+              "reach_share_of_actors": 0.3711,
+              "gini_among_users": 0.8543,
+              "gini_over_all_actors": 0.9459
+            },
+            "swarm_task_record": {
+              "attributed_trees": 243,
+              "distinct_actors": 36,
+              "reach_share_of_actors": 0.2264,
+              "gini_among_users": 0.8084,
+              "gini_over_all_actors": 0.9566
+            },
+            "identity_recon": {
+              "attributed_trees": 100,
+              "distinct_actors": 31,
+              "reach_share_of_actors": 0.195,
+              "gini_among_users": 0.5783,
+              "gini_over_all_actors": 0.9178
+            },
+            "link_shortener_chain": {
+              "attributed_trees": 98,
+              "distinct_actors": 27,
+              "reach_share_of_actors": 0.1698,
+              "gini_among_users": 0.6118,
+              "gini_over_all_actors": 0.9341
+            },
+            "decode_and_execute": {
+              "attributed_trees": 284,
+              "distinct_actors": 25,
+              "reach_share_of_actors": 0.1572,
+              "gini_among_users": 0.8166,
+              "gini_over_all_actors": 0.9712
+            },
+            "dataset_card_yaml": {
+              "attributed_trees": 95,
+              "distinct_actors": 24,
+              "reach_share_of_actors": 0.1509,
+              "gini_among_users": 0.675,
+              "gini_over_all_actors": 0.9509
+            },
+            "jwt_claims": {
+              "attributed_trees": 183,
+              "distinct_actors": 21,
+              "reach_share_of_actors": 0.1321,
+              "gini_among_users": 0.7121,
+              "gini_over_all_actors": 0.962
+            },
+            "kubernetes_api": {
+              "attributed_trees": 22,
+              "distinct_actors": 14,
+              "reach_share_of_actors": 0.0881,
+              "gini_among_users": 0.3916,
+              "gini_over_all_actors": 0.9464
+            },
+            "template_injection": {
+              "attributed_trees": 91,
+              "distinct_actors": 13,
+              "reach_share_of_actors": 0.0818,
+              "gini_among_users": 0.7738,
+              "gini_over_all_actors": 0.9815
+            },
+            "env_or_secret_read": {
+              "attributed_trees": 62,
+              "distinct_actors": 12,
+              "reach_share_of_actors": 0.0755,
+              "gini_among_users": 0.5322,
+              "gini_over_all_actors": 0.9647
+            },
+            "container_registry": {
+              "attributed_trees": 425,
+              "distinct_actors": 11,
+              "reach_share_of_actors": 0.0692,
+              "gini_among_users": 0.8823,
+              "gini_over_all_actors": 0.9919
+            },
+            "board_zz_path": {
+              "attributed_trees": 81,
+              "distinct_actors": 9,
+              "reach_share_of_actors": 0.0566,
+              "gini_among_users": 0.7642,
+              "gini_over_all_actors": 0.9867
+            },
+            "shell_command": {
+              "attributed_trees": 87,
+              "distinct_actors": 8,
+              "reach_share_of_actors": 0.0503,
+              "gini_among_users": 0.7879,
+              "gini_over_all_actors": 0.9893
+            },
+            "artifact_store_path": {
+              "attributed_trees": 34,
+              "distinct_actors": 8,
+              "reach_share_of_actors": 0.0503,
+              "gini_among_users": 0.5662,
+              "gini_over_all_actors": 0.9782
+            },
+            "native_code_or_memory": {
+              "attributed_trees": 82,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0252,
+              "gini_among_users": 0.7078,
+              "gini_over_all_actors": 0.9926
+            },
+            "reverse_shell_or_socket": {
+              "attributed_trees": 42,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0252,
+              "gini_among_users": 0.6686,
+              "gini_over_all_actors": 0.9917
+            },
+            "disarm_or_self_kill": {
+              "attributed_trees": 12,
+              "distinct_actors": 4,
+              "reach_share_of_actors": 0.0252,
+              "gini_among_users": 0.5,
+              "gini_over_all_actors": 0.9874
+            },
+            "cloud_metadata_or_signing": {
+              "attributed_trees": 14,
+              "distinct_actors": 3,
+              "reach_share_of_actors": 0.0189,
+              "gini_among_users": 0.3333,
+              "gini_over_all_actors": 0.9874
+            },
+            "path_traversal_or_file_url": {
+              "attributed_trees": 2,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0126,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9874
+            },
+            "webhook_or_callback": {
+              "attributed_trees": 15,
+              "distinct_actors": 2,
+              "reach_share_of_actors": 0.0126,
+              "gini_among_users": 0.2333,
+              "gini_over_all_actors": 0.9904
+            },
+            "bi_semantic_query": {
+              "attributed_trees": 2,
+              "distinct_actors": 1,
+              "reach_share_of_actors": 0.0063,
+              "gini_among_users": 0.0,
+              "gini_over_all_actors": 0.9937
+            },
+            "media_playlist": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "persistence": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            },
+            "slack_api": {
+              "attributed_trees": 0,
+              "distinct_actors": 0,
+              "reach_share_of_actors": 0.0,
+              "gini_among_users": null,
+              "gini_over_all_actors": null
+            }
+          }
+        }
+      }
+    },
+    "credential_profile": {
+      "credentials_by_dominant_auth_context": {
+        "x_api_key": 34,
+        "token_param_or_field": 95,
+        "bearer": 331,
+        "basic_btoa": 2
+      },
+      "top10_strict_cred_trees_and_context": [
+        {
+          "rank": 1,
+          "trees": 5235,
+          "dominant_context": "x_api_key",
+          "share_trees_with_hf_hub_access": 0.086
+        },
+        {
+          "rank": 2,
+          "trees": 3415,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.925
+        },
+        {
+          "rank": 3,
+          "trees": 3079,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.894
+        },
+        {
+          "rank": 4,
+          "trees": 3001,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.978
+        },
+        {
+          "rank": 5,
+          "trees": 375,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.96
+        },
+        {
+          "rank": 6,
+          "trees": 284,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.926
+        },
+        {
+          "rank": 7,
+          "trees": 149,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.953
+        },
+        {
+          "rank": 8,
+          "trees": 135,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.97
+        },
+        {
+          "rank": 9,
+          "trees": 131,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.931
+        },
+        {
+          "rank": 10,
+          "trees": 101,
+          "dominant_context": "bearer",
+          "share_trees_with_hf_hub_access": 0.871
+        }
+      ],
+      "strict_creds_with_le2_trees": 295,
+      "strict_creds_with_le2_trees_all_hf_hub": 120,
+      "note": "long-tail credentials used once or twice against the Hub look like harvested/tested tokens rather than agent identities"
+    }
+  },
+  "3b_duplicates": {
+    "payload_rows": {
+      "rows_considered_norm_len_ge20": 82324,
+      "exact_text_sha256": {
+        "groups": 80697,
+        "groups_with_ge2_rows": 468,
+        "rows_in_ge2_groups": 2095,
+        "max_rows_in_group": 120,
+        "groups_shared_by_ge2_cred": 0,
+        "groups_shared_by_ge5_cred": 0,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 1,
+        "groups_shared_by_ge2_user": 0,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 1,
+        "groups_shared_by_ge2_hfuser": 0,
+        "groups_shared_by_ge5_hfuser": 0,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 1,
+        "groups_in_ge2_trees": 468,
+        "groups_in_ge5_trees": 95,
+        "groups_in_ge20_trees": 13,
+        "max_trees_per_group": 120
+      },
+      "normalized_template": {
+        "groups": 41991,
+        "groups_with_ge2_rows": 2840,
+        "rows_in_ge2_groups": 43173,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 227,
+        "groups_shared_by_ge5_cred": 7,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 4,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 2,
+        "groups_shared_by_ge2_hfuser": 3,
+        "groups_shared_by_ge5_hfuser": 0,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 3,
+        "groups_in_ge2_trees": 2840,
+        "groups_in_ge5_trees": 535,
+        "groups_in_ge20_trees": 143,
+        "max_trees_per_group": 3765
+      },
+      "normalized_first200": {
+        "groups": 32700,
+        "groups_with_ge2_rows": 4156,
+        "rows_in_ge2_groups": 53780,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 281,
+        "groups_shared_by_ge5_cred": 9,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 32,
+        "groups_shared_by_ge5_user": 2,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 5,
+        "groups_shared_by_ge2_hfuser": 10,
+        "groups_shared_by_ge5_hfuser": 1,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 5,
+        "groups_in_ge2_trees": 4156,
+        "groups_in_ge5_trees": 918,
+        "groups_in_ge20_trees": 229,
+        "max_trees_per_group": 3765
+      }
+    },
+    "all_roots": {
+      "rows_considered_norm_len_ge20": 104841,
+      "exact_text_sha256": {
+        "groups": 99244,
+        "groups_with_ge2_rows": 2836,
+        "rows_in_ge2_groups": 8433,
+        "max_rows_in_group": 120,
+        "groups_shared_by_ge2_cred": 0,
+        "groups_shared_by_ge5_cred": 0,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 1,
+        "groups_shared_by_ge2_user": 0,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 1,
+        "groups_shared_by_ge2_hfuser": 0,
+        "groups_shared_by_ge5_hfuser": 0,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 1,
+        "groups_in_ge2_trees": 2836,
+        "groups_in_ge5_trees": 126,
+        "groups_in_ge20_trees": 19,
+        "max_trees_per_group": 120
+      },
+      "normalized_template": {
+        "groups": 56077,
+        "groups_with_ge2_rows": 4621,
+        "rows_in_ge2_groups": 53385,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 267,
+        "groups_shared_by_ge5_cred": 7,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 5,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 2,
+        "groups_shared_by_ge2_hfuser": 4,
+        "groups_shared_by_ge5_hfuser": 0,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 3,
+        "groups_in_ge2_trees": 4621,
+        "groups_in_ge5_trees": 744,
+        "groups_in_ge20_trees": 191,
+        "max_trees_per_group": 3765
+      },
+      "normalized_first200": {
+        "groups": 44831,
+        "groups_with_ge2_rows": 6514,
+        "rows_in_ge2_groups": 66524,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 336,
+        "groups_shared_by_ge5_cred": 10,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 36,
+        "groups_shared_by_ge5_user": 2,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 5,
+        "groups_shared_by_ge2_hfuser": 14,
+        "groups_shared_by_ge5_hfuser": 2,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 5,
+        "groups_in_ge2_trees": 6514,
+        "groups_in_ge5_trees": 1246,
+        "groups_in_ge20_trees": 281,
+        "max_trees_per_group": 3765
+      }
+    },
+    "all_rows": {
+      "rows_considered_norm_len_ge20": 134729,
+      "exact_text_sha256": {
+        "groups": 120872,
+        "groups_with_ge2_rows": 10324,
+        "rows_in_ge2_groups": 24181,
+        "max_rows_in_group": 120,
+        "groups_shared_by_ge2_cred": 4,
+        "groups_shared_by_ge5_cred": 0,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 2,
+        "groups_shared_by_ge2_user": 1,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 2,
+        "groups_shared_by_ge2_hfuser": 0,
+        "groups_shared_by_ge5_hfuser": 0,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 1,
+        "groups_in_ge2_trees": 3267,
+        "groups_in_ge5_trees": 146,
+        "groups_in_ge20_trees": 21,
+        "max_trees_per_group": 120
+      },
+      "normalized_template": {
+        "groups": 67264,
+        "groups_with_ge2_rows": 9355,
+        "rows_in_ge2_groups": 76820,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 375,
+        "groups_shared_by_ge5_cred": 13,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 32,
+        "groups_shared_by_ge5_user": 0,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 4,
+        "groups_shared_by_ge2_hfuser": 21,
+        "groups_shared_by_ge5_hfuser": 1,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 5,
+        "groups_in_ge2_trees": 5429,
+        "groups_in_ge5_trees": 930,
+        "groups_in_ge20_trees": 232,
+        "max_trees_per_group": 3765
+      },
+      "normalized_first200": {
+        "groups": 54134,
+        "groups_with_ge2_rows": 10621,
+        "rows_in_ge2_groups": 91216,
+        "max_rows_in_group": 3765,
+        "groups_shared_by_ge2_cred": 456,
+        "groups_shared_by_ge5_cred": 17,
+        "groups_shared_by_ge20_cred": 0,
+        "max_distinct_cred_per_group": 11,
+        "groups_shared_by_ge2_user": 69,
+        "groups_shared_by_ge5_user": 2,
+        "groups_shared_by_ge20_user": 0,
+        "max_distinct_user_per_group": 5,
+        "groups_shared_by_ge2_hfuser": 31,
+        "groups_shared_by_ge5_hfuser": 3,
+        "groups_shared_by_ge20_hfuser": 0,
+        "max_distinct_hfuser_per_group": 5,
+        "groups_in_ge2_trees": 7654,
+        "groups_in_ge5_trees": 1496,
+        "groups_in_ge20_trees": 335,
+        "max_trees_per_group": 3765
+      }
+    },
+    "top15_payload_templates_by_distinct_cred": [
+      {
+        "template_sha256_8": "5e21eaac",
+        "distinct_cred": 11,
+        "rows": 12,
+        "norm_len": 189,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "b10f8708",
+        "distinct_cred": 10,
+        "rows": 10,
+        "norm_len": 130,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "b83f5538",
+        "distinct_cred": 7,
+        "rows": 7,
+        "norm_len": 194,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "e5c7de84",
+        "distinct_cred": 6,
+        "rows": 6,
+        "norm_len": 494,
+        "techniques": [
+          "auth_header_use",
+          "js_http_request",
+          "link_shortener_chain"
+        ]
+      },
+      {
+        "template_sha256_8": "61d2179d",
+        "distinct_cred": 6,
+        "rows": 6,
+        "norm_len": 151,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "78033bce",
+        "distinct_cred": 5,
+        "rows": 6,
+        "norm_len": 689,
+        "techniques": [
+          "auth_header_use",
+          "js_dom_or_image_beacon",
+          "js_http_request",
+          "link_shortener_chain"
+        ]
+      },
+      {
+        "template_sha256_8": "a47732ad",
+        "distinct_cred": 5,
+        "rows": 5,
+        "norm_len": 727,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "9e438cf2",
+        "distinct_cred": 4,
+        "rows": 5,
+        "norm_len": 192,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "96ecd719",
+        "distinct_cred": 4,
+        "rows": 5,
+        "norm_len": 134,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "097dce3e",
+        "distinct_cred": 4,
+        "rows": 5,
+        "norm_len": 179,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "fb060c66",
+        "distinct_cred": 4,
+        "rows": 4,
+        "norm_len": 243,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "69841b22",
+        "distinct_cred": 4,
+        "rows": 4,
+        "norm_len": 711,
+        "techniques": [
+          "auth_header_use",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "2e19f8d1",
+        "distinct_cred": 4,
+        "rows": 4,
+        "norm_len": 796,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "166e3eed",
+        "distinct_cred": 4,
+        "rows": 4,
+        "norm_len": 747,
+        "techniques": [
+          "auth_header_use",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      },
+      {
+        "template_sha256_8": "9bd90e99",
+        "distinct_cred": 3,
+        "rows": 6,
+        "norm_len": 187,
+        "techniques": [
+          "auth_header_use",
+          "hf_hub_access",
+          "identity_recon",
+          "js_dom_or_image_beacon",
+          "js_http_request"
+        ]
+      }
+    ],
+    "per_technique_template_sharing_cred": {
+      "js_http_request": {
+        "templates_shared_by_ge2_cred": 224,
+        "max_cred_on_one_template": 11
+      },
+      "js_dom_or_image_beacon": {
+        "templates_shared_by_ge2_cred": 203,
+        "max_cred_on_one_template": 11
+      },
+      "hf_hub_access": {
+        "templates_shared_by_ge2_cred": 206,
+        "max_cred_on_one_template": 11
+      },
+      "auth_header_use": {
+        "templates_shared_by_ge2_cred": 227,
+        "max_cred_on_one_template": 11
+      },
+      "identity_recon": {
+        "templates_shared_by_ge2_cred": 65,
+        "max_cred_on_one_template": 11
+      },
+      "link_shortener_chain": {
+        "templates_shared_by_ge2_cred": 9,
+        "max_cred_on_one_template": 6
+      },
+      "decode_and_execute": {
+        "templates_shared_by_ge2_cred": 3,
+        "max_cred_on_one_template": 2
+      },
+      "python_script": {
+        "templates_shared_by_ge2_cred": 4,
+        "max_cred_on_one_template": 2
+      },
+      "dataset_card_yaml": {
+        "templates_shared_by_ge2_cred": 8,
+        "max_cred_on_one_template": 2
+      },
+      "container_registry": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "kubernetes_api": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "jwt_claims": {
+        "templates_shared_by_ge2_cred": 2,
+        "max_cred_on_one_template": 2
+      },
+      "template_injection": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "board_zz_path": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "artifact_store_path": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "env_or_secret_read": {
+        "templates_shared_by_ge2_cred": 1,
+        "max_cred_on_one_template": 2
+      },
+      "shell_command": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "native_code_or_memory": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "reverse_shell_or_socket": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "swarm_task_record": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "disarm_or_self_kill": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "webhook_or_callback": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 1
+      },
+      "cloud_metadata_or_signing": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      },
+      "media_playlist": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      },
+      "persistence": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      },
+      "path_traversal_or_file_url": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      },
+      "slack_api": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      },
+      "bi_semantic_query": {
+        "templates_shared_by_ge2_cred": 0,
+        "max_cred_on_one_template": 0
+      }
+    }
+  },
+  "4_board": {
+    "strict_inbox_modal_mailbox": {
+      "rows": 234,
+      "rows_by_kind": {
+        "payload": 75,
+        "response": 7,
+        "recovered_text": 152
+      },
+      "trees": 210,
+      "distinct_cred": 3,
+      "share_of_all_cred": 0.0071,
+      "distinct_user": 1,
+      "share_of_all_user": 0.0192,
+      "distinct_hfuser": 0,
+      "share_of_all_hfuser": 0.0
+    },
+    "any_zz_prefix_dir": {
+      "rows": 1348,
+      "rows_by_kind": {
+        "payload": 699,
+        "response": 74,
+        "recovered_text": 575
+      },
+      "trees": 1125,
+      "distinct_cred": 7,
+      "share_of_all_cred": 0.0165,
+      "distinct_user": 3,
+      "share_of_all_user": 0.0577,
+      "distinct_hfuser": 7,
+      "share_of_all_hfuser": 0.0507
+    },
+    "artifact_store_mention": {
+      "rows": 2238,
+      "rows_by_kind": {
+        "payload": 1115,
+        "response": 163,
+        "recovered_text": 960
+      },
+      "trees": 1850,
+      "distinct_cred": 14,
+      "share_of_all_cred": 0.0331,
+      "distinct_user": 6,
+      "share_of_all_user": 0.1154,
+      "distinct_hfuser": 8,
+      "share_of_all_hfuser": 0.058
+    },
+    "zz_prefix_rows_top": [
+      [
+        "zzFILE_",
+        794
+      ],
+      [
+        "zzMODAL_",
+        129
+      ],
+      [
+        "zzRESULT_",
+        46
+      ],
+      [
+        "zzBEACON_",
+        46
+      ],
+      [
+        "zzDATA_",
+        29
+      ],
+      [
+        "zzMARK_",
+        28
+      ],
+      [
+        "zzTEST_",
+        27
+      ],
+      [
+        "zzINBOX_",
+        27
+      ],
+      [
+        "zzCALLBACK_",
+        21
+      ],
+      [
+        "zzMAILBOX_",
+        18
+      ],
+      [
+        "zzMODALTEST_",
+        17
+      ],
+      [
+        "zzHF_",
+        14
+      ],
+      [
+        "zzTMP_",
+        14
+      ],
+      [
+        "zzBROWSER_",
+        10
+      ],
+      [
+        "zzPAY_",
+        7
+      ],
+      [
+        "zzDONE_",
+        6
+      ],
+      [
+        "zzPAYTEST_",
+        6
+      ],
+      [
+        "zzDIAG_",
+        5
+      ],
+      [
+        "zzMODALROOT_",
+        5
+      ],
+      [
+        "zzMX_",
+        5
+      ]
+    ],
+    "distinct_zz_tokens": 548,
+    "note": "zz token stems look like per-target/task labels (e.g. fuzz-target style names), not agent names"
+  },
+  "5_ordering": {
+    "ids": "R0000001..R0189579 contiguous; file is laid out in batches, each ordered payload -> response -> recovered_text, so id order is export order, not time",
+    "kind_runs": 11,
+    "placeholder_numbering_vs_file_order": {
+      "ENCODED_BLOB": {
+        "rows": 66297,
+        "share_nondecreasing_adjacent": 0.8521,
+        "share_increasing_first_seen_order": 0.9438
+      },
+      "SHORTENER_CODE": {
+        "rows": 10834,
+        "share_nondecreasing_adjacent": 0.8429,
+        "share_increasing_first_seen_order": 0.9766
+      },
+      "destination": {
+        "rows": 77030,
+        "share_nondecreasing_adjacent": 0.6877,
+        "share_increasing_first_seen_order": 0.9446
+      }
+    },
+    "in_text_time_signals_rows": {
+      "http_date_header": 347,
+      "iso_date_2024_2027": 996,
+      "epoch_seconds_like_175_179e7": 2189,
+      "redacted_jwt_claim_time_rows": 1783
+    },
+    "in_text_time_signals_payload_rows": {
+      "http_date_header": 3,
+      "iso_date_2024_2027": 631,
+      "epoch_seconds_like_175_179e7": 1339
+    },
+    "iso_date_year_month_occurrences": {
+      "2024-01": 9,
+      "2024-02": 6,
+      "2024-03": 28,
+      "2024-04": 5,
+      "2024-05": 4,
+      "2024-06": 7,
+      "2024-07": 4,
+      "2024-08": 57,
+      "2024-09": 7,
+      "2024-10": 11,
+      "2024-11": 9,
+      "2024-12": 6,
+      "2025-01": 10,
+      "2025-02": 5,
+      "2025-03": 57,
+      "2025-04": 4,
+      "2025-05": 6,
+      "2025-06": 4,
+      "2025-07": 4,
+      "2025-08": 4,
+      "2025-09": 4,
+      "2025-10": 4,
+      "2025-11": 10,
+      "2025-12": 5,
+      "2026-01": 5,
+      "2026-02": 6,
+      "2026-03": 9,
+      "2026-04": 1585,
+      "2026-05": 78,
+      "2026-06": 64,
+      "2026-07": 989,
+      "2026-08": 1,
+      "2026-09": 7,
+      "2026-44": 10,
+      "2026-45": 23,
+      "2027-04": 1
+    },
+    "epoch_like_value_months_utc": {
+      "2026-01": 8,
+      "2026-05": 89,
+      "2026-06": 388,
+      "2026-07": 2080,
+      "2026-08": 1,
+      "2026-09": 4
+    },
+    "trees_with_epoch_like_value": 1793,
+    "dated_trees_jun_aug_2026": {
+      "trees": 1748,
+      "share_of_trees": 0.01361,
+      "trees_per_day": {
+        "2026-06-11": 16,
+        "2026-06-12": 19,
+        "2026-06-14": 3,
+        "2026-06-16": 11,
+        "2026-06-17": 22,
+        "2026-06-18": 27,
+        "2026-06-19": 4,
+        "2026-06-21": 8,
+        "2026-06-23": 1,
+        "2026-07-09": 13,
+        "2026-07-10": 7,
+        "2026-07-11": 920,
+        "2026-07-12": 533,
+        "2026-07-13": 40,
+        "2026-07-16": 92,
+        "2026-07-18": 4,
+        "2026-07-19": 26,
+        "2026-07-21": 1,
+        "2026-08-28": 1
+      },
+      "per_technique_first_median_last_day": {
+        "js_http_request": {
+          "dated_trees": 833,
+          "first_day": "2026-06-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-19"
+        },
+        "js_dom_or_image_beacon": {
+          "dated_trees": 749,
+          "first_day": "2026-06-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-19"
+        },
+        "jwt_claims": {
+          "dated_trees": 82,
+          "first_day": "2026-06-16",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-18"
+        },
+        "auth_header_use": {
+          "dated_trees": 606,
+          "first_day": "2026-06-16",
+          "median_day": "2026-07-11",
+          "last_day": "2026-08-28"
+        },
+        "link_shortener_chain": {
+          "dated_trees": 101,
+          "first_day": "2026-06-16",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-21"
+        },
+        "decode_and_execute": {
+          "dated_trees": 148,
+          "first_day": "2026-06-17",
+          "median_day": "2026-07-11",
+          "last_day": "2026-08-28"
+        },
+        "python_script": {
+          "dated_trees": 500,
+          "first_day": "2026-06-23",
+          "median_day": "2026-07-12",
+          "last_day": "2026-08-28"
+        },
+        "hf_hub_access": {
+          "dated_trees": 463,
+          "first_day": "2026-06-23",
+          "median_day": "2026-07-11",
+          "last_day": "2026-08-28"
+        },
+        "container_registry": {
+          "dated_trees": 135,
+          "first_day": "2026-06-23",
+          "median_day": "2026-07-16",
+          "last_day": "2026-08-28"
+        },
+        "swarm_task_record": {
+          "dated_trees": 339,
+          "first_day": "2026-06-23",
+          "median_day": "2026-07-11",
+          "last_day": "2026-08-28"
+        },
+        "artifact_store_path": {
+          "dated_trees": 109,
+          "first_day": "2026-07-09",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-13"
+        },
+        "shell_command": {
+          "dated_trees": 90,
+          "first_day": "2026-07-10",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-12"
+        },
+        "board_zz_path": {
+          "dated_trees": 90,
+          "first_day": "2026-07-10",
+          "median_day": "2026-07-11",
+          "last_day": "2026-08-28"
+        },
+        "identity_recon": {
+          "dated_trees": 44,
+          "first_day": "2026-07-10",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-13"
+        },
+        "dataset_card_yaml": {
+          "dated_trees": 94,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-13"
+        },
+        "kubernetes_api": {
+          "dated_trees": 67,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-18"
+        },
+        "cloud_metadata_or_signing": {
+          "dated_trees": 31,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-12",
+          "last_day": "2026-07-12"
+        },
+        "template_injection": {
+          "dated_trees": 56,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-13"
+        },
+        "native_code_or_memory": {
+          "dated_trees": 2,
+          "first_day": "2026-07-11",
+          "median_day": "2026-08-28",
+          "last_day": "2026-08-28"
+        },
+        "env_or_secret_read": {
+          "dated_trees": 19,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-12"
+        },
+        "reverse_shell_or_socket": {
+          "dated_trees": 10,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-11"
+        },
+        "persistence": {
+          "dated_trees": 2,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-12",
+          "last_day": "2026-07-12"
+        },
+        "path_traversal_or_file_url": {
+          "dated_trees": 1,
+          "first_day": "2026-07-11",
+          "median_day": "2026-07-11",
+          "last_day": "2026-07-11"
+        },
+        "disarm_or_self_kill": {
+          "dated_trees": 1,
+          "first_day": "2026-07-12",
+          "median_day": "2026-07-12",
+          "last_day": "2026-07-12"
+        },
+        "webhook_or_callback": {
+          "dated_trees": 1,
+          "first_day": "2026-08-28",
+          "median_day": "2026-08-28",
+          "last_day": "2026-08-28"
+        }
+      },
+      "strict_cred_pseudonyms_with_dated_trees": 19,
+      "caveat": "epoch-like 10/13-digit integers inside text (request params, cache-busters, build or expiry times); authors call recovered dates best estimates"
+    },
+    "trees_with_any_time_signal": 2449
+  }
+}
