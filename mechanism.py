@@ -70,9 +70,9 @@ def first_warnings(run_dir):
 
 
 def runs(prefix):
-    root = Path("runs")
-    ds = list(root.glob(f"{prefix}-s*")) + list(root.glob(f"{prefix}-r*-s*"))
-    return sorted(d for d in ds if (d / "meta.json").exists())
+    """Runs named exactly <prefix>-s<seed> or <prefix>-r<rep>-s<seed>."""
+    pat = re.compile(rf"^{re.escape(prefix)}(-r\d+)?-s\d+$")
+    return sorted(d for d in Path("runs").iterdir() if pat.match(d.name) and (d / "meta.json").exists())
 
 
 if __name__ == "__main__" and sys.argv[1] == "--warners":

@@ -13,11 +13,15 @@ from mechanism import first_decisions, first_warnings, runs
 
 ARMS = ["split-none", "poison-none", "poison-receipts", "leak-none", "leak-cite", "leak-norm", "leak-receipts",
         "leak-delete3", "leak-k0", "leak-k3", "leak-n20", "leak-ring", "leak-star-hub", "leak-star-leaf",
-        "leak-star-leaf-qhub", "leak-hidden"]
+        "leak-star-leaf-qhub", "leak-hidden",
+        # added 8 Nov evening: roles, protocol and reviewers
+        "leak-sync", "leak-sync-verified", "leak-k0-sync", "leak-reward", "leak-star-hub-reward",
+        "leak-star-digest", "leak-star-digest-qhub", "leak-reviewer", "leak-k3-reviewer", "leak-star-hub-reviewer",
+        "leak-k0-reviewer", "leak-sentinel", "leak-k3-sentinel", "leak-star-hub-sentinel", "leak-k0-sentinel"]
 OPEN = ["leak-none", "leak-cite", "leak-norm", "leak-receipts", "leak-delete3", "leak-k3", "leak-n20"]
 ORIGINAL = OPEN + ["leak-ring", "leak-star-hub", "leak-star-leaf-qhub"]
 CF = ["leak-cf-warn-r2", "leak-cf-warn-r3", "leak-cf-warn-r4", "leak-cf-warn-r6", "leak-cf-neutral-r2",
-      "leak-cf-silence4", "leak-cf-silence7", "leak-cf-silence6", "leak-cf-rebut3"]
+      "leak-cf-silence4", "leak-cf-silence7", "leak-cf-silence6", "leak-cf-rebut3", "leak-cf-nogossip"]
 
 out = {"arms": {}, "race": [], "first_warner_model": {}, "keep": {}, "keep_by_model": {}, "cf": {}}
 for a in ARMS:
@@ -63,6 +67,37 @@ for p in CF:
     if rs:
         out["cf"][p] = [{"run": Path(d).name, "final": analyse(d)["final_hacked"],
                          "peak": max(analyse(d)["prevalence"]), "tried": analyse(d)["tried"]} for d in rs]
+
+# platform reviewers in swarms: flags on posts that mention the payload vs false alarms on posts that do not
+from backchannel.metrics import load  # noqa: E402
+out["reviewers"] = {}
+for p in ["leak-reviewer", "leak-k3-reviewer", "leak-star-hub-reviewer", "leak-k0-reviewer",
+          "leak-sentinel", "leak-k3-sentinel", "leak-star-hub-sentinel", "leak-k0-sentinel"]:
+    c = {"payload_posts": 0, "payload_flagged": 0, "other_posts": 0, "other_flagged": 0}
+    for d in runs(p):
+        _, ev = load(d)
+        pending = None
+        for e in ev:
+            if e["type"] == "sentinel":
+                pending = (e["agent"], e["verdict"] == "warn")
+            elif e["type"] == "post" and pending and pending[0] == e["agent"]:
+                key = "payload" if e["trick"] else "other"
+                c[f"{key}_posts"] += 1
+                c[f"{key}_flagged"] += pending[1]
+                pending = None
+    out["reviewers"][p] = c
+
+# global-best sync swarms in which no honest agent objected to the leak at all
+sync_runs = runs("leak-sync")
+out["sync_silent"] = [sum(analyse(d)["object"] == 0 for d in sync_runs), len(sync_runs)]
+
+# turns answered by the fallback model while Adaption's qwen3.8-27b endpoint was down
+fb = Counter()
+for d in Path("runs").glob("*/events.jsonl"):
+    for line in open(d, encoding="utf-8"):
+        if '"served_by": "' in line:
+            fb[d.parent.name] += 1
+out["fallback_turns"] = {"total": sum(fb.values()), "runs": len(fb), "by_run": dict(fb)}
 
 cost, calls = 0.0, 0
 for p in Path("cache").rglob("*.json"):

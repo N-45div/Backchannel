@@ -17,14 +17,23 @@ ARM_LABEL = {
     "leak-k0": "no bad apple", "leak-k3": "leak, 3 bad apples", "leak-n20": "leak, 20 agents",
     "leak-ring": "leak, ring", "leak-star-hub": "leak, star, bad apple at hub",
     "leak-star-leaf": "leak, star, Gemma hub", "leak-star-leaf-qhub": "leak, star, Qwen hub",
-    "leak-hidden": "leak, hidden cache (no board)"}
+    "leak-hidden": "leak, hidden cache (no board)",
+    "leak-sync": "leak, global-best sync (reported)", "leak-sync-verified": "leak, global-best sync (verified)",
+    "leak-k0-sync": "no bad apple, global-best sync", "leak-reward": "leak, reward for reporting",
+    "leak-star-hub-reward": "leak, star hub, reward for reporting", "leak-star-digest": "leak, star, Gemma digest hub",
+    "leak-star-digest-qhub": "leak, star, Qwen digest hub", "leak-reviewer": "leak, GLM reviewer",
+    "leak-k3-reviewer": "leak, 3 bad apples, GLM reviewer", "leak-star-hub-reviewer": "leak, star hub, GLM reviewer",
+    "leak-k0-reviewer": "no bad apple, GLM reviewer", "leak-sentinel": "leak, sentinel",
+    "leak-k3-sentinel": "leak, 3 bad apples, sentinel", "leak-star-hub-sentinel": "leak, star hub, sentinel",
+    "leak-k0-sentinel": "no bad apple, sentinel"}
 CF_LABEL = {
     "leak-cf-warn-r2": "seed 0, warning in round 2", "leak-cf-warn-r3": "seed 0, warning in round 3",
     "leak-cf-warn-r4": "seed 0, warning in round 4", "leak-cf-warn-r6": "seed 0, warning in round 6",
     "leak-cf-neutral-r2": "seed 0, neutral post in round 2 (placebo)",
     "leak-cf-silence4": "seed 2, first warner (agent-4) silenced", "leak-cf-silence6": "seed 2, non-warner (agent-6) silenced (placebo)",
     "leak-cf-silence7": "seed 1, first warner (agent-7) silenced",
-    "leak-cf-rebut3": "seeds 1–9, bad apple's round-3 post replaced by a rebuttal (one replay per seed; originals ended at 1, 1, 0, 0, 0, 0, 0, 0, 0)"}
+    "leak-cf-rebut3": "seeds 1–9, bad apple's round-3 post replaced by a rebuttal (one replay per seed; originals ended at 1, 1, 0, 0, 0, 0, 0, 0, 0)",
+    "leak-cf-nogossip": "seeds 0 and 2, all honest agents' posts removed from round 2 (originals ended at 9 and 1)"}
 
 
 def pct(a, b):

@@ -4,6 +4,7 @@
 Each argument is a run prefix; all runs named <prefix>-s<seed> are pooled.
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -27,7 +28,9 @@ plt.rcParams.update({
 
 
 def pool(prefix):
-    runs = sorted(d for d in Path("runs").glob(f"{prefix}-s*") if (d / "events.jsonl").exists())
+    """All runs named exactly <prefix>-s<seed> (not longer names that merely start with the prefix)."""
+    pat = re.compile(rf"^{re.escape(prefix)}-s\d+$")
+    runs = sorted(d for d in Path("runs").iterdir() if pat.match(d.name) and (d / "events.jsonl").exists())
     return [analyse(d) for d in runs]
 
 

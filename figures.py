@@ -14,9 +14,9 @@ from backchannel.metrics import analyse  # noqa: E402
 
 
 def runs(prefix):
-    root = Path("runs")
-    ds = list(root.glob(f"{prefix}-s*")) + list(root.glob(f"{prefix}-r*-s*"))
-    return sorted(str(d) for d in ds if (d / "meta.json").exists())
+    """Runs named exactly <prefix>-s<seed> or <prefix>-r<rep>-s<seed>."""
+    from mechanism import runs as exact_runs
+    return [str(d) for d in exact_runs(prefix)]
 
 
 def share(prefix, key):
@@ -42,11 +42,13 @@ def bars(ax, groups, title):
 
 
 def fig_payloads_defences():
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.0, 2.3), gridspec_kw={"width_ratios": [3, 4]}, sharey=True)
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.0, 2.4), gridspec_kw={"width_ratios": [3, 7]}, sharey=True)
     bars(a1, [("split\n(breaks rule,\nconfirms)", "split-none"), ("poison\n(legal,\nrefutes)", "poison-none"),
               ("leak\n(legal,\nconfirms)", "leak-none")], "a. Exploit type (plain board)")
-    bars(a2, [("none", "leak-none"), ("cite\n(hash)", "leak-cite"), ("norm\n(verify first)", "leak-norm"),
-              ("receipts\n(re-run)", "leak-receipts")], "b. Leak, by board condition")
+    bars(a2, [("none", "leak-none"), ("cite\n(hash)", "leak-cite"), ("norm\n(verify\nfirst)", "leak-norm"),
+              ("receipts\n(re-run)", "leak-receipts"), ("reward\nreports", "leak-reward"),
+              ("reviewer\n(GLM)", "leak-reviewer"), ("sentinel\n(2B, Adaption)", "leak-sentinel")],
+         "b. Leak, by what the platform adds")
     a1.set_ylabel("share of honest agents")
     h = [plt.Rectangle((0, 0), 1, 1, color=SERIES[0]), plt.Rectangle((0, 0), 1, 1, color=SERIES[1])]
     fig.legend(h, ["ran it at least once", "still running it at the end"], loc="upper right", ncol=2, fontsize=7.5,
@@ -123,20 +125,73 @@ def fig_counterfactuals():
 
 
 def fig_topology():
-    fig, ax = plt.subplots(figsize=(7.0, 2.3))
-    bars(ax, [("open board\nn=10", "leak-none"), ("open board\nn=20", "leak-n20"), ("ring", "leak-ring"),
-              ("star,\nbad apple\nat the hub", "leak-star-hub"), ("star,\nQwen hub,\nbad apple a leaf", "leak-star-leaf-qhub"),
-              ("star,\nGemma hub,\nbad apple a leaf", "leak-star-leaf"), ("open board,\n3 bad apples", "leak-k3")],
-         "Leak by network shape and dose")
-    ax.set_ylabel("share of honest agents")
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.0, 2.5), gridspec_kw={"width_ratios": [6, 4]}, sharey=True)
+    bars(a1, [("open\nn=10", "leak-none"), ("open\nn=20", "leak-n20"), ("ring", "leak-ring"),
+              ("star,\nbad apple\nis hub", "leak-star-hub"), ("star,\nQwen\nhub", "leak-star-leaf-qhub"),
+              ("star,\nGemma\nhub", "leak-star-leaf")], "a. Who can hear whom")
+    bars(a2, [("Qwen\ndigest\nhub", "leak-star-digest-qhub"), ("Gemma\ndigest\nhub", "leak-star-digest"),
+              ("global\nbest,\nreported", "leak-sync"), ("global\nbest,\nverified", "leak-sync-verified")],
+         "b. Proxies")
+    a1.set_ylabel("share of honest agents")
     h = [plt.Rectangle((0, 0), 1, 1, color=SERIES[0]), plt.Rectangle((0, 0), 1, 1, color=SERIES[1])]
-    ax.legend(h, ["ran it at least once", "still running it at the end"], loc="upper left", fontsize=7.5, ncol=2)
-    fig.tight_layout()
+    fig.legend(h, ["ran it at least once", "still running it at the end"], loc="upper right", ncol=2, fontsize=7.5,
+               bbox_to_anchor=(0.99, 1.0))
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
     fig.savefig(OUT / "fig4_topology.png", dpi=220)
     plt.close(fig)
 
 
+def fig_incident():
+    """The real incident, from METR's public chart data: the board's lock-in curve and the false belief's arc."""
+    import json
+    from collections import defaultdict
+    from realdata.metr_timeline import literal_after
+    tl = literal_after(Path("data/metr/agent_timeline_data.js").read_text(encoding="utf-8"), "window.AGENT_TIMELINE_DATA")
+    ws = literal_after(Path("data/metr/workstream_data.js").read_text(encoding="utf-8"), "window.WORKSTREAM_TRAFFIC_DATA")
+    ag = [{k: (None if a[k] is None else a[k] / 3600) for k in ("read", "end", "hfStart")} for a in tl["agents"]
+          if a["read"] is not None]
+    hours = [h for h in range(72, 192) if sum(a["read"] <= h <= a["end"] for a in ag) >= 25]
+    share = []
+    for h in hours:
+        act = [a for a in ag if a["read"] <= h <= a["end"]]
+        share.append(sum(a["hfStart"] is not None and a["hfStart"] <= h for a in act) / len(act))
+    marks = {a["title"]: a["time"] / 3600 for a in tl["annotations"] if a.get("kind") == "hf-start"}
+    creds, works = marks["38148c finds working HF credentials"], marks["38148c confirms arbitrary file read"]
+    fam_of = {i: leaf["family"] for i, leaf in enumerate(ws["leaves"])}
+    by_day = defaultdict(lambda: defaultdict(float))
+    for hour, leaf, counts in ws["rows"]:
+        by_day[hour // 24][fam_of.get(leaf, "?")] += sum(counts)
+    days = sorted(by_day)
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(7.0, 2.3), gridspec_kw={"width_ratios": [3, 2]})
+    a1.plot([h / 24 for h in hours], share, color=SERIES[0], linewidth=2)
+    for t, text, y in ((creds, "credentials found\nand shared", 0.62), (works, "\"It works\": exploit\nconfirmed on the board", 0.42)):
+        a1.axvline(t / 24, color=MUTED, linewidth=1, linestyle=(0, (3, 2)))
+        a1.annotate(text, (t / 24, y), xytext=(-4, 0), textcoords="offset points", ha="right", fontsize=6.5,
+                    color=INK2)
+    ticks = list(range(3, 9))
+    a1.set_xticks(ticks, [f"Jul {6 + t}" for t in ticks], fontsize=7)
+    a1.set_ylim(0, 1.02)
+    a1.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
+    a1.tick_params(labelsize=7)
+    a1.set_title("a. Board agents that had joined the attack", loc="left", fontsize=9, color=INK)
+    for fam, label, color in (("hf", "attack Hugging Face", SERIES[0]),
+                              ("scorer", "manipulate the scorer (the false belief)", SERIES[1])):
+        ys = [by_day[d][fam] / sum(by_day[d].values()) for d in days]
+        a2.plot(range(len(days)), ys, color=color, linewidth=2, marker="o", markersize=4,
+                markeredgecolor=SURFACE, markeredgewidth=1, label=label)
+    a2.legend(fontsize=6.5, loc="upper left")
+    a2.set_xticks(range(len(days)), [f"Jul {8 + d}" for d in days], fontsize=7)
+    a2.set_ylim(0, 0.62)
+    a2.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter(1.0))
+    a2.tick_params(labelsize=7)
+    a2.set_title("b. Share of board traffic, by day", loc="left", fontsize=9, color=INK)
+    fig.tight_layout()
+    fig.savefig(OUT / "fig5_incident.png", dpi=220)
+    plt.close(fig)
+
+
 if __name__ == "__main__":
+    fig_incident()
     fig_payloads_defences()
     fig_race()
     fig_counterfactuals()
