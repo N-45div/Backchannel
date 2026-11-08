@@ -16,10 +16,11 @@ message while keeping everything else fixed.
 | `backchannel/swarm.py` | the swarm: agents, board, topologies, conditions, exploits, replay and interventions |
 | `backchannel/llm.py` | model calls (Adaption and OpenAI) with a disk cache and a spend cap |
 | `backchannel/metrics.py` | blast radius from the event log: reach, prevalence, generations, warnings |
-| `run.py`, `batch.ps1`, `specs/` | run one configuration, or a batch of them in parallel |
+| `run.py`, `batch.ps1`, `queue.ps1`, `specs/` | run one configuration, a batch in parallel, or a priority queue a few at a time |
+| `sentinel/`, `backchannel/sentinel_client.py` | the 2B sentinel: training data, Adaption AutoScientist training, local serving and evaluation |
 | `solo.py` | the single-agent baseline |
 | `mechanism.py`, `judge.py`, `stats.py`, `tables.py`, `figures.py` | every number, table and figure in the report |
-| `realdata/` | the AI Village, Moltbook, collusion.wiki and Swarm Traces analyses |
+| `realdata/` | real swarms: METR's per-agent timeline of the July 2026 incident (`metr_timeline.py`), an audit of real autoresearch forks (`autoresearch_wild.py`), and the AI Village, Moltbook, collusion.wiki and Swarm Traces analyses |
 | `runs/` | one folder per swarm: `events.jsonl` (every view, reply, run and decision) and `meta.json` |
 | `runs_invalid/` | an early counterfactual batch discarded for a cache bug (see its README) |
 | `cache/` | every model response, keyed by model, prompt and sample key |
