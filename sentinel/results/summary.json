@@ -1,0 +1,134 @@
+{
+ "api:glm-53-flash": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    200,
+    200
+   ],
+   "caught": [
+    60,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 0
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    94,
+    96
+   ],
+   "caught": [
+    56,
+    56
+   ],
+   "false_alarm": [
+    2,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    80,
+    80
+   ],
+   "caught": [
+    80,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    24,
+    24
+   ],
+   "caught": [
+    18,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
+ },
+ "api:gemma-4-26b-a4b-it": {
+  "test_id": {
+   "n": 200,
+   "acc": [
+    183,
+    200
+   ],
+   "caught": [
+    43,
+    60
+   ],
+   "false_alarm": [
+    0,
+    140
+   ],
+   "unparsed": 0
+  },
+  "test_lookalike": {
+   "n": 96,
+   "acc": [
+    72,
+    96
+   ],
+   "caught": [
+    32,
+    56
+   ],
+   "false_alarm": [
+    0,
+    40
+   ],
+   "unparsed": 0
+  },
+  "test_evaledit": {
+   "n": 80,
+   "acc": [
+    62,
+    80
+   ],
+   "caught": [
+    62,
+    80
+   ],
+   "false_alarm": [
+    0,
+    0
+   ],
+   "unparsed": 0
+  },
+  "test_swarm": {
+   "n": 24,
+   "acc": [
+    21,
+    24
+   ],
+   "caught": [
+    15,
+    18
+   ],
+   "false_alarm": [
+    0,
+    6
+   ],
+   "unparsed": 0
+  }
+ }
+}
