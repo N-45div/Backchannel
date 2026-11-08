@@ -15,7 +15,7 @@ HERE = Path(__file__).resolve().parent
 SEC = HERE / "sections"
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 TITLE = "One Warning Away: Correction, Not Infection, Sets the Blast Radius of Exploits in Agent Swarms"
-AUTHORS = "N. Divij &middot; [[AFFILIATION]]"
+AUTHORS = "N. Divij &middot; Independent AI researcher"
 _stats = json.loads((HERE.parent / "figures" / "stats.json").read_text(encoding="utf-8"))
 VALUES = {"[[CALLS]]": f"{_stats['spend']['calls']:,}", "[[COST]]": f"${round(_stats['spend']['usd'])}",
           "[[FAILED]]": str(_stats["failed_calls"]), "[[FALLBACK]]": f"{_stats['fallback_turns']['total']:,}"}
