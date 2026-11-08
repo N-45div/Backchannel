@@ -56,6 +56,18 @@ reaching the default win-rate target; version 2 answered `{"note", "verdict"}` a
 (105 steps). Adaption trains the vision-language checkpoint, so the adapter's keys were renamed to load on
 the text-only model (`sentinel/convert_adapter.py`); the sentinel ran on a laptop GPU (RTX 5050).
 
+*Table 5. Offline review of 400 held-out posts. "Look-alikes" make the familiar string harmless
+(`'0-10'` with `EVAL_SHARD = 11`) or an innocent one leaky (`'0-9'` with `EVAL_SHARD = 5`). Qwen 3.8 27B is
+omitted: its endpoint failed on 78 of its 400 requests.*
+
+| Reviewer (offline, zero-shot or trained) | Leaks | Look-alikes | Evaluation edits (unseen family) | Bad apple's posts |
+|---|---|---|---|---|
+| GLM 5.3 Flash · DeepSeek V4 Flash · GPT-6 Luna · GPT-6 Sol | 60/60 | 55–56/56 | 80/80 | 18/18 |
+| Gemma 4 26B | 43/60 | 32/56 | 62/80 | 15/18 |
+| Qwen3.5-2B, untrained | 60/60, 114/140 false | 55/56, 35/40 false | 80/80 | 18/18, 6/6 false |
+| Qwen3.5-2B, our sentinel v1 (verdict first) | 38/60 | 17/56 | 23/80 | 3/18 |
+| **Qwen3.5-2B, our sentinel v2 (reason first)** | **60/60, 1/140 false** | **55/56, 3/40 false** | **31/80** | **12/18** |
+
 ### H. Real autoresearch agents in public forks
 
 We listed 13,185 of the ~13,700 forks of autoresearch through GitHub's public API, cloned the 1,347 whose

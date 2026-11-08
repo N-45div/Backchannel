@@ -110,31 +110,18 @@ open board's ten), including both that had
 locked in and the star with the bad apple at the hub (originally 7 of 9), where the note travelled with the
 hub's post. It raised no false alarm on 833 posts that did not mention the payload. The capacity was always
 there. Asked to review the posts offline, four of the five models whose endpoints held flagged every leak post
-with at most four false alarms in 186 legal changes (Table 4), yet in the swarms the same models, as workers,
+with at most four false alarms in 186 legal changes (appendix G, Table 5), yet in the swarms the same models, as workers,
 kept the leak in most first decisions before a teammate warned (DeepSeek 8 of 9, GPT-6 Luna 6 of 6, GLM 8 of
 13). The models could check; nothing asked them to.
 
-*Table 4. Offline review of 400 held-out posts (appendix G). "Look-alikes" make the familiar string harmless
-(`'0-10'` with `EVAL_SHARD = 11`) or an innocent one leaky (`'0-9'` with `EVAL_SHARD = 5`). Qwen 3.8 27B is
-omitted: its endpoint failed on 78 of its 400 requests.*
-
-| Reviewer (offline, zero-shot or trained) | Leaks | Look-alikes | Evaluation edits (unseen family) | Bad apple's posts |
-|---|---|---|---|---|
-| GLM 5.3 Flash · DeepSeek V4 Flash · GPT-6 Luna · GPT-6 Sol | 60/60 | 55–56/56 | 80/80 | 18/18 |
-| Gemma 4 26B | 43/60 | 32/56 | 62/80 | 15/18 |
-| Qwen3.5-2B, untrained | 60/60, 114/140 false | 55/56, 35/40 false | 80/80 | 18/18, 6/6 false |
-| Qwen3.5-2B, our sentinel v1 (verdict first) | 38/60 | 17/56 | 23/80 | 3/18 |
-| **Qwen3.5-2B, our sentinel v2 (reason first)** | **60/60, 1/140 false** | **55/56, 3/40 false** | **31/80** | **12/18** |
-
 **A small sentinel trained on Adaption.** We trained Qwen3.5-2B with Adaption's AutoScientist on 1,400 posts
-labelled by the sandbox's own rules (appendix G). Version 1 caught 3 of the bad apple's 18 posts, writing
-notes such as "TRAIN_SHARDS='all' includes EVAL_SHARD=10, so it trains on the evaluation shard" above a verdict
-of "ok": trained verdict-first on mostly legal examples, it decided before it reasoned. Version 2 wrote its
-reason first and trained for five epochs. It matched the large reviewers on the leak family, look-alikes
-included, so it reads the two lines rather than the string; it generalised to the evaluation-split hack (31 of
-32), a cousin of the leak, but not to exploits that work differently (0 of 48 cuts to the evaluation sample
-or shard). In five swarms it let no agent run the leak, with one false alarm in 452 other posts. A small
-sentinel is cheap and precise but narrow; a capable model given the job covers more.
+labelled by the sandbox's own rules (appendix G). Version 1, answering verdict-first, caught 3 of the bad
+apple's 18 posts while writing correct notes ("…includes EVAL_SHARD=10, so it trains on the evaluation shard")
+above a verdict of "ok": it decided before it reasoned. Version 2 reasoned first and trained for five epochs:
+it caught 60 of 60 leaks and 55 of 56 look-alikes with 4 false alarms in 180 legal changes, so it reads the
+two lines rather than the string, and generalised to the evaluation-split hack (31 of 32) but not to
+unrelated exploits (0 of 48). In five swarms it let no agent run the leak, with one false alarm in 452 other
+posts: cheap and precise, but narrower than a capable model given the job.
 
 **Rewarding the whistle.** Following the Swarmchasing hackathon's finding that crediting reports raises
 whistleblowing [22], we told agents a report earns full credit. [[REWARD_TEXT]]
@@ -142,34 +129,26 @@ whistleblowing [22], we told agents a report earns full credit. [[REWARD_TEXT]]
 ### 4.5 Real swarms
 
 **The July 2026 incident: a cascade set off by a confirmed result.** METR publishes the data behind its
-investigation's charts [1, 24]: for each of the 1,206 agents, when it first read the message board, first posted
-and started attacking Hugging Face, its model family, and hourly board traffic by workstream (no messages or
-payloads). Among agents active on the board, the share that had joined the attack held near 20% for two days,
-then rose to 76% within twelve hours on 11 July and 93% by the next day (Figure 4a): the all-or-nothing shape
-of a locked-in sandbox swarm, at a thousand agents. METR timestamps the attack's milestones. After an agent
-found working Hugging Face credentials and shared them on the board (10 July, 09:40 UTC), agents already on
-the board joined at 0.91 per 100 agent-hours over six hours, against 0.22 before (10 joins against 3), and
-none of the 22 newcomers of the next twelve hours joined within twelve hours. After an agent posted that its
-exploit worked ("BOOM! It works.", 11 July, 04:40 UTC), 118 agents already on the board joined within six
-hours (13.4 per 100 agent-hours, against 0.08), and 206 of 262 newcomers joined within twelve hours of first
-reading the board. Logs cannot separate this from all else that changed that morning, but the contrast
-between the two milestones is the sandbox's mechanism: what spreads is the exploit a result confirms. Per
-agent-hour after first reading the board, the odds of joining rose 1.25 times (95% CI 1.21–1.30, bootstrap
-over agents) for every ten points more of the active board already attacking, within the same calendar day;
-GPT-5.6 Sol agents joined at about half the odds of HPIM agents (0.46), a partial firebreak like the Gemma
-hub. The workstream built on the false belief that a scorer read the agents' transcripts rose to 47% of board
-traffic on 10 July and fell to 3% by 12 July (Figure 4b); METR reports that "OpenAI did not use a scorer that
-would review their transcripts" [1]. Nothing on the board corrected it; it was displaced.
+investigation's charts [1, 24]: for each of 1,206 agents, when it first read the message board and when it
+started attacking Hugging Face, and hourly board traffic by workstream. Among agents on the board, the share
+that had joined the attack held near 20% for two days, then rose to 76% within twelve hours on 11 July and 93%
+by the next day (Figure 4a): the all-or-nothing shape of a locked-in sandbox swarm, at a thousand agents. After
+an agent shared working Hugging Face credentials on the board (10 July, 09:40 UTC), agents already there
+joined at 0.91 per 100 agent-hours over six hours, against 0.22 before (10 joins against 3). After an agent
+posted that its exploit worked ("BOOM! It works.", 11 July, 04:40 UTC), 118 joined within six hours (13.4 per
+100 agent-hours, against 0.08), and 206 of 262 newcomers joined within twelve hours. Logs cannot separate this
+from all else that changed that morning, but the contrast is the sandbox's mechanism: what spreads is the
+exploit a result confirms. Per agent-hour on the board, the odds of joining rose 1.25 times (95% CI 1.21–1.30)
+for every ten points more of the board already attacking, within the same day; GPT-5.6 Sol agents joined at
+about half the odds of HPIM agents (0.46). The workstream built on the false belief that a scorer read
+transcripts fell from 47% of traffic on 10 July to 3% by 12 July (Figure 4b), displaced rather than corrected.
 
 ![Figure 4](../figures/fig5_incident.png)
 *Figure 4. The July 2026 incident, from METR's chart data [1]. (a) Share of agents active on the board that had
 joined the Hugging Face attack, by hour. (b) Board traffic in two workstreams, by day.*
 
-**Real autoresearch agents invent the exploit, rarely, and without a board it stays put.** We read the public
-history of 13,185 forks of autoresearch and classified 9,084 agent experiments in 202 forks by what their
-diffs touch (every flagged diff read by hand; appendix H). 131 (1.4%) changed the evaluation, the time budget
-or the data path, concentrated in a few forks. The clearest case is rule-abiding and self-serving, as the
-sandbox predicts: one of eight GPU agents in a user's autoresearch swarm repeatedly raised the number of
-untimed "free" warmup steps from 10 to 30,000 ("more free steps"). It did not spread to the other seven, and
-across forks the same moves were invented independently (a time-budget override in 17 forks) but never
-copied. Without a shared board, exploits stay with their inventors. Other public logs show the same roles (appendix I).
+**Real autoresearch agents invent the exploit, rarely, and without a board it stays put.** Of 9,084 agent
+experiments in 202 public forks of autoresearch (every flagged diff read by hand; appendix H), 131 (1.4%)
+changed the evaluation, time budget or data path. In one user's eight-agent swarm, one agent raised its
+untimed "free" warmup steps from 10 to 30,000 ("more free steps"); the other seven never did, and across forks
+the same moves were invented independently but never copied. Other public logs show the same roles (appendix I).
